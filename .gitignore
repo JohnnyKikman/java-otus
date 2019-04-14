@@ -24,4 +24,5 @@ hs_err_pid*
 
 # Idea-generated files
 *.iml
-.idea/*
+.idea/
+target/
