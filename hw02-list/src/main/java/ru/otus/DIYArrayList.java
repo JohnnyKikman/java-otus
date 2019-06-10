@@ -10,6 +10,9 @@ import java.util.NoSuchElementException;
 @SuppressWarnings("NullableProblems")
 public class DIYArrayList<E> implements List<E> {
 
+    private static final int DEFAULT_LIST_SIZE = 1;
+    private static final int LIST_SIZE_MULTIPLIER = 2;
+
     private Object[] elements;
     private int size;
 
@@ -43,7 +46,7 @@ public class DIYArrayList<E> implements List<E> {
     @Override
     public boolean add(E e) {
         if (size == elements.length) {
-            elements = Arrays.copyOf(elements, size == 0 ? 1 : size * 2);
+            growArray();
         }
         elements[size++] = e;
         return true;
@@ -127,6 +130,10 @@ public class DIYArrayList<E> implements List<E> {
             result.append(elements[i]).append(", ");
         }
         return result.append(elements[size - 1]).append(']').toString();
+    }
+
+    private void growArray() {
+        elements = Arrays.copyOf(elements, size == 0 ? DEFAULT_LIST_SIZE : size * LIST_SIZE_MULTIPLIER);
     }
 
     // Not implemented methods
