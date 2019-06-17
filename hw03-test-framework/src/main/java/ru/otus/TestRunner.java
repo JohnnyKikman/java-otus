@@ -12,10 +12,27 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.String.format;
 import static java.util.Arrays.stream;
 
 @Slf4j
 public class TestRunner {
+
+    public static void main(String[] args) {
+        if (args.length < 1) {
+            throw new IllegalArgumentException("No class names provided, unable to test");
+        } else if (args.length > 1) {
+            log.warn("More than one class names provided, only first will be used");
+        }
+
+        final String testClassName = args[0];
+        try {
+            final Class<?> testClass = Class.forName(testClassName);
+            run(testClass);
+        } catch (ClassNotFoundException e) {
+            throw new IllegalArgumentException(format("Invalid class name %s, unable to test", testClassName));
+        }
+    }
 
     /**
      * Method to run classes that have methods marked with annotations from ru.otus.annotation.* annotations.
