@@ -10,29 +10,23 @@ import ru.otus.annotation.Test;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import static java.lang.String.format;
 import static java.util.Arrays.stream;
+import static ru.otus.utils.ReflectionUtils.getDefaultConstructor;
+import static ru.otus.utils.ReflectionUtils.instantiateClass;
+import static ru.otus.utils.ReflectionUtils.invokeMethod;
 
 @Slf4j
 public class TestRunner {
 
-    public static void main(String[] args) {
-        if (args.length < 1) {
-            throw new IllegalArgumentException("No class names provided, unable to test");
-        } else if (args.length > 1) {
-            log.warn("More than one class names provided, only first will be used");
-        }
-
-        final String testClassName = args[0];
-        try {
-            final Class<?> testClass = Class.forName(testClassName);
-            run(testClass);
-        } catch (ClassNotFoundException e) {
-            throw new IllegalArgumentException(format("Invalid class name %s, unable to test", testClassName));
-        }
-    }
+    private static final String TEST_METHOD_ERROR = "Error running test method {}:";
+    private static final String BEFORE_EACH_ERROR = "Error preparing test method %s";
+    private static final String AFTER_ALL_ERROR = "Cannot invoke @AfterAll method %s";
+    private static final String BEFORE_ALL_ERROR = "Cannot invoke @BeforeAll method %s";
+    private static final String AFTER_EACH_ERROR = "Error shutting down test method %s";
 
     /**
      * Method to run classes that have methods marked with annotations from ru.otus.annotation.* annotations.
@@ -52,15 +46,7 @@ public class TestRunner {
      * @param testClass class containing {@link Test}-marked tests
      */
     public static <T> void run(Class<T> testClass) {
-        final String className = testClass.getSimpleName();
-        final Constructor<T> testClassConstructor;
-        try {
-            testClassConstructor = testClass.getConstructor();
-            testClassConstructor.setAccessible(true);
-        } catch (NoSuchMethodException e) {
-            log.error("Cannot instantiate class {}: no default constructor", className);
-            return;
-        }
+        final Constructor<T> testClassConstructor = getDefaultConstructor(testClass);
 
         final List<Method> beforeAllMethods = new ArrayList<>();
         final List<Method> afterAllMethods = new ArrayList<>();
@@ -68,74 +54,58 @@ public class TestRunner {
         final List<Method> afterEachMethods = new ArrayList<>();
         final List<Method> testMethods = new ArrayList<>();
 
-        stream(testClass.getMethods()).forEach(method -> {
-            if (method.getAnnotation(BeforeAll.class) != null) {
-                beforeAllMethods.add(method);
-            } else if (method.getAnnotation(AfterAll.class) != null) {
-                afterAllMethods.add(method);
-            } else if (method.getAnnotation(BeforeEach.class) != null) {
-                beforeEachMethods.add(method);
-            } else if (method.getAnnotation(AfterEach.class) != null) {
-                afterEachMethods.add(method);
-            } else if (method.getAnnotation(Test.class) != null) {
-                testMethods.add(method);
-            }
-        });
+        stream(testClass.getMethods()).forEach(method -> analyzeAnnotations(method, beforeAllMethods,
+                afterAllMethods, beforeEachMethods, afterEachMethods, testMethods));
 
-        beforeAllMethods.forEach(method -> {
-            try {
-                method.invoke(null);
-            } catch (Exception e) {
-                log.error("Cannot invoke @BeforeAll method {}", method.getName());
-                throw new RuntimeException(e);
-            }
-        });
-        testMethods.forEach(method -> {
-            final String methodName = method.getName();
-            log.info("Running test method {}", methodName);
+        try {
+            beforeAllMethods.forEach(method -> invokeMethod(
+                    method, null, format(BEFORE_ALL_ERROR, method.getName()), true
+            ));
+            testMethods.forEach(method -> {
+                final String methodName = method.getName();
+                log.info("Running test method {}", methodName);
 
-            final T testClassInstance;
-            try {
-                testClassInstance = testClassConstructor.newInstance();
-            } catch (Exception e) {
-                log.error("Cannot instantiate class {}: no default constructor", className);
-                throw new RuntimeException(e);
-            }
-
-            try {
-                for (Method beforeMethod : beforeEachMethods) {
-                    try {
-                        beforeMethod.invoke(testClassInstance);
-                    } catch (Exception e) {
-                        log.error("Error preparing test method {}:", methodName, e);
-                        return;
-                    }
+                final T testClassInstance = instantiateClass(testClassConstructor);
+                try {
+                    beforeEachMethods.forEach(beforeMethod-> invokeMethod(
+                            beforeMethod, testClassInstance, format(BEFORE_EACH_ERROR, methodName), false
+                    ));
+                    method.invoke(testClassInstance);
+                } catch (Exception e) {
+                    log.error(TEST_METHOD_ERROR, methodName, e);
+                    return;
+                } finally {
+                    afterEachMethods.forEach(afterMethod -> invokeMethod(
+                            afterMethod, testClassInstance, format(AFTER_EACH_ERROR, methodName), false
+                    ));
                 }
-                method.invoke(testClassInstance);
-            } catch (Exception e) {
-                log.error("Error running test method {}:", methodName, e);
-                return;
-            } finally {
-                for (Method afterMethod : afterEachMethods) {
-                    try {
-                        afterMethod.invoke(testClassInstance);
-                    } catch (Exception e) {
-                        log.error("Error shutting down test method {}:", methodName, e);
-                        break;
-                    }
-                }
-            }
 
-            log.info("Test method {} completed", methodName);
-        });
-        afterAllMethods.forEach(method -> {
-            try {
-                method.invoke(null);
-            } catch (Exception e) {
-                log.error("Cannot invoke @AfterAll method {}", method.getName());
-                throw new RuntimeException(e);
-            }
-        });
+                log.info("Test method {} completed", methodName);
+            });
+        } finally {
+            afterAllMethods.forEach(method -> invokeMethod(
+                    method, null, format(AFTER_ALL_ERROR, method.getName()), true
+            ));
+        }
+    }
+
+    private static void analyzeAnnotations(Method method,
+                                           Collection<Method> beforeAllMethods,
+                                           Collection<Method> afterAllMethods,
+                                           Collection<Method> beforeEachMethods,
+                                           Collection<Method> afterEachMethods,
+                                           Collection<Method> testMethods) {
+        if (method.getAnnotation(BeforeAll.class) != null) {
+            beforeAllMethods.add(method);
+        } else if (method.getAnnotation(AfterAll.class) != null) {
+            afterAllMethods.add(method);
+        } else if (method.getAnnotation(BeforeEach.class) != null) {
+            beforeEachMethods.add(method);
+        } else if (method.getAnnotation(AfterEach.class) != null) {
+            afterEachMethods.add(method);
+        } else if (method.getAnnotation(Test.class) != null) {
+            testMethods.add(method);
+        }
     }
 
 }

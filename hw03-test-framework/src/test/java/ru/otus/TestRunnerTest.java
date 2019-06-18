@@ -11,11 +11,6 @@ class TestRunnerTest {
     // Positive cases
 
     @Test
-    void shouldPassForCorrectTestClassByName() {
-        TestRunner.main(new String[]{"ru.otus.TestedClass"});
-    }
-
-    @Test
     void shouldPassForCorrectTestClass() {
         TestRunner.run(TestedClass.class);
     }
@@ -33,17 +28,7 @@ class TestRunnerTest {
     // Negative cases
 
     @Test
-    void shouldFailForTestClassByNameWhenNoArgumentsProvided() {
-        assertThrows(IllegalArgumentException.class, () -> TestRunner.main(new String[0]));
-    }
-
-    @Test
-    void shouldFailForTestClassWithIncorrectName() {
-        assertThrows(IllegalArgumentException.class, () -> TestRunner.main(new String[]{"ru.otus.DoesNotExist"}));
-    }
-
-    @Test
-    void shouldFailForTestClassWithErrorInBeforeAll() {
+    void shouldFailAndExecuteAfterAllForTestClassWithErrorInBeforeAll() {
         assertThrows(RuntimeException.class, () -> TestRunner.run(TestedClassErrorBeforeAll.class));
     }
 
