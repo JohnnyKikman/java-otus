@@ -4,12 +4,13 @@
 
     <groupId>ru.otus</groupId>
     <artifactId>java-otus</artifactId>
-    <version>0.0.1</version>
+    <version>0.4.0</version>
 
     <modules>
         <module>hw01-maven</module>
         <module>hw02-list</module>
         <module>hw03-test-framework</module>
+        <module>hw04-logging</module>
     </modules>
 
     <properties>
