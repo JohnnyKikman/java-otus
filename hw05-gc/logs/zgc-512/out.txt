@@ -1,0 +1,6 @@
+Application started, pid: 9709@johnnykay-HP-Pavilion-Power-Laptop-15-cb0xx
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to hw05-gc/logs/dump ...
+Heap dump file created [377295871 bytes in 1,783 secs]
+Enging GC data: 0 minor collections in 0 ms, 160 major collections in 40868 ms, 160 total collections in 40868 ms
+Application stopped after running for 53 s.
