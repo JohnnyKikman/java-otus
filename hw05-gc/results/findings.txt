@@ -1,0 +1,18 @@
+Best latency:
+1. Parallel
+2. G1
+3. ZGC
+4. Serial
+
+Best throughput:
+1. G1
+2. ZGC
+3. Parallel
+4. Serial
+
+Notes:
+1. Serial GC has the lowest CPU consumption and GC usage
+2. Despite generally inferior stats, serial GC ultimately works longer than other GCs (at least, on my laptop)
+3. Parallel collectors have better latency
+4. ZGC seems to optimize itself to work like Serial on my setup (otherwise it doesn't make sense in real environment)
+5. ZGC/G1 have higher footprint than parallel (of concurrent GC)

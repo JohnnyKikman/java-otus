@@ -1,0 +1,51 @@
+-XX:+UseSerialGC
+
+Results:
+- 512m - 94 s, 207 minor collections in 16294 ms, 178 major collections in 67403 ms, 385 total collections in 83697 ms
+- 1024m - 274 s, 202 minor collections in 3613 ms, 336 major collections in 236533 ms, 538 total collections in 240146 ms
+- 2048m - ~600s, 401 minor collections in 11705 ms, 405 major collections in 550494 ms, 806 total collections in 562199 ms
+
+Average % of time GC: 85-90%
+Individual GC collections: time grows steadily and reaches 1500ms after 10 minutes of working on 2048m heap
+
+Average CPU usage: 20-25%
+Average GC usage: 20-25%
+----------------
+-XX:+UseParallelGC
+
+Results:
+- 512m - 18 s, 246 minor collections in 5607 ms, 7 major collections in 4320 ms, 253 total collections in 9927 ms
+- 1024m - 54 s, 458 minor collections in 18793 ms, 7 major collections in 8442 ms, 465 total collections in 27235 ms
+- 2048m - 192 s, 878 minor collections in 73644 ms, 3 major collections in 8507 ms, 881 total collections in 82151 ms
+
+Average % of time GC: 45-50%
+Individual GC collections: most of them are young collections, time doesn't exceed 150ms
+
+Average CPU usage: 50-70%
+Average GC usage: 10-20%
+----------------
+-XX:+UseG1GC
+
+Results:
+- 512m - 43 s, 308 minor collections in 3460 ms, 151 major collections in 27734 ms, 459 total collections in 31194 ms
+- 1024m - 147 s, 542 minor collections in 10359 ms, 272 major collections in 95996 ms, 814 total collections in 106355 ms
+- 2048m - 546 s, 1015 minor collections in 22156 ms, 512 major collections in 358135 ms, 1527 total collections in 380291 ms
+
+Average % of time GC: 70-75%
+Individual GC collections: very short, both old and young, even close to OutOfMemoryError
+
+Average CPU usage: 75-90%
+Average GC usage: 10-20%
+----------------
+-XX:+UnlockExperimentalVMOptions -XX:+UseZGC
+
+Results:
+- 512m - 53 s, 160 total collections in 40868 ms
+- 1024m - 261 s, 354 total collections in 214867 ms
+- 2048m - ~600s, 483 total collections in 552686 ms
+
+Average % of time GC: 80-90%
+Individual GC collections: time grows steadily (but slower than on serial GC) and reaches 1000ms after 10 minutes of working on 2048m heap
+
+Average CPU usage: 30-40%
+Average GC usage: N/A (VisualVM doesn't measure that)

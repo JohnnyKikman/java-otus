@@ -4,13 +4,14 @@
 
     <groupId>ru.otus</groupId>
     <artifactId>java-otus</artifactId>
-    <version>0.4.0</version>
+    <version>0.5.0</version>
 
     <modules>
         <module>hw01-maven</module>
         <module>hw02-list</module>
         <module>hw03-test-framework</module>
         <module>hw04-logging</module>
+        <module>hw05-gc</module>
     </modules>
 
     <properties>
@@ -22,6 +23,7 @@
         <guava.version>27.1-jre</guava.version>
         <junit.version>5.4.2</junit.version>
         <assertj.version>3.12.2</assertj.version>
+        <apache.commons-lang.version>3.9</apache.commons-lang.version>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +50,12 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons-lang.version}</version>
             </dependency>
 
             <dependency>

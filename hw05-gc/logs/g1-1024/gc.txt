@@ -1,0 +1,1643 @@
+[0.008s][debug][gc] ConcGCThreads: 1 offset 8
+[0.008s][debug][gc] ParallelGCThreads: 4
+[0.008s][debug][gc] Initialize mark stack with 4096 chunks, maximum 16384
+[0.030s][info ][gc] Using G1
+[0,438s][info ][gc] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 123M->95M(1024M) 119,487ms
+[0,766s][info ][gc] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 322M->299M(1024M) 123,861ms
+[1,052s][info ][gc] GC(2) Pause Young (Concurrent Start) (G1 Humongous Allocation) 493M->479M(1024M) 90,335ms
+[1,052s][info ][gc] GC(3) Concurrent Cycle
+[1,186s][debug][gc] GC(3) Reclaimed 414 empty regions
+[1,186s][info ][gc] GC(3) Pause Remark 606M->192M(1024M) 3,536ms
+[1,347s][info ][gc] GC(3) Pause Cleanup 354M->354M(1024M) 0,198ms
+[1,355s][info ][gc] GC(3) Concurrent Cycle 303,370ms
+[1,522s][info ][gc] GC(4) Pause Young (Normal) (G1 Evacuation Pause) 472M->449M(1024M) 96,915ms
+[1,571s][info ][gc] GC(5) Pause Young (Concurrent Start) (G1 Humongous Allocation) 462M->463M(1024M) 36,273ms
+[1,571s][info ][gc] GC(6) Concurrent Cycle
+[1,689s][debug][gc] GC(6) Reclaimed 371 empty regions
+[1,689s][info ][gc] GC(6) Pause Remark 601M->230M(1024M) 1,826ms
+[1,876s][info ][gc] GC(6) Pause Cleanup 490M->490M(1024M) 0,241ms
+[1,884s][info ][gc] GC(6) Concurrent Cycle 313,460ms
+[1,934s][info ][gc] GC(7) Pause Young (Concurrent Start) (G1 Humongous Allocation) 506M->487M(1024M) 46,598ms
+[1,934s][info ][gc] GC(8) Concurrent Cycle
+[2,090s][debug][gc] GC(8) Reclaimed 376 empty regions
+[2,090s][info ][gc] GC(8) Pause Remark 682M->306M(1024M) 1,999ms
+[2,358s][info ][gc] GC(8) Pause Cleanup 702M->702M(1024M) 0,418ms
+[2,361s][info ][gc] GC(8) Concurrent Cycle 427,603ms
+[2,446s][info ][gc] GC(9) Pause Young (Concurrent Start) (G1 Humongous Allocation) 703M->682M(1024M) 79,148ms
+[2,446s][info ][gc] GC(10) Concurrent Cycle
+[2,590s][debug][gc] GC(10) Reclaimed 547 empty regions
+[2,590s][info ][gc] GC(10) Pause Remark 842M->295M(1024M) 1,287ms
+[2,822s][info ][gc] GC(10) Pause Cleanup 651M->651M(1024M) 0,279ms
+[2,826s][info ][gc] GC(10) Concurrent Cycle 379,292ms
+[2,892s][info ][gc] GC(11) Pause Young (Concurrent Start) (G1 Humongous Allocation) 672M->654M(1024M) 57,728ms
+[2,892s][info ][gc] GC(12) Concurrent Cycle
+[3,205s][debug][gc] GC(12) Reclaimed 501 empty regions
+[3,205s][info ][gc] GC(12) Pause Remark 980M->479M(1024M) 2,046ms
+[3,543s][info ][gc] GC(13) Pause Young (Normal) (G1 Evacuation Pause) 891M->867M(1024M) 106,867ms
+[3,666s][info ][gc] GC(14) Pause Young (Normal) (G1 Humongous Allocation) 980M->977M(1024M) 44,528ms
+[3,667s][debug][gc] GC(15) Clear Next Bitmap 1,640ms
+[3,809s][info ][gc] GC(15) Pause Full (G1 Humongous Allocation) 977M->170M(1024M) 143,197ms
+[3,813s][info ][gc] GC(12) Concurrent Cycle 920,086ms
+[4,057s][info ][gc] GC(16) Pause Young (Concurrent Start) (G1 Humongous Allocation) 473M->465M(1024M) 17,807ms
+[4,057s][info ][gc] GC(17) Concurrent Cycle
+[4,420s][info ][gc] GC(18) Pause Young (Normal) (G1 Humongous Allocation) 880M->869M(1024M) 52,463ms
+[4,422s][debug][gc] GC(19) Clear Next Bitmap 1,749ms
+[4,604s][info ][gc] GC(19) Pause Full (G1 Humongous Allocation) 869M->189M(1024M) 183,153ms
+[4,604s][info ][gc] GC(17) Concurrent Cycle 546,763ms
+[4,753s][info ][gc] GC(20) Pause Young (Concurrent Start) (G1 Humongous Allocation) 468M->462M(1024M) 7,894ms
+[4,753s][info ][gc] GC(21) Concurrent Cycle
+[5,033s][debug][gc] GC(21) Reclaimed 265 empty regions
+[5,033s][info ][gc] GC(21) Pause Remark 886M->621M(1024M) 1,958ms
+[5,251s][info ][gc] GC(22) Pause Young (Normal) (G1 Humongous Allocation) 895M->877M(1024M) 46,455ms
+[5,289s][info ][gc] GC(23) Pause Young (Normal) (G1 Humongous Allocation) 906M->907M(1024M) 19,421ms
+[5,291s][debug][gc] GC(24) Clear Next Bitmap 1,460ms
+[5,451s][info ][gc] GC(24) Pause Full (G1 Humongous Allocation) 907M->213M(1024M) 161,082ms
+[5,452s][info ][gc] GC(21) Concurrent Cycle 698,964ms
+[5,578s][info ][gc] GC(25) Pause Young (Concurrent Start) (G1 Humongous Allocation) 466M->461M(1024M) 6,615ms
+[5,578s][info ][gc] GC(26) Concurrent Cycle
+[5,854s][debug][gc] GC(26) Reclaimed 243 empty regions
+[5,854s][info ][gc] GC(26) Pause Remark 838M->595M(1024M) 1,851ms
+[6,120s][info ][gc] GC(27) Pause Young (Normal) (G1 Humongous Allocation) 927M->911M(1024M) 39,947ms
+[6,121s][debug][gc] GC(28) Clear Next Bitmap 0,980ms
+[6,279s][info ][gc] GC(28) Pause Full (G1 Humongous Allocation) 911M->232M(1024M) 158,886ms
+[6,281s][info ][gc] GC(26) Concurrent Cycle 702,780ms
+[6,386s][info ][gc] GC(29) Pause Young (Concurrent Start) (G1 Humongous Allocation) 447M->444M(1024M) 5,449ms
+[6,386s][info ][gc] GC(30) Concurrent Cycle
+[6,683s][debug][gc] GC(30) Reclaimed 205 empty regions
+[6,683s][info ][gc] GC(30) Pause Remark 883M->678M(1024M) 2,257ms
+[6,974s][info ][gc] GC(31) Pause Young (Normal) (G1 Humongous Allocation) 970M->953M(1024M) 56,136ms
+[7,058s][info ][gc] GC(32) Pause Young (Normal) (G1 Humongous Allocation) 986M->986M(1024M) 49,472ms
+[7,059s][debug][gc] GC(33) Clear Next Bitmap 1,401ms
+[7,281s][info ][gc] GC(33) Pause Full (G1 Humongous Allocation) 986M->252M(1024M) 223,437ms
+[7,282s][info ][gc] GC(30) Concurrent Cycle 895,527ms
+[7,403s][info ][gc] GC(34) Pause Young (Concurrent Start) (G1 Humongous Allocation) 451M->447M(1024M) 5,622ms
+[7,403s][info ][gc] GC(35) Concurrent Cycle
+[7,732s][debug][gc] GC(35) Reclaimed 192 empty regions
+[7,732s][info ][gc] GC(35) Pause Remark 953M->761M(1024M) 2,049ms
+[7,865s][info ][gc] GC(36) Pause Young (Normal) (G1 Humongous Allocation) 898M->886M(1024M) 33,952ms
+[7,940s][info ][gc] GC(37) Pause Young (Normal) (G1 Humongous Allocation) 922M->922M(1024M) 47,485ms
+[7,970s][info ][gc] GC(38) Pause Young (Normal) (G1 Humongous Allocation) 957M->956M(1024M) 7,714ms
+[7,971s][debug][gc] GC(39) Clear Next Bitmap 1,188ms
+[8,149s][info ][gc] GC(39) Pause Full (G1 Humongous Allocation) 956M->268M(1024M) 179,232ms
+[8,149s][info ][gc] GC(35) Concurrent Cycle 746,582ms
+[8,249s][info ][gc] GC(40) Pause Young (Concurrent Start) (G1 Humongous Allocation) 444M->441M(1024M) 11,055ms
+[8,250s][info ][gc] GC(41) Concurrent Cycle
+[8,631s][info ][gc] GC(42) Pause Young (Normal) (G1 Humongous Allocation) 978M->968M(1024M) 28,903ms
+[8,632s][debug][gc] GC(43) Clear Next Bitmap 1,413ms
+[8,868s][info ][gc] GC(43) Pause Full (G1 Humongous Allocation) 968M->280M(1024M) 237,070ms
+[8,868s][info ][gc] GC(41) Concurrent Cycle 618,338ms
+[8,997s][info ][gc] GC(44) Pause Young (Concurrent Start) (G1 Humongous Allocation) 463M->459M(1024M) 9,707ms
+[8,997s][info ][gc] GC(45) Concurrent Cycle
+[9,404s][info ][gc] GC(46) Pause Young (Normal) (G1 Humongous Allocation) 982M->972M(1024M) 19,317ms
+[9,405s][debug][gc] GC(47) Clear Next Bitmap 0,935ms
+[9,578s][info ][gc] GC(47) Pause Full (G1 Humongous Allocation) 972M->292M(1024M) 173,759ms
+[9,578s][info ][gc] GC(45) Concurrent Cycle 580,691ms
+[9,650s][info ][gc] GC(48) Pause Young (Concurrent Start) (G1 Humongous Allocation) 445M->443M(1024M) 6,473ms
+[9,650s][info ][gc] GC(49) Concurrent Cycle
+[9,957s][info ][gc] GC(50) Pause Young (Normal) (G1 Humongous Allocation) 946M->936M(1024M) 19,626ms
+[9,958s][debug][gc] GC(51) Clear Next Bitmap 0,933ms
+[10,143s][info ][gc] GC(51) Pause Full (G1 Humongous Allocation) 936M->302M(1024M) 185,527ms
+[10,145s][info ][gc] GC(49) Concurrent Cycle 494,928ms
+[10,218s][info ][gc] GC(52) Pause Young (Concurrent Start) (G1 Humongous Allocation) 459M->457M(1024M) 7,510ms
+[10,218s][info ][gc] GC(53) Concurrent Cycle
+[10,517s][info ][gc] GC(54) Pause Young (Normal) (G1 Humongous Allocation) 975M->966M(1024M) 19,204ms
+[10,518s][debug][gc] GC(55) Clear Next Bitmap 1,127ms
+[10,696s][info ][gc] GC(55) Pause Full (G1 Humongous Allocation) 966M->312M(1024M) 178,449ms
+[10,696s][info ][gc] GC(53) Concurrent Cycle 478,274ms
+[10,753s][info ][gc] GC(56) Pause Young (Concurrent Start) (G1 Humongous Allocation) 434M->431M(1024M) 8,652ms
+[10,753s][info ][gc] GC(57) Concurrent Cycle
+[11,052s][info ][gc] GC(58) Pause Young (Normal) (G1 Humongous Allocation) 926M->916M(1024M) 17,363ms
+[11,053s][debug][gc] GC(59) Clear Next Bitmap 0,989ms
+[11,238s][info ][gc] GC(59) Pause Full (G1 Humongous Allocation) 916M->321M(1024M) 185,725ms
+[11,239s][info ][gc] GC(57) Concurrent Cycle 485,142ms
+[11,296s][info ][gc] GC(60) Pause Young (Concurrent Start) (G1 Humongous Allocation) 446M->444M(1024M) 9,710ms
+[11,296s][info ][gc] GC(61) Concurrent Cycle
+[11,553s][info ][gc] GC(62) Pause Young (Normal) (G1 Humongous Allocation) 908M->901M(1024M) 18,113ms
+[11,554s][debug][gc] GC(63) Clear Next Bitmap 0,917ms
+[11,735s][info ][gc] GC(63) Pause Full (G1 Humongous Allocation) 901M->329M(1024M) 181,117ms
+[11,735s][info ][gc] GC(61) Concurrent Cycle 438,829ms
+[11,794s][info ][gc] GC(64) Pause Young (Concurrent Start) (G1 Humongous Allocation) 458M->456M(1024M) 12,023ms
+[11,794s][info ][gc] GC(65) Concurrent Cycle
+[12,038s][info ][gc] GC(66) Pause Young (Normal) (G1 Humongous Allocation) 890M->882M(1024M) 18,361ms
+[12,039s][debug][gc] GC(67) Clear Next Bitmap 0,958ms
+[12,232s][info ][gc] GC(67) Pause Full (G1 Humongous Allocation) 882M->337M(1024M) 193,984ms
+[12,232s][info ][gc] GC(65) Concurrent Cycle 437,919ms
+[12,274s][info ][gc] GC(68) Pause Young (Concurrent Start) (G1 Humongous Allocation) 425M->424M(1024M) 11,498ms
+[12,274s][info ][gc] GC(69) Concurrent Cycle
+[12,528s][info ][gc] GC(70) Pause Young (Normal) (G1 Humongous Allocation) 910M->902M(1024M) 18,356ms
+[12,529s][debug][gc] GC(71) Clear Next Bitmap 1,136ms
+[12,716s][info ][gc] GC(71) Pause Full (G1 Humongous Allocation) 902M->345M(1024M) 187,637ms
+[12,716s][info ][gc] GC(69) Concurrent Cycle 441,716ms
+[12,762s][info ][gc] GC(72) Pause Young (Concurrent Start) (G1 Humongous Allocation) 435M->434M(1024M) 12,968ms
+[12,762s][info ][gc] GC(73) Concurrent Cycle
+[13,024s][info ][gc] GC(74) Pause Young (Normal) (G1 Humongous Allocation) 888M->879M(1024M) 28,796ms
+[13,025s][debug][gc] GC(75) Clear Next Bitmap 0,929ms
+[13,212s][info ][gc] GC(75) Pause Full (G1 Humongous Allocation) 879M->353M(1024M) 188,324ms
+[13,213s][info ][gc] GC(73) Concurrent Cycle 450,676ms
+[13,257s][info ][gc] GC(76) Pause Young (Concurrent Start) (G1 Humongous Allocation) 443M->442M(1024M) 13,028ms
+[13,257s][info ][gc] GC(77) Concurrent Cycle
+[13,507s][info ][gc] GC(78) Pause Young (Normal) (G1 Humongous Allocation) 904M->897M(1024M) 25,275ms
+[13,508s][debug][gc] GC(79) Clear Next Bitmap 0,968ms
+[13,701s][info ][gc] GC(79) Pause Full (G1 Humongous Allocation) 897M->360M(1024M) 194,128ms
+[13,701s][info ][gc] GC(77) Concurrent Cycle 444,253ms
+[13,750s][info ][gc] GC(80) Pause Young (Concurrent Start) (G1 Humongous Allocation) 453M->452M(1024M) 8,267ms
+[13,750s][info ][gc] GC(81) Concurrent Cycle
+[14,008s][info ][gc] GC(82) Pause Young (Normal) (G1 Humongous Allocation) 877M->869M(1024M) 15,909ms
+[14,009s][debug][gc] GC(83) Clear Next Bitmap 0,978ms
+[14,221s][info ][gc] GC(83) Pause Full (G1 Humongous Allocation) 869M->367M(1024M) 213,229ms
+[14,221s][info ][gc] GC(81) Concurrent Cycle 471,239ms
+[14,247s][info ][gc] GC(84) Pause Young (Concurrent Start) (G1 Humongous Allocation) 414M->414M(1024M) 9,689ms
+[14,247s][info ][gc] GC(85) Concurrent Cycle
+[14,500s][info ][gc] GC(86) Pause Young (Normal) (G1 Humongous Allocation) 892M->885M(1024M) 21,309ms
+[14,501s][debug][gc] GC(87) Clear Next Bitmap 0,962ms
+[14,702s][info ][gc] GC(87) Pause Full (G1 Humongous Allocation) 885M->374M(1024M) 201,840ms
+[14,702s][info ][gc] GC(85) Concurrent Cycle 455,344ms
+[14,727s][info ][gc] GC(88) Pause Young (Concurrent Start) (G1 Humongous Allocation) 422M->422M(1024M) 9,649ms
+[14,727s][info ][gc] GC(89) Concurrent Cycle
+[15,031s][info ][gc] GC(90) Pause Young (Normal) (G1 Humongous Allocation) 957M->948M(1024M) 23,331ms
+[15,033s][debug][gc] GC(91) Clear Next Bitmap 0,981ms
+[15,235s][info ][gc] GC(91) Pause Full (G1 Humongous Allocation) 948M->381M(1024M) 203,826ms
+[15,236s][info ][gc] GC(89) Concurrent Cycle 508,678ms
+[15,261s][info ][gc] GC(92) Pause Young (Concurrent Start) (G1 Humongous Allocation) 431M->430M(1024M) 9,751ms
+[15,261s][info ][gc] GC(93) Concurrent Cycle
+[15,530s][info ][gc] GC(94) Pause Young (Normal) (G1 Humongous Allocation) 924M->917M(1024M) 29,737ms
+[15,532s][debug][gc] GC(95) Clear Next Bitmap 0,984ms
+[15,755s][info ][gc] GC(95) Pause Full (G1 Humongous Allocation) 917M->388M(1024M) 223,924ms
+[15,755s][info ][gc] GC(93) Concurrent Cycle 493,818ms
+[15,784s][info ][gc] GC(96) Pause Young (Concurrent Start) (G1 Humongous Allocation) 438M->438M(1024M) 11,852ms
+[15,784s][info ][gc] GC(97) Concurrent Cycle
+[16,072s][info ][gc] GC(98) Pause Young (Normal) (G1 Humongous Allocation) 941M->933M(1024M) 35,158ms
+[16,073s][debug][gc] GC(99) Clear Next Bitmap 0,968ms
+[16,289s][info ][gc] GC(99) Pause Full (G1 Humongous Allocation) 933M->394M(1024M) 217,194ms
+[16,290s][info ][gc] GC(97) Concurrent Cycle 505,644ms
+[16,317s][info ][gc] GC(100) Pause Young (Concurrent Start) (G1 Humongous Allocation) 445M->445M(1024M) 11,037ms
+[16,317s][info ][gc] GC(101) Concurrent Cycle
+[16,568s][info ][gc] GC(102) Pause Young (Normal) (G1 Humongous Allocation) 905M->899M(1024M) 27,774ms
+[16,569s][debug][gc] GC(103) Clear Next Bitmap 0,948ms
+[16,780s][info ][gc] GC(103) Pause Full (G1 Humongous Allocation) 899M->400M(1024M) 211,450ms
+[16,780s][info ][gc] GC(101) Concurrent Cycle 463,141ms
+[16,810s][info ][gc] GC(104) Pause Young (Concurrent Start) (G1 Humongous Allocation) 452M->451M(1024M) 11,997ms
+[16,810s][info ][gc] GC(105) Concurrent Cycle
+[17,066s][info ][gc] GC(106) Pause Young (Normal) (G1 Humongous Allocation) 868M->861M(1024M) 25,020ms
+[17,067s][debug][gc] GC(107) Clear Next Bitmap 0,935ms
+[17,318s][info ][gc] GC(107) Pause Full (G1 Humongous Allocation) 861M->406M(1024M) 252,009ms
+[17,318s][info ][gc] GC(105) Concurrent Cycle 507,912ms
+[17,345s][info ][gc] GC(108) Pause Young (Concurrent Start) (G1 Humongous Allocation) 458M->458M(1024M) 10,235ms
+[17,345s][info ][gc] GC(109) Concurrent Cycle
+[17,555s][info ][gc] GC(110) Pause Young (Normal) (G1 Humongous Allocation) 824M->820M(1024M) 24,021ms
+[17,556s][debug][gc] GC(111) Clear Next Bitmap 1,207ms
+[17,779s][info ][gc] GC(111) Pause Full (G1 Humongous Allocation) 820M->411M(1024M) 224,031ms
+[17,779s][info ][gc] GC(109) Concurrent Cycle 434,450ms
+[17,806s][info ][gc] GC(112) Pause Young (Concurrent Start) (G1 Humongous Allocation) 465M->464M(1024M) 10,510ms
+[17,806s][info ][gc] GC(113) Concurrent Cycle
+[18,063s][info ][gc] GC(114) Pause Young (Normal) (G1 Humongous Allocation) 891M->884M(1024M) 25,090ms
+[18,065s][debug][gc] GC(115) Clear Next Bitmap 1,118ms
+[18,297s][info ][gc] GC(115) Pause Full (G1 Humongous Allocation) 884M->416M(1024M) 233,438ms
+[18,297s][info ][gc] GC(113) Concurrent Cycle 491,317ms
+[18,326s][info ][gc] GC(116) Pause Young (Concurrent Start) (G1 Humongous Allocation) 470M->469M(1024M) 10,532ms
+[18,326s][info ][gc] GC(117) Concurrent Cycle
+[18,581s][info ][gc] GC(118) Pause Young (Normal) (G1 Humongous Allocation) 900M->895M(1024M) 25,782ms
+[18,582s][debug][gc] GC(119) Clear Next Bitmap 0,984ms
+[18,812s][info ][gc] GC(119) Pause Full (G1 Humongous Allocation) 895M->422M(1024M) 231,237ms
+[18,812s][info ][gc] GC(117) Concurrent Cycle 486,246ms
+[18,840s][info ][gc] GC(120) Pause Young (Concurrent Start) (G1 Humongous Allocation) 476M->476M(1024M) 10,682ms
+[18,840s][info ][gc] GC(121) Concurrent Cycle
+[19,094s][info ][gc] GC(122) Pause Young (Normal) (G1 Humongous Allocation) 913M->906M(1024M) 28,890ms
+[19,095s][debug][gc] GC(123) Clear Next Bitmap 0,948ms
+[19,344s][info ][gc] GC(123) Pause Full (G1 Humongous Allocation) 906M->428M(1024M) 249,977ms
+[19,345s][info ][gc] GC(121) Concurrent Cycle 504,792ms
+[19,373s][info ][gc] GC(124) Pause Young (Concurrent Start) (G1 Humongous Allocation) 483M->482M(1024M) 11,001ms
+[19,373s][info ][gc] GC(125) Concurrent Cycle
+[19,641s][info ][gc] GC(126) Pause Young (Normal) (G1 Humongous Allocation) 979M->973M(1024M) 28,217ms
+[19,643s][debug][gc] GC(127) Clear Next Bitmap 1,035ms
+[19,877s][info ][gc] GC(127) Pause Full (G1 Humongous Allocation) 973M->433M(1024M) 235,201ms
+[19,877s][info ][gc] GC(125) Concurrent Cycle 504,369ms
+[19,924s][info ][gc] GC(128) Pause Young (Concurrent Start) (G1 Humongous Allocation) 490M->488M(1024M) 20,914ms
+[19,924s][info ][gc] GC(129) Concurrent Cycle
+[20,217s][info ][gc] GC(130) Pause Young (Normal) (G1 Humongous Allocation) 994M->987M(1024M) 29,701ms
+[20,219s][debug][gc] GC(131) Clear Next Bitmap 0,945ms
+[20,461s][info ][gc] GC(131) Pause Full (G1 Humongous Allocation) 987M->439M(1024M) 243,323ms
+[20,461s][info ][gc] GC(129) Concurrent Cycle 537,612ms
+[20,492s][info ][gc] GC(132) Pause Young (Concurrent Start) (G1 Humongous Allocation) 496M->495M(1024M) 12,126ms
+[20,492s][info ][gc] GC(133) Concurrent Cycle
+[20,709s][info ][gc] GC(134) Pause Young (Normal) (G1 Humongous Allocation) 893M->888M(1024M) 24,504ms
+[20,710s][debug][gc] GC(135) Clear Next Bitmap 1,008ms
+[20,944s][info ][gc] GC(135) Pause Full (G1 Humongous Allocation) 888M->444M(1024M) 235,199ms
+[20,944s][info ][gc] GC(133) Concurrent Cycle 452,430ms
+[20,986s][info ][gc] GC(136) Pause Young (Concurrent Start) (G1 Humongous Allocation) 504M->501M(1024M) 17,736ms
+[20,986s][info ][gc] GC(137) Concurrent Cycle
+[21,252s][info ][gc] GC(138) Pause Young (Normal) (G1 Humongous Allocation) 959M->953M(1024M) 25,097ms
+[21,255s][debug][gc] GC(139) Clear Next Bitmap 1,507ms
+[21,489s][info ][gc] GC(139) Pause Full (G1 Humongous Allocation) 953M->449M(1024M) 236,299ms
+[21,490s][info ][gc] GC(137) Concurrent Cycle 503,883ms
+[21,519s][info ][gc] GC(140) Pause Young (Concurrent Start) (G1 Humongous Allocation) 507M->506M(1024M) 11,240ms
+[21,519s][info ][gc] GC(141) Concurrent Cycle
+[21,775s][info ][gc] GC(142) Pause Young (Normal) (G1 Humongous Allocation) 972M->966M(1024M) 28,603ms
+[21,776s][debug][gc] GC(143) Clear Next Bitmap 0,958ms
+[22,018s][info ][gc] GC(143) Pause Full (G1 Humongous Allocation) 966M->455M(1024M) 243,489ms
+[22,019s][info ][gc] GC(141) Concurrent Cycle 499,875ms
+[22,066s][info ][gc] GC(144) Pause Young (Concurrent Start) (G1 Humongous Allocation) 515M->513M(1024M) 22,036ms
+[22,066s][info ][gc] GC(145) Concurrent Cycle
+[22,328s][info ][gc] GC(146) Pause Young (Normal) (G1 Humongous Allocation) 982M->977M(1024M) 28,843ms
+[22,330s][debug][gc] GC(147) Clear Next Bitmap 1,010ms
+[22,575s][info ][gc] GC(147) Pause Full (G1 Humongous Allocation) 977M->461M(1024M) 246,253ms
+[22,575s][info ][gc] GC(145) Concurrent Cycle 509,042ms
+[22,606s][info ][gc] GC(148) Pause Young (Concurrent Start) (G1 Humongous Allocation) 520M->520M(1024M) 12,730ms
+[22,606s][info ][gc] GC(149) Concurrent Cycle
+[22,805s][info ][gc] GC(150) Pause Young (Normal) (G1 Humongous Allocation) 875M->871M(1024M) 26,460ms
+[22,807s][debug][gc] GC(151) Clear Next Bitmap 0,993ms
+[23,053s][info ][gc] GC(151) Pause Full (G1 Humongous Allocation) 871M->465M(1024M) 247,332ms
+[23,053s][info ][gc] GC(149) Concurrent Cycle 447,078ms
+[23,095s][info ][gc] GC(152) Pause Young (Concurrent Start) (G1 Humongous Allocation) 526M->524M(1024M) 17,372ms
+[23,095s][info ][gc] GC(153) Concurrent Cycle
+[23,307s][info ][gc] GC(154) Pause Young (Normal) (G1 Humongous Allocation) 885M->879M(1024M) 32,773ms
+[23,309s][debug][gc] GC(155) Clear Next Bitmap 1,362ms
+[23,557s][info ][gc] GC(155) Pause Full (G1 Humongous Allocation) 879M->469M(1024M) 249,625ms
+[23,558s][info ][gc] GC(153) Concurrent Cycle 462,242ms
+[23,588s][info ][gc] GC(156) Pause Young (Concurrent Start) (G1 Humongous Allocation) 530M->529M(1024M) 11,697ms
+[23,588s][info ][gc] GC(157) Concurrent Cycle
+[23,821s][info ][gc] GC(158) Pause Young (Normal) (G1 Humongous Allocation) 950M->946M(1024M) 27,451ms
+[23,822s][debug][gc] GC(159) Clear Next Bitmap 1,022ms
+[24,078s][info ][gc] GC(159) Pause Full (G1 Humongous Allocation) 946M->474M(1024M) 256,738ms
+[24,079s][info ][gc] GC(157) Concurrent Cycle 490,516ms
+[24,123s][info ][gc] GC(160) Pause Young (Concurrent Start) (G1 Humongous Allocation) 537M->535M(1024M) 17,594ms
+[24,123s][info ][gc] GC(161) Concurrent Cycle
+[24,336s][info ][gc] GC(162) Pause Young (Normal) (G1 Humongous Allocation) 902M->897M(1024M) 27,061ms
+[24,338s][debug][gc] GC(163) Clear Next Bitmap 1,070ms
+[24,589s][info ][gc] GC(163) Pause Full (G1 Humongous Allocation) 897M->478M(1024M) 252,764ms
+[24,590s][info ][gc] GC(161) Concurrent Cycle 466,613ms
+[24,620s][info ][gc] GC(164) Pause Young (Concurrent Start) (G1 Humongous Allocation) 540M->539M(1024M) 12,035ms
+[24,620s][info ][gc] GC(165) Concurrent Cycle
+[24,824s][info ][gc] GC(166) Pause Young (Normal) (G1 Humongous Allocation) 907M->903M(1024M) 27,561ms
+[24,826s][debug][gc] GC(167) Clear Next Bitmap 0,988ms
+[25,078s][info ][gc] GC(167) Pause Full (G1 Humongous Allocation) 903M->483M(1024M) 253,371ms
+[25,079s][info ][gc] GC(165) Concurrent Cycle 458,897ms
+[25,128s][info ][gc] GC(168) Pause Young (Concurrent Start) (G1 Humongous Allocation) 547M->545M(1024M) 18,625ms
+[25,128s][info ][gc] GC(169) Concurrent Cycle
+[25,380s][info ][gc] GC(170) Pause Young (Normal) (G1 Humongous Allocation) 981M->975M(1024M) 26,469ms
+[25,381s][debug][gc] GC(171) Clear Next Bitmap 0,987ms
+[25,647s][info ][gc] GC(171) Pause Full (G1 Humongous Allocation) 975M->487M(1024M) 266,807ms
+[25,647s][info ][gc] GC(169) Concurrent Cycle 519,264ms
+[25,679s][info ][gc] GC(172) Pause Young (Concurrent Start) (G1 Humongous Allocation) 550M->549M(1024M) 12,259ms
+[25,679s][info ][gc] GC(173) Concurrent Cycle
+[25,885s][info ][gc] GC(174) Pause Young (Normal) (G1 Humongous Allocation) 925M->921M(1024M) 25,695ms
+[25,886s][debug][gc] GC(175) Clear Next Bitmap 0,949ms
+[26,150s][info ][gc] GC(175) Pause Full (G1 Humongous Allocation) 921M->492M(1024M) 264,707ms
+[26,151s][info ][gc] GC(173) Concurrent Cycle 472,359ms
+[26,204s][info ][gc] GC(176) Pause Young (Concurrent Start) (G1 Humongous Allocation) 556M->555M(1024M) 23,503ms
+[26,204s][info ][gc] GC(177) Concurrent Cycle
+[26,391s][info ][gc] GC(178) Pause Young (Normal) (G1 Humongous Allocation) 871M->867M(1024M) 22,175ms
+[26,392s][debug][gc] GC(179) Clear Next Bitmap 0,979ms
+[26,671s][info ][gc] GC(179) Pause Full (G1 Humongous Allocation) 867M->495M(1024M) 279,857ms
+[26,671s][info ][gc] GC(177) Concurrent Cycle 466,788ms
+[26,703s][info ][gc] GC(180) Pause Young (Concurrent Start) (G1 Humongous Allocation) 559M->558M(1024M) 12,208ms
+[26,703s][info ][gc] GC(181) Concurrent Cycle
+[26,863s][info ][gc] GC(182) Pause Young (Normal) (G1 Humongous Allocation) 812M->809M(1024M) 27,091ms
+[26,864s][debug][gc] GC(183) Clear Next Bitmap 0,925ms
+[27,121s][info ][gc] GC(183) Pause Full (G1 Humongous Allocation) 809M->499M(1024M) 257,793ms
+[27,121s][info ][gc] GC(181) Concurrent Cycle 418,403ms
+[27,173s][info ][gc] GC(184) Pause Young (Concurrent Start) (G1 Humongous Allocation) 565M->563M(1024M) 24,258ms
+[27,173s][info ][gc] GC(185) Concurrent Cycle
+[27,338s][info ][gc] GC(186) Pause Young (Normal) (G1 Humongous Allocation) 820M->817M(1024M) 23,892ms
+[27,339s][debug][gc] GC(187) Clear Next Bitmap 0,933ms
+[27,639s][info ][gc] GC(187) Pause Full (G1 Humongous Allocation) 817M->502M(1024M) 301,536ms
+[27,640s][info ][gc] GC(185) Concurrent Cycle 466,341ms
+[27,673s][info ][gc] GC(188) Pause Young (Concurrent Start) (G1 Humongous Allocation) 566M->565M(1024M) 12,559ms
+[27,689s][info ][gc] GC(189) Concurrent Cycle
+[27,871s][info ][gc] GC(190) Pause Young (Normal) (G1 Humongous Allocation) 886M->883M(1024M) 26,943ms
+[27,872s][debug][gc] GC(191) Clear Next Bitmap 0,976ms
+[28,146s][info ][gc] GC(191) Pause Full (G1 Humongous Allocation) 883M->505M(1024M) 275,282ms
+[28,146s][info ][gc] GC(189) Concurrent Cycle 457,712ms
+[28,190s][info ][gc] GC(192) Pause Young (Concurrent Start) (G1 Humongous Allocation) 571M->569M(1024M) 17,229ms
+[28,190s][info ][gc] GC(193) Concurrent Cycle
+[28,374s][info ][gc] GC(194) Pause Young (Normal) (G1 Humongous Allocation) 895M->891M(1024M) 25,735ms
+[28,375s][debug][gc] GC(195) Clear Next Bitmap 1,019ms
+[28,639s][info ][gc] GC(195) Pause Full (G1 Humongous Allocation) 891M->509M(1024M) 264,535ms
+[28,639s][info ][gc] GC(193) Concurrent Cycle 449,071ms
+[28,673s][info ][gc] GC(196) Pause Young (Concurrent Start) (G1 Humongous Allocation) 574M->574M(1024M) 12,727ms
+[28,673s][info ][gc] GC(197) Concurrent Cycle
+[28,822s][info ][gc] GC(198) Pause Young (Normal) (G1 Humongous Allocation) 835M->832M(1024M) 24,885ms
+[28,823s][debug][gc] GC(199) Clear Next Bitmap 0,992ms
+[29,097s][info ][gc] GC(199) Pause Full (G1 Humongous Allocation) 832M->512M(1024M) 275,046ms
+[29,102s][info ][gc] GC(197) Concurrent Cycle 428,848ms
+[29,143s][info ][gc] GC(200) Pause Young (Concurrent Start) (G1 Humongous Allocation) 579M->576M(1024M) 19,068ms
+[29,144s][info ][gc] GC(201) Concurrent Cycle
+[29,330s][info ][gc] GC(202) Pause Young (Normal) (G1 Humongous Allocation) 905M->902M(1024M) 24,290ms
+[29,331s][debug][gc] GC(203) Clear Next Bitmap 0,966ms
+[29,614s][info ][gc] GC(203) Pause Full (G1 Humongous Allocation) 902M->516M(1024M) 284,245ms
+[29,615s][info ][gc] GC(201) Concurrent Cycle 471,237ms
+[29,657s][info ][gc] GC(204) Pause Young (Concurrent Start) (G1 Humongous Allocation) 582M->582M(1024M) 13,895ms
+[29,657s][info ][gc] GC(205) Concurrent Cycle
+[29,840s][info ][gc] GC(206) Pause Young (Normal) (G1 Humongous Allocation) 913M->909M(1024M) 24,632ms
+[29,841s][debug][gc] GC(207) Clear Next Bitmap 0,963ms
+[30,110s][info ][gc] GC(207) Pause Full (G1 Humongous Allocation) 909M->519M(1024M) 269,850ms
+[30,111s][info ][gc] GC(205) Concurrent Cycle 454,260ms
+[30,154s][info ][gc] GC(208) Pause Young (Concurrent Start) (G1 Humongous Allocation) 587M->585M(1024M) 18,324ms
+[30,154s][info ][gc] GC(209) Concurrent Cycle
+[30,347s][info ][gc] GC(210) Pause Young (Normal) (G1 Humongous Allocation) 918M->914M(1024M) 30,128ms
+[30,349s][debug][gc] GC(211) Clear Next Bitmap 0,956ms
+[30,622s][info ][gc] GC(211) Pause Full (G1 Humongous Allocation) 914M->523M(1024M) 274,181ms
+[30,622s][info ][gc] GC(209) Concurrent Cycle 467,790ms
+[30,656s][info ][gc] GC(212) Pause Young (Concurrent Start) (G1 Humongous Allocation) 591M->590M(1024M) 13,089ms
+[30,656s][info ][gc] GC(213) Concurrent Cycle
+[30,841s][info ][gc] GC(214) Pause Young (Normal) (G1 Humongous Allocation) 926M->923M(1024M) 24,785ms
+[30,843s][debug][gc] GC(215) Clear Next Bitmap 0,948ms
+[31,122s][info ][gc] GC(215) Pause Full (G1 Humongous Allocation) 923M->526M(1024M) 280,603ms
+[31,124s][info ][gc] GC(213) Concurrent Cycle 467,717ms
+[31,171s][info ][gc] GC(216) Pause Young (Concurrent Start) (G1 Humongous Allocation) 595M->593M(1024M) 14,668ms
+[31,171s][info ][gc] GC(217) Concurrent Cycle
+[31,324s][info ][gc] GC(218) Pause Young (Normal) (G1 Humongous Allocation) 862M->859M(1024M) 24,045ms
+[31,325s][debug][gc] GC(219) Clear Next Bitmap 1,297ms
+[31,603s][info ][gc] GC(219) Pause Full (G1 Humongous Allocation) 859M->529M(1024M) 278,855ms
+[31,603s][info ][gc] GC(217) Concurrent Cycle 432,000ms
+[31,637s][info ][gc] GC(220) Pause Young (Concurrent Start) (G1 Humongous Allocation) 596M->596M(1024M) 12,979ms
+[31,637s][info ][gc] GC(221) Concurrent Cycle
+[31,759s][info ][gc] GC(222) Pause Young (Normal) (G1 Humongous Allocation) 801M->798M(1024M) 25,186ms
+[31,761s][debug][gc] GC(223) Clear Next Bitmap 1,256ms
+[32,035s][info ][gc] GC(223) Pause Full (G1 Humongous Allocation) 798M->532M(1024M) 275,249ms
+[32,042s][info ][gc] GC(221) Concurrent Cycle 404,835ms
+[32,081s][info ][gc] GC(224) Pause Young (Concurrent Start) (G1 Humongous Allocation) 602M->600M(1024M) 19,823ms
+[32,081s][info ][gc] GC(225) Concurrent Cycle
+[32,239s][info ][gc] GC(226) Pause Young (Normal) (G1 Humongous Allocation) 873M->870M(1024M) 23,689ms
+[32,241s][debug][gc] GC(227) Clear Next Bitmap 0,981ms
+[32,522s][info ][gc] GC(227) Pause Full (G1 Humongous Allocation) 870M->535M(1024M) 282,059ms
+[32,522s][info ][gc] GC(225) Concurrent Cycle 440,904ms
+[32,557s][info ][gc] GC(228) Pause Young (Concurrent Start) (G1 Humongous Allocation) 603M->603M(1024M) 13,029ms
+[32,557s][info ][gc] GC(229) Concurrent Cycle
+[32,748s][info ][gc] GC(230) Pause Young (Normal) (G1 Humongous Allocation) 945M->941M(1024M) 24,791ms
+[32,749s][debug][gc] GC(231) Clear Next Bitmap 0,966ms
+[33,027s][info ][gc] GC(231) Pause Full (G1 Humongous Allocation) 941M->539M(1024M) 278,745ms
+[33,028s][info ][gc] GC(229) Concurrent Cycle 471,356ms
+[33,069s][info ][gc] GC(232) Pause Young (Concurrent Start) (G1 Humongous Allocation) 610M->608M(1024M) 14,038ms
+[33,069s][info ][gc] GC(233) Concurrent Cycle
+[33,265s][info ][gc] GC(234) Pause Young (Normal) (G1 Humongous Allocation) 954M->950M(1024M) 24,340ms
+[33,267s][debug][gc] GC(235) Clear Next Bitmap 1,034ms
+[33,546s][info ][gc] GC(235) Pause Full (G1 Humongous Allocation) 950M->542M(1024M) 280,278ms
+[33,546s][info ][gc] GC(233) Concurrent Cycle 476,864ms
+[33,581s][info ][gc] GC(236) Pause Young (Concurrent Start) (G1 Humongous Allocation) 612M->611M(1024M) 13,273ms
+[33,581s][info ][gc] GC(237) Concurrent Cycle
+[33,736s][info ][gc] GC(238) Pause Young (Normal) (G1 Humongous Allocation) 888M->885M(1024M) 23,353ms
+[33,738s][debug][gc] GC(239) Clear Next Bitmap 1,014ms
+[34,028s][info ][gc] GC(239) Pause Full (G1 Humongous Allocation) 885M->545M(1024M) 291,625ms
+[34,029s][info ][gc] GC(237) Concurrent Cycle 448,492ms
+[34,079s][info ][gc] GC(240) Pause Young (Concurrent Start) (G1 Humongous Allocation) 616M->614M(1024M) 19,214ms
+[34,079s][info ][gc] GC(241) Concurrent Cycle
+[34,205s][info ][gc] GC(242) Pause Young (Normal) (G1 Humongous Allocation) 825M->822M(1024M) 22,825ms
+[34,206s][debug][gc] GC(243) Clear Next Bitmap 1,002ms
+[34,488s][info ][gc] GC(243) Pause Full (G1 Humongous Allocation) 822M->548M(1024M) 282,584ms
+[34,488s][info ][gc] GC(241) Concurrent Cycle 408,944ms
+[34,526s][info ][gc] GC(244) Pause Young (Concurrent Start) (G1 Humongous Allocation) 618M->618M(1024M) 14,529ms
+[34,526s][info ][gc] GC(245) Concurrent Cycle
+[34,688s][info ][gc] GC(246) Pause Young (Normal) (G1 Humongous Allocation) 899M->896M(1024M) 19,457ms
+[34,690s][debug][gc] GC(247) Clear Next Bitmap 1,005ms
+[34,975s][info ][gc] GC(247) Pause Full (G1 Humongous Allocation) 896M->551M(1024M) 286,399ms
+[34,975s][info ][gc] GC(245) Concurrent Cycle 449,243ms
+[35,027s][info ][gc] GC(248) Pause Young (Concurrent Start) (G1 Humongous Allocation) 623M->620M(1024M) 18,869ms
+[35,028s][info ][gc] GC(249) Concurrent Cycle
+[35,189s][info ][gc] GC(250) Pause Young (Normal) (G1 Humongous Allocation) 901M->898M(1024M) 24,851ms
+[35,190s][debug][gc] GC(251) Clear Next Bitmap 1,394ms
+[35,482s][info ][gc] GC(251) Pause Full (G1 Humongous Allocation) 898M->553M(1024M) 293,275ms
+[35,483s][info ][gc] GC(249) Concurrent Cycle 454,986ms
+[35,517s][info ][gc] GC(252) Pause Young (Concurrent Start) (G1 Humongous Allocation) 625M->624M(1024M) 13,592ms
+[35,518s][info ][gc] GC(253) Concurrent Cycle
+[35,677s][info ][gc] GC(254) Pause Young (Normal) (G1 Humongous Allocation) 909M->906M(1024M) 25,280ms
+[35,679s][debug][gc] GC(255) Clear Next Bitmap 1,263ms
+[35,980s][info ][gc] GC(255) Pause Full (G1 Humongous Allocation) 906M->557M(1024M) 302,787ms
+[35,981s][info ][gc] GC(253) Concurrent Cycle 463,278ms
+[36,029s][info ][gc] GC(256) Pause Young (Concurrent Start) (G1 Humongous Allocation) 630M->628M(1024M) 18,798ms
+[36,029s][info ][gc] GC(257) Concurrent Cycle
+[36,194s][info ][gc] GC(258) Pause Young (Normal) (G1 Humongous Allocation) 913M->910M(1024M) 24,261ms
+[36,195s][debug][gc] GC(259) Clear Next Bitmap 0,986ms
+[36,483s][info ][gc] GC(259) Pause Full (G1 Humongous Allocation) 910M->560M(1024M) 289,100ms
+[36,484s][info ][gc] GC(257) Concurrent Cycle 454,468ms
+[36,520s][info ][gc] GC(260) Pause Young (Concurrent Start) (G1 Humongous Allocation) 631M->631M(1024M) 13,673ms
+[36,520s][info ][gc] GC(261) Concurrent Cycle
+[36,684s][info ][gc] GC(262) Pause Young (Normal) (G1 Humongous Allocation) 918M->914M(1024M) 29,408ms
+[36,685s][debug][gc] GC(263) Clear Next Bitmap 0,968ms
+[36,977s][info ][gc] GC(263) Pause Full (G1 Humongous Allocation) 914M->563M(1024M) 292,639ms
+[36,979s][info ][gc] GC(261) Concurrent Cycle 458,940ms
+[37,027s][info ][gc] GC(264) Pause Young (Concurrent Start) (G1 Humongous Allocation) 637M->635M(1024M) 18,973ms
+[37,027s][info ][gc] GC(265) Concurrent Cycle
+[37,157s][info ][gc] GC(266) Pause Young (Normal) (G1 Humongous Allocation) 852M->850M(1024M) 20,951ms
+[37,158s][debug][gc] GC(267) Clear Next Bitmap 0,977ms
+[37,457s][info ][gc] GC(267) Pause Full (G1 Humongous Allocation) 850M->565M(1024M) 299,907ms
+[37,457s][info ][gc] GC(265) Concurrent Cycle 430,088ms
+[37,494s][info ][gc] GC(268) Pause Young (Concurrent Start) (G1 Humongous Allocation) 638M->637M(1024M) 14,185ms
+[37,494s][info ][gc] GC(269) Concurrent Cycle
+[37,622s][info ][gc] GC(270) Pause Young (Normal) (G1 Humongous Allocation) 854M->852M(1024M) 26,781ms
+[37,623s][debug][gc] GC(271) Clear Next Bitmap 0,985ms
+[37,915s][info ][gc] GC(271) Pause Full (G1 Humongous Allocation) 852M->568M(1024M) 293,441ms
+[37,917s][info ][gc] GC(269) Concurrent Cycle 422,818ms
+[37,962s][info ][gc] GC(272) Pause Young (Concurrent Start) (G1 Humongous Allocation) 642M->639M(1024M) 18,258ms
+[37,962s][info ][gc] GC(273) Concurrent Cycle
+[38,095s][info ][gc] GC(274) Pause Young (Normal) (G1 Humongous Allocation) 857M->855M(1024M) 27,374ms
+[38,097s][debug][gc] GC(275) Clear Next Bitmap 0,950ms
+[38,393s][info ][gc] GC(275) Pause Full (G1 Humongous Allocation) 855M->571M(1024M) 297,130ms
+[38,393s][info ][gc] GC(273) Concurrent Cycle 430,783ms
+[38,429s][info ][gc] GC(276) Pause Young (Concurrent Start) (G1 Humongous Allocation) 644M->643M(1024M) 14,047ms
+[38,429s][info ][gc] GC(277) Concurrent Cycle
+[38,556s][info ][gc] GC(278) Pause Young (Normal) (G1 Humongous Allocation) 863M->861M(1024M) 25,276ms
+[38,557s][debug][gc] GC(279) Clear Next Bitmap 0,984ms
+[38,859s][info ][gc] GC(279) Pause Full (G1 Humongous Allocation) 861M->573M(1024M) 303,027ms
+[38,860s][info ][gc] GC(277) Concurrent Cycle 430,286ms
+[38,896s][info ][gc] GC(280) Pause Young (Concurrent Start) (G1 Humongous Allocation) 646M->646M(1024M) 14,282ms
+[38,896s][info ][gc] GC(281) Concurrent Cycle
+[39,033s][info ][gc] GC(282) Pause Young (Normal) (G1 Humongous Allocation) 867M->863M(1024M) 24,655ms
+[39,034s][debug][gc] GC(283) Clear Next Bitmap 0,947ms
+[39,330s][info ][gc] GC(283) Pause Full (G1 Humongous Allocation) 863M->575M(1024M) 296,522ms
+[39,330s][info ][gc] GC(281) Concurrent Cycle 433,944ms
+[39,367s][info ][gc] GC(284) Pause Young (Concurrent Start) (G1 Humongous Allocation) 648M->648M(1024M) 14,223ms
+[39,367s][info ][gc] GC(285) Concurrent Cycle
+[39,497s][info ][gc] GC(286) Pause Young (Normal) (G1 Humongous Allocation) 868M->865M(1024M) 26,971ms
+[39,499s][debug][gc] GC(287) Clear Next Bitmap 0,960ms
+[39,796s][info ][gc] GC(287) Pause Full (G1 Humongous Allocation) 865M->577M(1024M) 298,887ms
+[39,797s][info ][gc] GC(285) Concurrent Cycle 429,430ms
+[39,833s][info ][gc] GC(288) Pause Young (Concurrent Start) (G1 Humongous Allocation) 652M->651M(1024M) 14,196ms
+[39,833s][info ][gc] GC(289) Concurrent Cycle
+[40,017s][info ][gc] GC(290) Pause Young (Normal) (G1 Humongous Allocation) 948M->945M(1024M) 32,403ms
+[40,018s][debug][gc] GC(291) Clear Next Bitmap 0,961ms
+[40,325s][info ][gc] GC(291) Pause Full (G1 Humongous Allocation) 945M->581M(1024M) 308,347ms
+[40,326s][info ][gc] GC(289) Concurrent Cycle 492,367ms
+[40,363s][info ][gc] GC(292) Pause Young (Concurrent Start) (G1 Humongous Allocation) 655M->655M(1024M) 14,342ms
+[40,363s][info ][gc] GC(293) Concurrent Cycle
+[40,491s][info ][gc] GC(294) Pause Young (Normal) (G1 Humongous Allocation) 878M->875M(1024M) 24,447ms
+[40,492s][debug][gc] GC(295) Clear Next Bitmap 0,966ms
+[40,795s][info ][gc] GC(295) Pause Full (G1 Humongous Allocation) 875M->583M(1024M) 303,608ms
+[40,795s][info ][gc] GC(293) Concurrent Cycle 431,841ms
+[40,840s][info ][gc] GC(296) Pause Young (Concurrent Start) (G1 Humongous Allocation) 657M->657M(1024M) 15,377ms
+[40,841s][info ][gc] GC(297) Concurrent Cycle
+[41,028s][info ][gc] GC(298) Pause Young (Normal) (G1 Humongous Allocation) 955M->952M(1024M) 24,957ms
+[41,029s][debug][gc] GC(299) Clear Next Bitmap 1,011ms
+[41,330s][info ][gc] GC(299) Pause Full (G1 Humongous Allocation) 952M->586M(1024M) 302,129ms
+[41,330s][info ][gc] GC(297) Concurrent Cycle 489,859ms
+[41,367s][info ][gc] GC(300) Pause Young (Concurrent Start) (G1 Humongous Allocation) 662M->661M(1024M) 14,288ms
+[41,367s][info ][gc] GC(301) Concurrent Cycle
+[41,497s][info ][gc] GC(302) Pause Young (Normal) (G1 Humongous Allocation) 887M->885M(1024M) 24,909ms
+[41,498s][debug][gc] GC(303) Clear Next Bitmap 1,181ms
+[41,807s][info ][gc] GC(303) Pause Full (G1 Humongous Allocation) 885M->589M(1024M) 310,044ms
+[41,808s][info ][gc] GC(301) Concurrent Cycle 440,254ms
+[41,845s][info ][gc] GC(304) Pause Young (Concurrent Start) (G1 Humongous Allocation) 664M->663M(1024M) 14,400ms
+[41,845s][info ][gc] GC(305) Concurrent Cycle
+[42,033s][info ][gc] GC(306) Pause Young (Normal) (G1 Humongous Allocation) 966M->961M(1024M) 35,403ms
+[42,035s][debug][gc] GC(307) Clear Next Bitmap 1,043ms
+[42,346s][info ][gc] GC(307) Pause Full (G1 Humongous Allocation) 961M->591M(1024M) 311,955ms
+[42,346s][info ][gc] GC(305) Concurrent Cycle 501,303ms
+[42,384s][info ][gc] GC(308) Pause Young (Concurrent Start) (G1 Humongous Allocation) 667M->666M(1024M) 14,425ms
+[42,384s][info ][gc] GC(309) Concurrent Cycle
+[42,476s][info ][gc] GC(310) Pause Young (Normal) (G1 Humongous Allocation) 817M->815M(1024M) 22,862ms
+[42,477s][debug][gc] GC(311) Clear Next Bitmap 0,978ms
+[42,794s][info ][gc] GC(311) Pause Full (G1 Humongous Allocation) 815M->593M(1024M) 317,798ms
+[42,794s][info ][gc] GC(309) Concurrent Cycle 409,990ms
+[42,832s][info ][gc] GC(312) Pause Young (Concurrent Start) (G1 Humongous Allocation) 669M->669M(1024M) 14,385ms
+[42,832s][info ][gc] GC(313) Concurrent Cycle
+[42,978s][info ][gc] GC(314) Pause Young (Normal) (G1 Humongous Allocation) 898M->895M(1024M) 35,691ms
+[42,979s][debug][gc] GC(315) Clear Next Bitmap 0,949ms
+[43,285s][info ][gc] GC(315) Pause Full (G1 Humongous Allocation) 895M->596M(1024M) 306,802ms
+[43,286s][info ][gc] GC(313) Concurrent Cycle 453,751ms
+[43,324s][info ][gc] GC(316) Pause Young (Concurrent Start) (G1 Humongous Allocation) 674M->672M(1024M) 14,495ms
+[43,324s][info ][gc] GC(317) Concurrent Cycle
+[43,457s][info ][gc] GC(318) Pause Young (Normal) (G1 Humongous Allocation) 901M->898M(1024M) 25,284ms
+[43,458s][debug][gc] GC(319) Clear Next Bitmap 0,988ms
+[43,776s][info ][gc] GC(319) Pause Full (G1 Humongous Allocation) 898M->598M(1024M) 319,615ms
+[43,777s][info ][gc] GC(317) Concurrent Cycle 453,349ms
+[43,816s][info ][gc] GC(320) Pause Young (Concurrent Start) (G1 Humongous Allocation) 675M->674M(1024M) 14,320ms
+[43,816s][info ][gc] GC(321) Concurrent Cycle
+[43,963s][info ][gc] GC(322) Pause Young (Normal) (G1 Humongous Allocation) 904M->900M(1024M) 33,654ms
+[43,964s][debug][gc] GC(323) Clear Next Bitmap 0,952ms
+[44,282s][info ][gc] GC(323) Pause Full (G1 Humongous Allocation) 900M->600M(1024M) 318,558ms
+[44,282s][info ][gc] GC(321) Concurrent Cycle 466,607ms
+[44,325s][info ][gc] GC(324) Pause Young (Concurrent Start) (G1 Humongous Allocation) 678M->676M(1024M) 15,503ms
+[44,326s][info ][gc] GC(325) Concurrent Cycle
+[44,434s][info ][gc] GC(326) Pause Young (Normal) (G1 Humongous Allocation) 830M->828M(1024M) 22,227ms
+[44,435s][debug][gc] GC(327) Clear Next Bitmap 0,938ms
+[44,744s][info ][gc] GC(327) Pause Full (G1 Humongous Allocation) 828M->603M(1024M) 309,850ms
+[44,745s][info ][gc] GC(325) Concurrent Cycle 419,192ms
+[44,783s][info ][gc] GC(328) Pause Young (Concurrent Start) (G1 Humongous Allocation) 680M->679M(1024M) 14,558ms
+[44,783s][info ][gc] GC(329) Concurrent Cycle
+[44,876s][info ][gc] GC(330) Pause Young (Normal) (G1 Humongous Allocation) 834M->833M(1024M) 22,741ms
+[44,878s][debug][gc] GC(331) Clear Next Bitmap 0,956ms
+[45,194s][info ][gc] GC(331) Pause Full (G1 Humongous Allocation) 833M->604M(1024M) 317,472ms
+[45,195s][info ][gc] GC(329) Concurrent Cycle 411,981ms
+[45,245s][info ][gc] GC(332) Pause Young (Concurrent Start) (G1 Humongous Allocation) 683M->681M(1024M) 19,401ms
+[45,246s][info ][gc] GC(333) Concurrent Cycle
+[45,381s][info ][gc] GC(334) Pause Young (Normal) (G1 Humongous Allocation) 913M->911M(1024M) 24,902ms
+[45,382s][debug][gc] GC(335) Clear Next Bitmap 0,999ms
+[45,693s][info ][gc] GC(335) Pause Full (G1 Humongous Allocation) 911M->607M(1024M) 312,339ms
+[45,693s][info ][gc] GC(333) Concurrent Cycle 447,840ms
+[45,739s][info ][gc] GC(336) Pause Young (Concurrent Start) (G1 Humongous Allocation) 684M->683M(1024M) 10,984ms
+[45,739s][info ][gc] GC(337) Concurrent Cycle
+[45,832s][info ][gc] GC(338) Pause Young (Normal) (G1 Humongous Allocation) 838M->836M(1024M) 21,760ms
+[45,833s][debug][gc] GC(339) Clear Next Bitmap 0,976ms
+[46,144s][info ][gc] GC(339) Pause Full (G1 Humongous Allocation) 836M->608M(1024M) 312,196ms
+[46,146s][info ][gc] GC(337) Concurrent Cycle 407,296ms
+[46,196s][info ][gc] GC(340) Pause Young (Concurrent Start) (G1 Humongous Allocation) 687M->685M(1024M) 18,752ms
+[46,196s][info ][gc] GC(341) Concurrent Cycle
+[46,334s][info ][gc] GC(342) Pause Young (Normal) (G1 Humongous Allocation) 919M->916M(1024M) 26,125ms
+[46,335s][debug][gc] GC(343) Clear Next Bitmap 1,075ms
+[46,659s][info ][gc] GC(343) Pause Full (G1 Humongous Allocation) 916M->611M(1024M) 324,586ms
+[46,659s][info ][gc] GC(341) Concurrent Cycle 462,934ms
+[46,698s][info ][gc] GC(344) Pause Young (Concurrent Start) (G1 Humongous Allocation) 690M->689M(1024M) 15,036ms
+[46,699s][info ][gc] GC(345) Concurrent Cycle
+[46,792s][info ][gc] GC(346) Pause Young (Normal) (G1 Humongous Allocation) 846M->844M(1024M) 22,919ms
+[46,793s][debug][gc] GC(347) Clear Next Bitmap 0,945ms
+[47,111s][info ][gc] GC(347) Pause Full (G1 Humongous Allocation) 844M->613M(1024M) 318,595ms
+[47,111s][info ][gc] GC(345) Concurrent Cycle 412,698ms
+[47,164s][info ][gc] GC(348) Pause Young (Concurrent Start) (G1 Humongous Allocation) 693M->691M(1024M) 24,593ms
+[47,164s][info ][gc] GC(349) Concurrent Cycle
+[47,342s][info ][gc] GC(350) Pause Young (Normal) (G1 Humongous Allocation) 1004M->1001M(1024M) 25,489ms
+[47,343s][debug][gc] GC(351) Clear Next Bitmap 0,956ms
+[47,812s][info ][gc] GC(351) Pause Full (G1 Humongous Allocation) 1001M->615M(1024M) 470,073ms
+[47,812s][info ][gc] GC(349) Concurrent Cycle 648,573ms
+[47,854s][info ][gc] GC(352) Pause Young (Concurrent Start) (G1 Humongous Allocation) 694M->693M(1024M) 15,777ms
+[47,854s][info ][gc] GC(353) Concurrent Cycle
+[47,957s][info ][gc] GC(354) Pause Young (Normal) (G1 Humongous Allocation) 851M->848M(1024M) 27,355ms
+[47,959s][debug][gc] GC(355) Clear Next Bitmap 1,202ms
+[48,302s][info ][gc] GC(355) Pause Full (G1 Humongous Allocation) 848M->617M(1024M) 345,024ms
+[48,303s][info ][gc] GC(353) Concurrent Cycle 448,788ms
+[48,347s][info ][gc] GC(356) Pause Young (Concurrent Start) (G1 Humongous Allocation) 697M->695M(1024M) 14,725ms
+[48,348s][info ][gc] GC(357) Concurrent Cycle
+[48,442s][info ][gc] GC(358) Pause Young (Normal) (G1 Humongous Allocation) 854M->852M(1024M) 21,731ms
+[48,443s][debug][gc] GC(359) Clear Next Bitmap 1,059ms
+[48,811s][info ][gc] GC(359) Pause Full (G1 Humongous Allocation) 852M->619M(1024M) 368,713ms
+[48,811s][info ][gc] GC(357) Concurrent Cycle 463,865ms
+[48,850s][info ][gc] GC(360) Pause Young (Concurrent Start) (G1 Humongous Allocation) 699M->698M(1024M) 15,024ms
+[48,851s][info ][gc] GC(361) Concurrent Cycle
+[48,954s][info ][gc] GC(362) Pause Young (Normal) (G1 Humongous Allocation) 857M->855M(1024M) 20,765ms
+[48,956s][debug][gc] GC(363) Clear Next Bitmap 0,964ms
+[49,294s][info ][gc] GC(363) Pause Full (G1 Humongous Allocation) 855M->621M(1024M) 339,343ms
+[49,294s][info ][gc] GC(361) Concurrent Cycle 443,740ms
+[49,339s][info ][gc] GC(364) Pause Young (Concurrent Start) (G1 Humongous Allocation) 701M->700M(1024M) 15,499ms
+[49,339s][info ][gc] GC(365) Concurrent Cycle
+[49,494s][info ][gc] GC(366) Pause Young (Normal) (G1 Humongous Allocation) 938M->935M(1024M) 31,259ms
+[49,495s][debug][gc] GC(367) Clear Next Bitmap 0,938ms
+[49,833s][info ][gc] GC(367) Pause Full (G1 Humongous Allocation) 935M->623M(1024M) 338,243ms
+[49,833s][info ][gc] GC(365) Concurrent Cycle 494,107ms
+[49,872s][info ][gc] GC(368) Pause Young (Concurrent Start) (G1 Humongous Allocation) 702M->702M(1024M) 15,298ms
+[49,873s][info ][gc] GC(369) Concurrent Cycle
+[50,033s][info ][gc] GC(370) Pause Young (Normal) (G1 Humongous Allocation) 941M->938M(1024M) 27,179ms
+[50,034s][debug][gc] GC(371) Clear Next Bitmap 0,975ms
+[50,355s][info ][gc] GC(371) Pause Full (G1 Humongous Allocation) 938M->626M(1024M) 322,770ms
+[50,356s][info ][gc] GC(369) Concurrent Cycle 483,357ms
+[50,395s][info ][gc] GC(372) Pause Young (Concurrent Start) (G1 Humongous Allocation) 707M->706M(1024M) 15,288ms
+[50,396s][info ][gc] GC(373) Concurrent Cycle
+[50,493s][info ][gc] GC(374) Pause Young (Normal) (G1 Humongous Allocation) 866M->865M(1024M) 25,137ms
+[50,494s][debug][gc] GC(375) Clear Next Bitmap 1,040ms
+[50,832s][info ][gc] GC(375) Pause Full (G1 Humongous Allocation) 865M->628M(1024M) 339,412ms
+[50,833s][info ][gc] GC(373) Concurrent Cycle 437,217ms
+[50,873s][info ][gc] GC(376) Pause Young (Concurrent Start) (G1 Humongous Allocation) 708M->707M(1024M) 15,348ms
+[50,873s][info ][gc] GC(377) Concurrent Cycle
+[50,984s][info ][gc] GC(378) Pause Young (Normal) (G1 Humongous Allocation) 869M->866M(1024M) 23,855ms
+[50,985s][debug][gc] GC(379) Clear Next Bitmap 0,969ms
+[51,339s][info ][gc] GC(379) Pause Full (G1 Humongous Allocation) 866M->629M(1024M) 355,470ms
+[51,340s][info ][gc] GC(377) Concurrent Cycle 466,927ms
+[51,389s][info ][gc] GC(380) Pause Young (Concurrent Start) (G1 Humongous Allocation) 710M->709M(1024M) 16,409ms
+[51,389s][info ][gc] GC(381) Concurrent Cycle
+[51,533s][info ][gc] GC(382) Pause Young (Normal) (G1 Humongous Allocation) 950M->948M(1024M) 27,160ms
+[51,534s][debug][gc] GC(383) Clear Next Bitmap 1,007ms
+[51,858s][info ][gc] GC(383) Pause Full (G1 Humongous Allocation) 948M->631M(1024M) 325,540ms
+[51,859s][info ][gc] GC(381) Concurrent Cycle 469,536ms
+[51,899s][info ][gc] GC(384) Pause Young (Concurrent Start) (G1 Humongous Allocation) 712M->711M(1024M) 15,811ms
+[51,899s][info ][gc] GC(385) Concurrent Cycle
+[52,011s][info ][gc] GC(386) Pause Young (Normal) (G1 Humongous Allocation) 875M->871M(1024M) 24,681ms
+[52,012s][debug][gc] GC(387) Clear Next Bitmap 0,982ms
+[52,343s][info ][gc] GC(387) Pause Full (G1 Humongous Allocation) 871M->634M(1024M) 332,058ms
+[52,344s][info ][gc] GC(385) Concurrent Cycle 444,658ms
+[52,387s][info ][gc] GC(388) Pause Young (Concurrent Start) (G1 Humongous Allocation) 716M->715M(1024M) 15,518ms
+[52,387s][info ][gc] GC(389) Concurrent Cycle
+[52,485s][info ][gc] GC(390) Pause Young (Normal) (G1 Humongous Allocation) 877M->876M(1024M) 24,326ms
+[52,486s][debug][gc] GC(391) Clear Next Bitmap 0,966ms
+[52,827s][info ][gc] GC(391) Pause Full (G1 Humongous Allocation) 876M->636M(1024M) 341,604ms
+[52,828s][info ][gc] GC(389) Concurrent Cycle 440,179ms
+[52,868s][info ][gc] GC(392) Pause Young (Concurrent Start) (G1 Humongous Allocation) 717M->716M(1024M) 15,579ms
+[52,868s][info ][gc] GC(393) Concurrent Cycle
+[52,978s][info ][gc] GC(394) Pause Young (Normal) (G1 Humongous Allocation) 880M->877M(1024M) 25,869ms
+[52,979s][debug][gc] GC(395) Clear Next Bitmap 0,989ms
+[53,305s][info ][gc] GC(395) Pause Full (G1 Humongous Allocation) 877M->637M(1024M) 326,896ms
+[53,305s][info ][gc] GC(393) Concurrent Cycle 437,342ms
+[53,346s][info ][gc] GC(396) Pause Young (Concurrent Start) (G1 Humongous Allocation) 719M->718M(1024M) 15,622ms
+[53,346s][info ][gc] GC(397) Concurrent Cycle
+[53,446s][info ][gc] GC(398) Pause Young (Normal) (G1 Humongous Allocation) 880M->879M(1024M) 25,979ms
+[53,447s][debug][gc] GC(399) Clear Next Bitmap 1,010ms
+[53,777s][info ][gc] GC(399) Pause Full (G1 Humongous Allocation) 879M->639M(1024M) 331,264ms
+[53,778s][info ][gc] GC(397) Concurrent Cycle 431,825ms
+[53,819s][info ][gc] GC(400) Pause Young (Concurrent Start) (G1 Humongous Allocation) 720M->720M(1024M) 15,483ms
+[53,819s][info ][gc] GC(401) Concurrent Cycle
+[53,933s][info ][gc] GC(402) Pause Young (Normal) (G1 Humongous Allocation) 883M->881M(1024M) 31,386ms
+[53,935s][debug][gc] GC(403) Clear Next Bitmap 1,077ms
+[54,283s][info ][gc] GC(403) Pause Full (G1 Humongous Allocation) 881M->640M(1024M) 349,652ms
+[54,283s][info ][gc] GC(401) Concurrent Cycle 464,185ms
+[54,333s][info ][gc] GC(404) Pause Young (Concurrent Start) (G1 Humongous Allocation) 724M->722M(1024M) 20,199ms
+[54,333s][info ][gc] GC(405) Concurrent Cycle
+[54,438s][info ][gc] GC(406) Pause Young (Normal) (G1 Humongous Allocation) 887M->885M(1024M) 23,542ms
+[54,439s][debug][gc] GC(407) Clear Next Bitmap 0,941ms
+[54,792s][info ][gc] GC(407) Pause Full (G1 Humongous Allocation) 885M->643M(1024M) 354,228ms
+[54,792s][info ][gc] GC(405) Concurrent Cycle 459,014ms
+[54,836s][info ][gc] GC(408) Pause Young (Concurrent Start) (G1 Humongous Allocation) 726M->725M(1024M) 18,437ms
+[54,836s][info ][gc] GC(409) Concurrent Cycle
+[54,940s][info ][gc] GC(410) Pause Young (Normal) (G1 Humongous Allocation) 890M->888M(1024M) 27,059ms
+[54,942s][debug][gc] GC(411) Clear Next Bitmap 1,174ms
+[55,277s][info ][gc] GC(411) Pause Full (G1 Humongous Allocation) 888M->645M(1024M) 336,139ms
+[55,277s][info ][gc] GC(409) Concurrent Cycle 440,963ms
+[55,323s][info ][gc] GC(412) Pause Young (Concurrent Start) (G1 Humongous Allocation) 728M->726M(1024M) 14,874ms
+[55,323s][info ][gc] GC(413) Concurrent Cycle
+[55,423s][info ][gc] GC(414) Pause Young (Normal) (G1 Humongous Allocation) 892M->889M(1024M) 22,537ms
+[55,424s][debug][gc] GC(415) Clear Next Bitmap 0,968ms
+[55,783s][info ][gc] GC(415) Pause Full (G1 Humongous Allocation) 889M->646M(1024M) 359,143ms
+[55,783s][info ][gc] GC(413) Concurrent Cycle 460,390ms
+[55,824s][info ][gc] GC(416) Pause Young (Concurrent Start) (G1 Humongous Allocation) 729M->728M(1024M) 15,650ms
+[55,824s][info ][gc] GC(417) Concurrent Cycle
+[55,935s][info ][gc] GC(418) Pause Young (Normal) (G1 Humongous Allocation) 893M->891M(1024M) 34,464ms
+[55,936s][debug][gc] GC(419) Clear Next Bitmap 0,998ms
+[56,304s][info ][gc] GC(419) Pause Full (G1 Humongous Allocation) 891M->648M(1024M) 368,581ms
+[56,304s][info ][gc] GC(417) Concurrent Cycle 479,986ms
+[56,351s][info ][gc] GC(420) Pause Young (Concurrent Start) (G1 Humongous Allocation) 731M->729M(1024M) 15,684ms
+[56,351s][info ][gc] GC(421) Concurrent Cycle
+[56,451s][info ][gc] GC(422) Pause Young (Normal) (G1 Humongous Allocation) 896M->895M(1024M) 24,269ms
+[56,452s][debug][gc] GC(423) Clear Next Bitmap 0,973ms
+[56,786s][info ][gc] GC(423) Pause Full (G1 Humongous Allocation) 895M->650M(1024M) 334,517ms
+[56,786s][info ][gc] GC(421) Concurrent Cycle 435,022ms
+[56,828s][info ][gc] GC(424) Pause Young (Concurrent Start) (G1 Humongous Allocation) 734M->733M(1024M) 16,418ms
+[56,828s][info ][gc] GC(425) Concurrent Cycle
+[56,940s][info ][gc] GC(426) Pause Young (Normal) (G1 Humongous Allocation) 901M->898M(1024M) 32,555ms
+[56,941s][debug][gc] GC(427) Clear Next Bitmap 1,022ms
+[57,299s][info ][gc] GC(427) Pause Full (G1 Humongous Allocation) 898M->652M(1024M) 358,917ms
+[57,300s][info ][gc] GC(425) Concurrent Cycle 472,035ms
+[57,343s][info ][gc] GC(428) Pause Young (Concurrent Start) (G1 Humongous Allocation) 736M->735M(1024M) 15,744ms
+[57,343s][info ][gc] GC(429) Concurrent Cycle
+[57,488s][info ][gc] GC(430) Pause Young (Normal) (G1 Humongous Allocation) 984M->982M(1024M) 26,649ms
+[57,489s][debug][gc] GC(431) Clear Next Bitmap 0,992ms
+[57,861s][info ][gc] GC(431) Pause Full (G1 Humongous Allocation) 982M->654M(1024M) 373,082ms
+[57,862s][info ][gc] GC(429) Concurrent Cycle 518,310ms
+[57,903s][info ][gc] GC(432) Pause Young (Concurrent Start) (G1 Humongous Allocation) 738M->737M(1024M) 15,866ms
+[57,903s][info ][gc] GC(433) Concurrent Cycle
+[58,013s][info ][gc] GC(434) Pause Young (Normal) (G1 Humongous Allocation) 904M->902M(1024M) 24,018ms
+[58,014s][debug][gc] GC(435) Clear Next Bitmap 1,109ms
+[58,403s][info ][gc] GC(435) Pause Full (G1 Humongous Allocation) 902M->656M(1024M) 390,275ms
+[58,404s][info ][gc] GC(433) Concurrent Cycle 500,715ms
+[58,450s][info ][gc] GC(436) Pause Young (Concurrent Start) (G1 Humongous Allocation) 739M->738M(1024M) 15,868ms
+[58,450s][info ][gc] GC(437) Concurrent Cycle
+[58,504s][info ][gc] GC(438) Pause Young (Normal) (G1 Humongous Allocation) 823M->822M(1024M) 16,650ms
+[58,505s][debug][gc] GC(439) Clear Next Bitmap 0,956ms
+[58,841s][info ][gc] GC(439) Pause Full (G1 Humongous Allocation) 822M->658M(1024M) 336,834ms
+[58,841s][info ][gc] GC(437) Concurrent Cycle 391,134ms
+[58,883s][info ][gc] GC(440) Pause Young (Concurrent Start) (G1 Humongous Allocation) 742M->741M(1024M) 16,060ms
+[58,883s][info ][gc] GC(441) Concurrent Cycle
+[58,885s][info ][gc] GC(442) Pause Young (Normal) (G1 Humongous Allocation) 741M->741M(1024M) 1,375ms
+[58,886s][debug][gc] GC(443) Clear Next Bitmap 1,415ms
+[59,251s][info ][gc] GC(443) Pause Full (G1 Humongous Allocation) 741M->658M(1024M) 365,533ms
+[59,251s][info ][gc] GC(441) Concurrent Cycle 367,553ms
+[59,303s][info ][gc] GC(444) Pause Young (Concurrent Start) (G1 Humongous Allocation) 744M->742M(1024M) 19,692ms
+[59,303s][info ][gc] GC(445) Concurrent Cycle
+[59,408s][info ][gc] GC(446) Pause Young (Normal) (G1 Humongous Allocation) 910M->909M(1024M) 26,931ms
+[59,410s][debug][gc] GC(447) Clear Next Bitmap 0,985ms
+[59,758s][info ][gc] GC(447) Pause Full (G1 Humongous Allocation) 909M->660M(1024M) 349,752ms
+[59,759s][info ][gc] GC(445) Concurrent Cycle 455,593ms
+[59,802s][info ][gc] GC(448) Pause Young (Concurrent Start) (G1 Humongous Allocation) 744M->744M(1024M) 17,070ms
+[59,803s][info ][gc] GC(449) Concurrent Cycle
+[59,860s][info ][gc] GC(450) Pause Young (Normal) (G1 Humongous Allocation) 828M->827M(1024M) 17,083ms
+[59,861s][debug][gc] GC(451) Clear Next Bitmap 1,013ms
+[60,198s][info ][gc] GC(451) Pause Full (G1 Humongous Allocation) 827M->661M(1024M) 337,986ms
+[60,213s][info ][gc] GC(449) Concurrent Cycle 410,080ms
+[60,258s][info ][gc] GC(452) Pause Young (Concurrent Start) (G1 Humongous Allocation) 748M->745M(1024M) 19,921ms
+[60,259s][info ][gc] GC(453) Concurrent Cycle
+[60,364s][info ][gc] GC(454) Pause Young (Normal) (G1 Humongous Allocation) 913M->912M(1024M) 28,175ms
+[60,365s][debug][gc] GC(455) Clear Next Bitmap 0,991ms
+[60,838s][info ][gc] GC(455) Pause Full (G1 Humongous Allocation) 912M->663M(1024M) 473,797ms
+[60,838s][info ][gc] GC(453) Concurrent Cycle 579,608ms
+[60,880s][info ][gc] GC(456) Pause Young (Concurrent Start) (G1 Humongous Allocation) 747M->746M(1024M) 16,275ms
+[60,881s][info ][gc] GC(457) Concurrent Cycle
+[61,008s][info ][gc] GC(458) Pause Young (Normal) (G1 Humongous Allocation) 916M->913M(1024M) 31,537ms
+[61,009s][debug][gc] GC(459) Clear Next Bitmap 0,968ms
+[61,389s][info ][gc] GC(459) Pause Full (G1 Humongous Allocation) 913M->664M(1024M) 380,781ms
+[61,389s][info ][gc] GC(457) Concurrent Cycle 508,598ms
+[61,432s][info ][gc] GC(460) Pause Young (Concurrent Start) (G1 Humongous Allocation) 750M->749M(1024M) 16,409ms
+[61,433s][info ][gc] GC(461) Concurrent Cycle
+[61,487s][info ][gc] GC(462) Pause Young (Normal) (G1 Humongous Allocation) 835M->833M(1024M) 16,517ms
+[61,488s][debug][gc] GC(463) Clear Next Bitmap 0,992ms
+[61,838s][info ][gc] GC(463) Pause Full (G1 Humongous Allocation) 833M->666M(1024M) 351,028ms
+[61,839s][info ][gc] GC(461) Concurrent Cycle 406,028ms
+[61,884s][info ][gc] GC(464) Pause Young (Concurrent Start) (G1 Humongous Allocation) 752M->751M(1024M) 18,625ms
+[61,884s][info ][gc] GC(465) Concurrent Cycle
+[62,001s][info ][gc] GC(466) Pause Young (Normal) (G1 Humongous Allocation) 924M->920M(1024M) 30,069ms
+[62,003s][debug][gc] GC(467) Clear Next Bitmap 1,551ms
+[62,352s][info ][gc] GC(467) Pause Full (G1 Humongous Allocation) 920M->668M(1024M) 350,505ms
+[62,352s][info ][gc] GC(465) Concurrent Cycle 467,913ms
+[62,395s][info ][gc] GC(468) Pause Young (Concurrent Start) (G1 Humongous Allocation) 753M->753M(1024M) 16,417ms
+[62,395s][info ][gc] GC(469) Concurrent Cycle
+[62,504s][info ][gc] GC(470) Pause Young (Normal) (G1 Humongous Allocation) 923M->922M(1024M) 31,242ms
+[62,506s][debug][gc] GC(471) Clear Next Bitmap 0,999ms
+[62,871s][info ][gc] GC(471) Pause Full (G1 Humongous Allocation) 922M->669M(1024M) 366,366ms
+[62,871s][info ][gc] GC(469) Concurrent Cycle 476,608ms
+[62,925s][info ][gc] GC(472) Pause Young (Concurrent Start) (G1 Humongous Allocation) 756M->754M(1024M) 23,247ms
+[62,925s][info ][gc] GC(473) Concurrent Cycle
+[63,035s][info ][gc] GC(474) Pause Young (Normal) (G1 Humongous Allocation) 925M->923M(1024M) 27,773ms
+[63,037s][debug][gc] GC(475) Clear Next Bitmap 1,011ms
+[63,401s][info ][gc] GC(475) Pause Full (G1 Humongous Allocation) 923M->671M(1024M) 364,960ms
+[63,401s][info ][gc] GC(473) Concurrent Cycle 475,613ms
+[63,443s][info ][gc] GC(476) Pause Young (Concurrent Start) (G1 Humongous Allocation) 757M->756M(1024M) 16,349ms
+[63,444s][info ][gc] GC(477) Concurrent Cycle
+[63,549s][info ][gc] GC(478) Pause Young (Normal) (G1 Humongous Allocation) 926M->925M(1024M) 27,945ms
+[63,550s][debug][gc] GC(479) Clear Next Bitmap 1,028ms
+[63,908s][info ][gc] GC(479) Pause Full (G1 Humongous Allocation) 925M->673M(1024M) 359,252ms
+[63,908s][info ][gc] GC(477) Concurrent Cycle 464,830ms
+[63,966s][info ][gc] GC(480) Pause Young (Concurrent Start) (G1 Humongous Allocation) 762M->758M(1024M) 24,384ms
+[63,966s][info ][gc] GC(481) Concurrent Cycle
+[64,076s][info ][gc] GC(482) Pause Young (Normal) (G1 Humongous Allocation) 932M->929M(1024M) 27,627ms
+[64,077s][debug][gc] GC(483) Clear Next Bitmap 0,964ms
+[64,451s][info ][gc] GC(483) Pause Full (G1 Humongous Allocation) 929M->675M(1024M) 374,721ms
+[64,451s][info ][gc] GC(481) Concurrent Cycle 484,904ms
+[64,494s][info ][gc] GC(484) Pause Young (Concurrent Start) (G1 Humongous Allocation) 762M->761M(1024M) 16,369ms
+[64,494s][info ][gc] GC(485) Concurrent Cycle
+[64,549s][info ][gc] GC(486) Pause Young (Normal) (G1 Humongous Allocation) 847M->846M(1024M) 16,784ms
+[64,550s][debug][gc] GC(487) Clear Next Bitmap 0,974ms
+[64,901s][info ][gc] GC(487) Pause Full (G1 Humongous Allocation) 846M->676M(1024M) 351,209ms
+[64,901s][info ][gc] GC(485) Concurrent Cycle 406,489ms
+[64,956s][info ][gc] GC(488) Pause Young (Concurrent Start) (G1 Humongous Allocation) 765M->762M(1024M) 20,688ms
+[64,956s][info ][gc] GC(489) Concurrent Cycle
+[65,013s][info ][gc] GC(490) Pause Young (Normal) (G1 Humongous Allocation) 850M->848M(1024M) 16,914ms
+[65,015s][debug][gc] GC(491) Clear Next Bitmap 0,930ms
+[65,380s][info ][gc] GC(491) Pause Full (G1 Humongous Allocation) 848M->677M(1024M) 366,868ms
+[65,381s][info ][gc] GC(489) Concurrent Cycle 424,895ms
+[65,425s][info ][gc] GC(492) Pause Young (Concurrent Start) (G1 Humongous Allocation) 764M->763M(1024M) 16,622ms
+[65,425s][info ][gc] GC(493) Concurrent Cycle
+[65,532s][info ][gc] GC(494) Pause Young (Normal) (G1 Humongous Allocation) 936M->934M(1024M) 29,758ms
+[65,533s][debug][gc] GC(495) Clear Next Bitmap 1,037ms
+[65,882s][info ][gc] GC(495) Pause Full (G1 Humongous Allocation) 934M->679M(1024M) 350,274ms
+[65,882s][info ][gc] GC(493) Concurrent Cycle 457,794ms
+[65,937s][info ][gc] GC(496) Pause Young (Concurrent Start) (G1 Humongous Allocation) 767M->765M(1024M) 23,017ms
+[65,937s][info ][gc] GC(497) Concurrent Cycle
+[65,997s][info ][gc] GC(498) Pause Young (Normal) (G1 Humongous Allocation) 851M->850M(1024M) 18,232ms
+[65,998s][debug][gc] GC(499) Clear Next Bitmap 0,939ms
+[66,371s][info ][gc] GC(499) Pause Full (G1 Humongous Allocation) 850M->680M(1024M) 374,054ms
+[66,371s][info ][gc] GC(497) Concurrent Cycle 434,026ms
+[66,415s][info ][gc] GC(500) Pause Young (Concurrent Start) (G1 Humongous Allocation) 767M->766M(1024M) 16,747ms
+[66,415s][info ][gc] GC(501) Concurrent Cycle
+[66,470s][info ][gc] GC(502) Pause Young (Normal) (G1 Humongous Allocation) 853M->852M(1024M) 16,835ms
+[66,472s][debug][gc] GC(503) Clear Next Bitmap 1,042ms
+[66,832s][info ][gc] GC(503) Pause Full (G1 Humongous Allocation) 852M->682M(1024M) 361,663ms
+[66,832s][info ][gc] GC(501) Concurrent Cycle 417,206ms
+[66,876s][info ][gc] GC(504) Pause Young (Concurrent Start) (G1 Humongous Allocation) 770M->769M(1024M) 17,103ms
+[66,876s][info ][gc] GC(505) Concurrent Cycle
+[66,938s][info ][gc] GC(506) Pause Young (Normal) (G1 Humongous Allocation) 857M->855M(1024M) 19,264ms
+[66,939s][debug][gc] GC(507) Clear Next Bitmap 1,150ms
+[67,337s][info ][gc] GC(507) Pause Full (G1 Humongous Allocation) 855M->683M(1024M) 399,313ms
+[67,338s][info ][gc] GC(505) Concurrent Cycle 461,478ms
+[67,383s][info ][gc] GC(508) Pause Young (Concurrent Start) (G1 Humongous Allocation) 772M->770M(1024M) 16,942ms
+[67,383s][info ][gc] GC(509) Concurrent Cycle
+[67,441s][info ][gc] GC(510) Pause Young (Normal) (G1 Humongous Allocation) 857M->856M(1024M) 18,979ms
+[67,442s][debug][gc] GC(511) Clear Next Bitmap 1,004ms
+[67,805s][info ][gc] GC(511) Pause Full (G1 Humongous Allocation) 856M->684M(1024M) 363,575ms
+[67,805s][info ][gc] GC(509) Concurrent Cycle 421,814ms
+[67,850s][info ][gc] GC(512) Pause Young (Concurrent Start) (G1 Humongous Allocation) 772M->771M(1024M) 16,994ms
+[67,850s][info ][gc] GC(513) Concurrent Cycle
+[67,913s][info ][gc] GC(514) Pause Young (Normal) (G1 Humongous Allocation) 859M->858M(1024M) 24,153ms
+[67,915s][debug][gc] GC(515) Clear Next Bitmap 1,023ms
+[68,287s][info ][gc] GC(515) Pause Full (G1 Humongous Allocation) 858M->685M(1024M) 373,813ms
+[68,288s][info ][gc] GC(513) Concurrent Cycle 437,528ms
+[68,333s][info ][gc] GC(516) Pause Young (Concurrent Start) (G1 Humongous Allocation) 774M->772M(1024M) 16,961ms
+[68,334s][info ][gc] GC(517) Concurrent Cycle
+[68,443s][info ][gc] GC(518) Pause Young (Normal) (G1 Humongous Allocation) 947M->945M(1024M) 32,982ms
+[68,444s][debug][gc] GC(519) Clear Next Bitmap 0,968ms
+[68,795s][info ][gc] GC(519) Pause Full (G1 Humongous Allocation) 945M->687M(1024M) 352,353ms
+[68,795s][info ][gc] GC(517) Concurrent Cycle 461,815ms
+[68,840s][info ][gc] GC(520) Pause Young (Concurrent Start) (G1 Humongous Allocation) 774M->774M(1024M) 18,076ms
+[68,840s][info ][gc] GC(521) Concurrent Cycle
+[68,897s][info ][gc] GC(522) Pause Young (Normal) (G1 Humongous Allocation) 861M->860M(1024M) 18,132ms
+[68,898s][debug][gc] GC(523) Clear Next Bitmap 1,080ms
+[69,252s][info ][gc] GC(523) Pause Full (G1 Humongous Allocation) 860M->688M(1024M) 354,805ms
+[69,252s][info ][gc] GC(521) Concurrent Cycle 412,357ms
+[69,310s][info ][gc] GC(524) Pause Young (Concurrent Start) (G1 Humongous Allocation) 777M->775M(1024M) 24,626ms
+[69,310s][info ][gc] GC(525) Concurrent Cycle
+[69,371s][info ][gc] GC(526) Pause Young (Normal) (G1 Humongous Allocation) 863M->862M(1024M) 17,185ms
+[69,372s][debug][gc] GC(527) Clear Next Bitmap 0,968ms
+[69,732s][info ][gc] GC(527) Pause Full (G1 Humongous Allocation) 862M->690M(1024M) 361,085ms
+[69,732s][info ][gc] GC(525) Concurrent Cycle 421,663ms
+[69,776s][info ][gc] GC(528) Pause Young (Concurrent Start) (G1 Humongous Allocation) 779M->778M(1024M) 17,065ms
+[69,776s][info ][gc] GC(529) Concurrent Cycle
+[69,833s][info ][gc] GC(530) Pause Young (Normal) (G1 Humongous Allocation) 866M->865M(1024M) 18,084ms
+[69,834s][debug][gc] GC(531) Clear Next Bitmap 1,046ms
+[70,185s][info ][gc] GC(531) Pause Full (G1 Humongous Allocation) 865M->691M(1024M) 352,109ms
+[70,185s][info ][gc] GC(529) Concurrent Cycle 409,465ms
+[70,244s][info ][gc] GC(532) Pause Young (Concurrent Start) (G1 Humongous Allocation) 781M->779M(1024M) 24,922ms
+[70,244s][info ][gc] GC(533) Concurrent Cycle
+[70,246s][info ][gc] GC(534) Pause Young (Normal) (G1 Humongous Allocation) 779M->779M(1024M) 1,348ms
+[70,247s][debug][gc] GC(535) Clear Next Bitmap 1,170ms
+[70,611s][info ][gc] GC(535) Pause Full (G1 Humongous Allocation) 779M->692M(1024M) 365,586ms
+[70,611s][info ][gc] GC(533) Concurrent Cycle 367,632ms
+[70,658s][info ][gc] GC(536) Pause Young (Concurrent Start) (G1 Humongous Allocation) 780M->779M(1024M) 17,216ms
+[70,658s][info ][gc] GC(537) Concurrent Cycle
+[70,714s][info ][gc] GC(538) Pause Young (Normal) (G1 Humongous Allocation) 868M->867M(1024M) 17,258ms
+[70,715s][debug][gc] GC(539) Clear Next Bitmap 0,994ms
+[71,074s][info ][gc] GC(539) Pause Full (G1 Humongous Allocation) 867M->693M(1024M) 359,504ms
+[71,075s][info ][gc] GC(537) Concurrent Cycle 417,282ms
+[71,128s][info ][gc] GC(540) Pause Young (Concurrent Start) (G1 Humongous Allocation) 783M->780M(1024M) 17,581ms
+[71,128s][info ][gc] GC(541) Concurrent Cycle
+[71,184s][info ][gc] GC(542) Pause Young (Normal) (G1 Humongous Allocation) 869M->868M(1024M) 17,592ms
+[71,185s][debug][gc] GC(543) Clear Next Bitmap 0,993ms
+[71,540s][info ][gc] GC(543) Pause Full (G1 Humongous Allocation) 868M->694M(1024M) 355,976ms
+[71,541s][info ][gc] GC(541) Concurrent Cycle 412,727ms
+[71,584s][info ][gc] GC(544) Pause Young (Concurrent Start) (G1 Humongous Allocation) 782M->781M(1024M) 17,375ms
+[71,585s][info ][gc] GC(545) Concurrent Cycle
+[71,645s][info ][gc] GC(546) Pause Young (Normal) (G1 Humongous Allocation) 870M->869M(1024M) 19,320ms
+[71,647s][debug][gc] GC(547) Clear Next Bitmap 0,958ms
+[72,007s][info ][gc] GC(547) Pause Full (G1 Humongous Allocation) 869M->695M(1024M) 361,286ms
+[72,007s][info ][gc] GC(545) Concurrent Cycle 422,541ms
+[72,060s][info ][gc] GC(548) Pause Young (Concurrent Start) (G1 Humongous Allocation) 784M->783M(1024M) 17,639ms
+[72,060s][info ][gc] GC(549) Concurrent Cycle
+[72,117s][info ][gc] GC(550) Pause Young (Normal) (G1 Humongous Allocation) 871M->870M(1024M) 17,357ms
+[72,118s][debug][gc] GC(551) Clear Next Bitmap 0,999ms
+[72,485s][info ][gc] GC(551) Pause Full (G1 Humongous Allocation) 870M->696M(1024M) 368,122ms
+[72,485s][info ][gc] GC(549) Concurrent Cycle 425,057ms
+[72,529s][info ][gc] GC(552) Pause Young (Concurrent Start) (G1 Humongous Allocation) 784M->784M(1024M) 17,108ms
+[72,529s][info ][gc] GC(553) Concurrent Cycle
+[72,641s][info ][gc] GC(554) Pause Young (Normal) (G1 Humongous Allocation) 962M->961M(1024M) 34,256ms
+[72,642s][debug][gc] GC(555) Clear Next Bitmap 0,991ms
+[72,998s][info ][gc] GC(555) Pause Full (G1 Humongous Allocation) 961M->699M(1024M) 356,884ms
+[72,998s][info ][gc] GC(553) Concurrent Cycle 468,848ms
+[73,052s][info ][gc] GC(556) Pause Young (Concurrent Start) (G1 Humongous Allocation) 790M->787M(1024M) 18,380ms
+[73,052s][info ][gc] GC(557) Concurrent Cycle
+[73,167s][info ][gc] GC(558) Pause Young (Normal) (G1 Humongous Allocation) 966M->964M(1024M) 35,468ms
+[73,168s][debug][gc] GC(559) Clear Next Bitmap 0,946ms
+[73,529s][info ][gc] GC(559) Pause Full (G1 Humongous Allocation) 964M->700M(1024M) 361,650ms
+[73,529s][info ][gc] GC(557) Concurrent Cycle 476,934ms
+[73,573s][info ][gc] GC(560) Pause Young (Concurrent Start) (G1 Humongous Allocation) 790M->789M(1024M) 17,052ms
+[73,573s][info ][gc] GC(561) Concurrent Cycle
+[73,686s][info ][gc] GC(562) Pause Young (Normal) (G1 Humongous Allocation) 967M->966M(1024M) 34,307ms
+[73,687s][debug][gc] GC(563) Clear Next Bitmap 0,990ms
+[74,051s][info ][gc] GC(563) Pause Full (G1 Humongous Allocation) 966M->702M(1024M) 365,161ms
+[74,051s][info ][gc] GC(561) Concurrent Cycle 478,077ms
+[74,105s][info ][gc] GC(564) Pause Young (Concurrent Start) (G1 Humongous Allocation) 792M->790M(1024M) 17,568ms
+[74,105s][info ][gc] GC(565) Concurrent Cycle
+[74,218s][info ][gc] GC(566) Pause Young (Normal) (G1 Humongous Allocation) 969M->967M(1024M) 34,026ms
+[74,219s][debug][gc] GC(567) Clear Next Bitmap 1,485ms
+[74,584s][info ][gc] GC(567) Pause Full (G1 Humongous Allocation) 967M->703M(1024M) 366,548ms
+[74,585s][info ][gc] GC(565) Concurrent Cycle 479,819ms
+[74,629s][info ][gc] GC(568) Pause Young (Concurrent Start) (G1 Humongous Allocation) 793M->792M(1024M) 17,178ms
+[74,629s][info ][gc] GC(569) Concurrent Cycle
+[74,760s][info ][gc] GC(570) Pause Young (Normal) (G1 Humongous Allocation) 972M->970M(1024M) 41,146ms
+[74,761s][debug][gc] GC(571) Clear Next Bitmap 1,258ms
+[75,136s][info ][gc] GC(571) Pause Full (G1 Humongous Allocation) 970M->706M(1024M) 376,018ms
+[75,142s][info ][gc] GC(569) Concurrent Cycle 512,507ms
+[75,200s][info ][gc] GC(572) Pause Young (Concurrent Start) (G1 Humongous Allocation) 797M->796M(1024M) 20,037ms
+[75,200s][info ][gc] GC(573) Concurrent Cycle
+[75,262s][info ][gc] GC(574) Pause Young (Normal) (G1 Humongous Allocation) 887M->885M(1024M) 17,817ms
+[75,263s][debug][gc] GC(575) Clear Next Bitmap 0,943ms
+[75,629s][info ][gc] GC(575) Pause Full (G1 Humongous Allocation) 885M->707M(1024M) 366,362ms
+[75,629s][info ][gc] GC(573) Concurrent Cycle 428,970ms
+[75,674s][info ][gc] GC(576) Pause Young (Concurrent Start) (G1 Humongous Allocation) 797M->797M(1024M) 17,759ms
+[75,674s][info ][gc] GC(577) Concurrent Cycle
+[75,733s][info ][gc] GC(578) Pause Young (Normal) (G1 Humongous Allocation) 887M->886M(1024M) 17,782ms
+[75,734s][debug][gc] GC(579) Clear Next Bitmap 0,985ms
+[76,103s][info ][gc] GC(579) Pause Full (G1 Humongous Allocation) 886M->708M(1024M) 369,915ms
+[76,104s][info ][gc] GC(577) Concurrent Cycle 429,410ms
+[76,158s][info ][gc] GC(580) Pause Young (Concurrent Start) (G1 Humongous Allocation) 800M->798M(1024M) 22,142ms
+[76,158s][info ][gc] GC(581) Concurrent Cycle
+[76,217s][info ][gc] GC(582) Pause Young (Normal) (G1 Humongous Allocation) 888M->887M(1024M) 18,375ms
+[76,219s][debug][gc] GC(583) Clear Next Bitmap 1,096ms
+[76,593s][info ][gc] GC(583) Pause Full (G1 Humongous Allocation) 887M->709M(1024M) 375,377ms
+[76,593s][info ][gc] GC(581) Concurrent Cycle 435,103ms
+[76,639s][info ][gc] GC(584) Pause Young (Concurrent Start) (G1 Humongous Allocation) 800M->799M(1024M) 17,759ms
+[76,640s][info ][gc] GC(585) Concurrent Cycle
+[76,697s][info ][gc] GC(586) Pause Young (Normal) (G1 Humongous Allocation) 889M->888M(1024M) 17,584ms
+[76,698s][debug][gc] GC(587) Clear Next Bitmap 0,943ms
+[77,059s][info ][gc] GC(587) Pause Full (G1 Humongous Allocation) 888M->710M(1024M) 362,381ms
+[77,059s][info ][gc] GC(585) Concurrent Cycle 419,951ms
+[77,114s][info ][gc] GC(588) Pause Young (Concurrent Start) (G1 Humongous Allocation) 802M->800M(1024M) 17,988ms
+[77,114s][info ][gc] GC(589) Concurrent Cycle
+[77,172s][info ][gc] GC(590) Pause Young (Normal) (G1 Humongous Allocation) 890M->889M(1024M) 17,600ms
+[77,173s][debug][gc] GC(591) Clear Next Bitmap 0,989ms
+[77,544s][info ][gc] GC(591) Pause Full (G1 Humongous Allocation) 889M->711M(1024M) 371,469ms
+[77,544s][info ][gc] GC(589) Concurrent Cycle 430,192ms
+[77,589s][info ][gc] GC(592) Pause Young (Concurrent Start) (G1 Humongous Allocation) 802M->801M(1024M) 17,634ms
+[77,589s][info ][gc] GC(593) Concurrent Cycle
+[77,647s][info ][gc] GC(594) Pause Young (Normal) (G1 Humongous Allocation) 891M->890M(1024M) 17,882ms
+[77,648s][debug][gc] GC(595) Clear Next Bitmap 1,018ms
+[78,025s][info ][gc] GC(595) Pause Full (G1 Humongous Allocation) 890M->712M(1024M) 378,110ms
+[78,026s][info ][gc] GC(593) Concurrent Cycle 437,206ms
+[78,079s][info ][gc] GC(596) Pause Young (Concurrent Start) (G1 Humongous Allocation) 805M->803M(1024M) 17,666ms
+[78,080s][info ][gc] GC(597) Concurrent Cycle
+[78,139s][info ][gc] GC(598) Pause Young (Normal) (G1 Humongous Allocation) 894M->893M(1024M) 18,097ms
+[78,140s][debug][gc] GC(599) Clear Next Bitmap 0,995ms
+[78,512s][info ][gc] GC(599) Pause Full (G1 Humongous Allocation) 893M->714M(1024M) 373,332ms
+[78,512s][info ][gc] GC(597) Concurrent Cycle 432,716ms
+[78,557s][info ][gc] GC(600) Pause Young (Concurrent Start) (G1 Humongous Allocation) 806M->805M(1024M) 17,660ms
+[78,557s][info ][gc] GC(601) Concurrent Cycle
+[78,616s][info ][gc] GC(602) Pause Young (Normal) (G1 Humongous Allocation) 897M->896M(1024M) 17,835ms
+[78,617s][debug][gc] GC(603) Clear Next Bitmap 0,965ms
+[78,989s][info ][gc] GC(603) Pause Full (G1 Humongous Allocation) 896M->715M(1024M) 372,998ms
+[78,989s][info ][gc] GC(601) Concurrent Cycle 431,758ms
+[79,044s][info ][gc] GC(604) Pause Young (Concurrent Start) (G1 Humongous Allocation) 808M->806M(1024M) 17,759ms
+[79,044s][info ][gc] GC(605) Concurrent Cycle
+[79,045s][info ][gc] GC(606) Pause Young (Normal) (G1 Humongous Allocation) 806M->806M(1024M) 0,559ms
+[79,046s][debug][gc] GC(607) Clear Next Bitmap 0,978ms
+[79,425s][info ][gc] GC(607) Pause Full (G1 Humongous Allocation) 806M->716M(1024M) 380,471ms
+[79,426s][info ][gc] GC(605) Concurrent Cycle 381,813ms
+[79,472s][info ][gc] GC(608) Pause Young (Concurrent Start) (G1 Humongous Allocation) 807M->807M(1024M) 17,732ms
+[79,472s][info ][gc] GC(609) Concurrent Cycle
+[79,473s][info ][gc] GC(610) Pause Young (Normal) (G1 Humongous Allocation) 807M->807M(1024M) 1,214ms
+[79,474s][debug][gc] GC(611) Clear Next Bitmap 0,971ms
+[79,841s][info ][gc] GC(611) Pause Full (G1 Humongous Allocation) 807M->716M(1024M) 367,567ms
+[79,841s][info ][gc] GC(609) Concurrent Cycle 369,400ms
+[79,887s][info ][gc] GC(612) Pause Young (Concurrent Start) (G1 Humongous Allocation) 808M->807M(1024M) 17,823ms
+[79,887s][info ][gc] GC(613) Concurrent Cycle
+[79,952s][info ][gc] GC(614) Pause Young (Normal) (G1 Humongous Allocation) 899M->898M(1024M) 18,159ms
+[79,954s][debug][gc] GC(615) Clear Next Bitmap 0,991ms
+[80,327s][info ][gc] GC(615) Pause Full (G1 Humongous Allocation) 898M->718M(1024M) 374,600ms
+[80,327s][info ][gc] GC(613) Concurrent Cycle 440,643ms
+[80,373s][info ][gc] GC(616) Pause Young (Concurrent Start) (G1 Humongous Allocation) 809M->808M(1024M) 17,724ms
+[80,373s][info ][gc] GC(617) Concurrent Cycle
+[80,431s][info ][gc] GC(618) Pause Young (Normal) (G1 Humongous Allocation) 900M->899M(1024M) 18,079ms
+[80,432s][debug][gc] GC(619) Clear Next Bitmap 1,003ms
+[80,814s][info ][gc] GC(619) Pause Full (G1 Humongous Allocation) 899M->719M(1024M) 382,389ms
+[80,814s][info ][gc] GC(617) Concurrent Cycle 441,047ms
+[80,860s][info ][gc] GC(620) Pause Young (Concurrent Start) (G1 Humongous Allocation) 810M->809M(1024M) 17,930ms
+[80,860s][info ][gc] GC(621) Concurrent Cycle
+[80,861s][info ][gc] GC(622) Pause Young (Normal) (G1 Humongous Allocation) 809M->809M(1024M) 0,503ms
+[80,862s][debug][gc] GC(623) Clear Next Bitmap 0,983ms
+[81,228s][info ][gc] GC(623) Pause Full (G1 Humongous Allocation) 809M->719M(1024M) 366,471ms
+[81,228s][info ][gc] GC(621) Concurrent Cycle 367,799ms
+[81,282s][info ][gc] GC(624) Pause Young (Concurrent Start) (G1 Humongous Allocation) 812M->810M(1024M) 18,533ms
+[81,282s][info ][gc] GC(625) Concurrent Cycle
+[81,342s][info ][gc] GC(626) Pause Young (Normal) (G1 Humongous Allocation) 901M->900M(1024M) 18,550ms
+[81,344s][debug][gc] GC(627) Clear Next Bitmap 0,986ms
+[81,723s][info ][gc] GC(627) Pause Full (G1 Humongous Allocation) 900M->720M(1024M) 379,979ms
+[81,723s][info ][gc] GC(625) Concurrent Cycle 440,461ms
+[81,769s][info ][gc] GC(628) Pause Young (Concurrent Start) (G1 Humongous Allocation) 813M->812M(1024M) 18,011ms
+[81,769s][info ][gc] GC(629) Concurrent Cycle
+[81,771s][info ][gc] GC(630) Pause Young (Normal) (G1 Humongous Allocation) 812M->812M(1024M) 1,352ms
+[81,772s][debug][gc] GC(631) Clear Next Bitmap 0,993ms
+[82,165s][info ][gc] GC(631) Pause Full (G1 Humongous Allocation) 812M->722M(1024M) 394,475ms
+[82,165s][info ][gc] GC(629) Concurrent Cycle 396,558ms
+[82,226s][info ][gc] GC(632) Pause Young (Concurrent Start) (G1 Humongous Allocation) 815M->813M(1024M) 19,504ms
+[82,226s][info ][gc] GC(633) Concurrent Cycle
+[82,285s][info ][gc] GC(634) Pause Young (Normal) (G1 Humongous Allocation) 906M->905M(1024M) 17,807ms
+[82,286s][debug][gc] GC(635) Clear Next Bitmap 1,075ms
+[82,672s][info ][gc] GC(635) Pause Full (G1 Humongous Allocation) 905M->723M(1024M) 386,611ms
+[82,672s][info ][gc] GC(633) Concurrent Cycle 445,826ms
+[82,718s][info ][gc] GC(636) Pause Young (Concurrent Start) (G1 Humongous Allocation) 815M->814M(1024M) 17,833ms
+[82,718s][info ][gc] GC(637) Concurrent Cycle
+[82,777s][info ][gc] GC(638) Pause Young (Normal) (G1 Humongous Allocation) 907M->906M(1024M) 18,215ms
+[82,778s][debug][gc] GC(639) Clear Next Bitmap 0,968ms
+[83,154s][info ][gc] GC(639) Pause Full (G1 Humongous Allocation) 906M->724M(1024M) 376,292ms
+[83,155s][info ][gc] GC(637) Concurrent Cycle 436,106ms
+[83,210s][info ][gc] GC(640) Pause Young (Concurrent Start) (G1 Humongous Allocation) 817M->816M(1024M) 18,468ms
+[83,210s][info ][gc] GC(641) Concurrent Cycle
+[83,270s][info ][gc] GC(642) Pause Young (Normal) (G1 Humongous Allocation) 908M->907M(1024M) 18,141ms
+[83,271s][debug][gc] GC(643) Clear Next Bitmap 0,961ms
+[83,655s][info ][gc] GC(643) Pause Full (G1 Humongous Allocation) 907M->725M(1024M) 384,727ms
+[83,655s][info ][gc] GC(641) Concurrent Cycle 445,401ms
+[83,702s][info ][gc] GC(644) Pause Young (Concurrent Start) (G1 Humongous Allocation) 817M->817M(1024M) 18,065ms
+[83,703s][info ][gc] GC(645) Concurrent Cycle
+[83,704s][info ][gc] GC(646) Pause Young (Normal) (G1 Humongous Allocation) 817M->817M(1024M) 1,304ms
+[83,706s][debug][gc] GC(647) Clear Next Bitmap 1,170ms
+[84,078s][info ][gc] GC(647) Pause Full (G1 Humongous Allocation) 817M->725M(1024M) 373,264ms
+[84,078s][info ][gc] GC(645) Concurrent Cycle 375,465ms
+[84,152s][info ][gc] GC(648) Pause Young (Concurrent Start) (G1 Humongous Allocation) 819M->817M(1024M) 34,719ms
+[84,152s][info ][gc] GC(649) Concurrent Cycle
+[84,214s][info ][gc] GC(650) Pause Young (Normal) (G1 Humongous Allocation) 910M->909M(1024M) 18,093ms
+[84,215s][debug][gc] GC(651) Clear Next Bitmap 1,010ms
+[84,593s][info ][gc] GC(651) Pause Full (G1 Humongous Allocation) 909M->727M(1024M) 379,711ms
+[84,594s][info ][gc] GC(649) Concurrent Cycle 441,709ms
+[84,640s][info ][gc] GC(652) Pause Young (Concurrent Start) (G1 Humongous Allocation) 819M->818M(1024M) 17,998ms
+[84,640s][info ][gc] GC(653) Concurrent Cycle
+[84,700s][info ][gc] GC(654) Pause Young (Normal) (G1 Humongous Allocation) 911M->910M(1024M) 18,461ms
+[84,701s][debug][gc] GC(655) Clear Next Bitmap 0,983ms
+[85,079s][info ][gc] GC(655) Pause Full (G1 Humongous Allocation) 910M->728M(1024M) 379,278ms
+[85,080s][info ][gc] GC(653) Concurrent Cycle 439,484ms
+[85,136s][info ][gc] GC(656) Pause Young (Concurrent Start) (G1 Humongous Allocation) 821M->819M(1024M) 18,316ms
+[85,136s][info ][gc] GC(657) Concurrent Cycle
+[85,254s][info ][gc] GC(658) Pause Young (Normal) (G1 Humongous Allocation) 1006M->1004M(1024M) 35,953ms
+[85,255s][debug][gc] GC(659) Clear Next Bitmap 1,038ms
+[85,636s][info ][gc] GC(659) Pause Full (G1 Humongous Allocation) 1004M->730M(1024M) 381,582ms
+[85,636s][info ][gc] GC(657) Concurrent Cycle 499,866ms
+[85,684s][info ][gc] GC(660) Pause Young (Concurrent Start) (G1 Humongous Allocation) 824M->823M(1024M) 18,943ms
+[85,684s][info ][gc] GC(661) Concurrent Cycle
+[85,747s][info ][gc] GC(662) Pause Young (Normal) (G1 Humongous Allocation) 916M->915M(1024M) 20,050ms
+[85,748s][debug][gc] GC(663) Clear Next Bitmap 0,988ms
+[86,122s][info ][gc] GC(663) Pause Full (G1 Humongous Allocation) 915M->731M(1024M) 374,901ms
+[86,122s][info ][gc] GC(661) Concurrent Cycle 438,114ms
+[86,180s][info ][gc] GC(664) Pause Young (Concurrent Start) (G1 Humongous Allocation) 826M->824M(1024M) 18,434ms
+[86,180s][info ][gc] GC(665) Concurrent Cycle
+[86,241s][info ][gc] GC(666) Pause Young (Normal) (G1 Humongous Allocation) 917M->916M(1024M) 18,419ms
+[86,242s][debug][gc] GC(667) Clear Next Bitmap 0,998ms
+[86,624s][info ][gc] GC(667) Pause Full (G1 Humongous Allocation) 916M->732M(1024M) 382,337ms
+[86,624s][info ][gc] GC(665) Concurrent Cycle 444,127ms
+[86,671s][info ][gc] GC(668) Pause Young (Concurrent Start) (G1 Humongous Allocation) 826M->825M(1024M) 18,248ms
+[86,671s][info ][gc] GC(669) Concurrent Cycle
+[86,672s][info ][gc] GC(670) Pause Young (Normal) (G1 Humongous Allocation) 825M->825M(1024M) 0,627ms
+[86,673s][debug][gc] GC(671) Clear Next Bitmap 0,990ms
+[87,050s][info ][gc] GC(671) Pause Full (G1 Humongous Allocation) 825M->733M(1024M) 377,851ms
+[87,050s][info ][gc] GC(669) Concurrent Cycle 379,218ms
+[87,113s][info ][gc] GC(672) Pause Young (Concurrent Start) (G1 Humongous Allocation) 828M->825M(1024M) 19,375ms
+[87,113s][info ][gc] GC(673) Concurrent Cycle
+[87,172s][info ][gc] GC(674) Pause Young (Normal) (G1 Humongous Allocation) 919M->918M(1024M) 18,594ms
+[87,173s][debug][gc] GC(675) Clear Next Bitmap 0,972ms
+[87,548s][info ][gc] GC(675) Pause Full (G1 Humongous Allocation) 918M->734M(1024M) 375,662ms
+[87,548s][info ][gc] GC(673) Concurrent Cycle 435,155ms
+[87,595s][info ][gc] GC(676) Pause Young (Concurrent Start) (G1 Humongous Allocation) 827M->827M(1024M) 18,172ms
+[87,595s][info ][gc] GC(677) Concurrent Cycle
+[87,655s][info ][gc] GC(678) Pause Young (Normal) (G1 Humongous Allocation) 920M->919M(1024M) 18,440ms
+[87,656s][debug][gc] GC(679) Clear Next Bitmap 0,978ms
+[88,041s][info ][gc] GC(679) Pause Full (G1 Humongous Allocation) 919M->735M(1024M) 386,626ms
+[88,042s][info ][gc] GC(677) Concurrent Cycle 447,067ms
+[88,098s][info ][gc] GC(680) Pause Young (Concurrent Start) (G1 Humongous Allocation) 829M->828M(1024M) 18,526ms
+[88,098s][info ][gc] GC(681) Concurrent Cycle
+[88,159s][info ][gc] GC(682) Pause Young (Normal) (G1 Humongous Allocation) 921M->920M(1024M) 18,291ms
+[88,160s][debug][gc] GC(683) Clear Next Bitmap 0,974ms
+[88,551s][info ][gc] GC(683) Pause Full (G1 Humongous Allocation) 920M->736M(1024M) 392,261ms
+[88,551s][info ][gc] GC(681) Concurrent Cycle 453,042ms
+[88,600s][info ][gc] GC(684) Pause Young (Concurrent Start) (G1 Humongous Allocation) 831M->830M(1024M) 18,122ms
+[88,600s][info ][gc] GC(685) Concurrent Cycle
+[88,660s][info ][gc] GC(686) Pause Young (Normal) (G1 Humongous Allocation) 924M->923M(1024M) 18,652ms
+[88,662s][debug][gc] GC(687) Clear Next Bitmap 0,982ms
+[89,040s][info ][gc] GC(687) Pause Full (G1 Humongous Allocation) 923M->738M(1024M) 379,232ms
+[89,040s][info ][gc] GC(685) Concurrent Cycle 439,725ms
+[89,096s][info ][gc] GC(688) Pause Young (Concurrent Start) (G1 Humongous Allocation) 834M->832M(1024M) 18,409ms
+[89,096s][info ][gc] GC(689) Concurrent Cycle
+[89,097s][info ][gc] GC(690) Pause Young (Normal) (G1 Humongous Allocation) 832M->832M(1024M) 0,510ms
+[89,099s][debug][gc] GC(691) Clear Next Bitmap 1,088ms
+[89,490s][info ][gc] GC(691) Pause Full (G1 Humongous Allocation) 832M->739M(1024M) 392,615ms
+[89,490s][info ][gc] GC(689) Concurrent Cycle 393,928ms
+[89,537s][info ][gc] GC(692) Pause Young (Concurrent Start) (G1 Humongous Allocation) 833M->832M(1024M) 18,276ms
+[89,537s][info ][gc] GC(693) Concurrent Cycle
+[89,597s][info ][gc] GC(694) Pause Young (Normal) (G1 Humongous Allocation) 927M->926M(1024M) 18,402ms
+[89,598s][debug][gc] GC(695) Clear Next Bitmap 0,974ms
+[89,983s][info ][gc] GC(695) Pause Full (G1 Humongous Allocation) 926M->740M(1024M) 386,151ms
+[89,984s][info ][gc] GC(693) Concurrent Cycle 446,406ms
+[90,043s][info ][gc] GC(696) Pause Young (Concurrent Start) (G1 Humongous Allocation) 835M->833M(1024M) 18,522ms
+[90,043s][info ][gc] GC(697) Concurrent Cycle
+[90,044s][info ][gc] GC(698) Pause Young (Normal) (G1 Humongous Allocation) 833M->833M(1024M) 0,689ms
+[90,106s][info ][gc] GC(699) Pause Young (Normal) (G1 Humongous Allocation) 928M->927M(1024M) 19,237ms
+[90,108s][debug][gc] GC(700) Clear Next Bitmap 0,981ms
+[90,486s][info ][gc] GC(700) Pause Full (G1 Humongous Allocation) 927M->741M(1024M) 379,322ms
+[90,486s][info ][gc] GC(697) Concurrent Cycle 442,885ms
+[90,533s][info ][gc] GC(701) Pause Young (Concurrent Start) (G1 Humongous Allocation) 835M->834M(1024M) 18,321ms
+[90,533s][info ][gc] GC(702) Concurrent Cycle
+[90,534s][info ][gc] GC(703) Pause Young (Normal) (G1 Humongous Allocation) 834M->834M(1024M) 0,596ms
+[90,535s][debug][gc] GC(704) Clear Next Bitmap 0,967ms
+[90,919s][info ][gc] GC(704) Pause Full (G1 Humongous Allocation) 834M->741M(1024M) 384,353ms
+[90,919s][info ][gc] GC(702) Concurrent Cycle 385,704ms
+[90,977s][info ][gc] GC(705) Pause Young (Concurrent Start) (G1 Humongous Allocation) 837M->835M(1024M) 18,464ms
+[90,977s][info ][gc] GC(706) Concurrent Cycle
+[90,979s][info ][gc] GC(707) Pause Young (Normal) (G1 Humongous Allocation) 835M->835M(1024M) 1,335ms
+[90,980s][debug][gc] GC(708) Clear Next Bitmap 0,999ms
+[91,369s][info ][gc] GC(708) Pause Full (G1 Humongous Allocation) 835M->742M(1024M) 390,568ms
+[91,369s][info ][gc] GC(706) Concurrent Cycle 392,638ms
+[91,417s][info ][gc] GC(709) Pause Young (Concurrent Start) (G1 Humongous Allocation) 836M->835M(1024M) 18,582ms
+[91,417s][info ][gc] GC(710) Concurrent Cycle
+[91,478s][info ][gc] GC(711) Pause Young (Normal) (G1 Humongous Allocation) 930M->929M(1024M) 18,398ms
+[91,479s][debug][gc] GC(712) Clear Next Bitmap 0,974ms
+[91,858s][info ][gc] GC(712) Pause Full (G1 Humongous Allocation) 929M->743M(1024M) 380,046ms
+[91,858s][info ][gc] GC(710) Concurrent Cycle 441,435ms
+[91,905s][info ][gc] GC(713) Pause Young (Concurrent Start) (G1 Humongous Allocation) 837M->837M(1024M) 18,421ms
+[91,905s][info ][gc] GC(714) Concurrent Cycle
+[91,907s][info ][gc] GC(715) Pause Young (Normal) (G1 Humongous Allocation) 837M->837M(1024M) 1,222ms
+[91,908s][debug][gc] GC(716) Clear Next Bitmap 0,967ms
+[92,294s][info ][gc] GC(716) Pause Full (G1 Humongous Allocation) 837M->743M(1024M) 386,468ms
+[92,294s][info ][gc] GC(714) Concurrent Cycle 388,581ms
+[92,352s][info ][gc] GC(717) Pause Young (Concurrent Start) (G1 Humongous Allocation) 839M->837M(1024M) 19,811ms
+[92,352s][info ][gc] GC(718) Concurrent Cycle
+[92,413s][info ][gc] GC(719) Pause Young (Normal) (G1 Humongous Allocation) 933M->932M(1024M) 19,540ms
+[92,414s][debug][gc] GC(720) Clear Next Bitmap 0,979ms
+[92,810s][info ][gc] GC(720) Pause Full (G1 Humongous Allocation) 932M->745M(1024M) 396,229ms
+[92,810s][info ][gc] GC(718) Concurrent Cycle 457,874ms
+[92,858s][info ][gc] GC(721) Pause Young (Concurrent Start) (G1 Humongous Allocation) 841M->840M(1024M) 18,429ms
+[92,858s][info ][gc] GC(722) Concurrent Cycle
+[92,925s][info ][gc] GC(723) Pause Young (Normal) (G1 Humongous Allocation) 936M->935M(1024M) 23,054ms
+[92,926s][debug][gc] GC(724) Clear Next Bitmap 0,961ms
+[93,313s][info ][gc] GC(724) Pause Full (G1 Humongous Allocation) 935M->747M(1024M) 387,783ms
+[93,314s][info ][gc] GC(722) Concurrent Cycle 455,597ms
+[93,363s][info ][gc] GC(725) Pause Young (Concurrent Start) (G1 Humongous Allocation) 843M->841M(1024M) 18,478ms
+[93,363s][info ][gc] GC(726) Concurrent Cycle
+[93,364s][info ][gc] GC(727) Pause Young (Normal) (G1 Humongous Allocation) 841M->841M(1024M) 0,592ms
+[93,365s][debug][gc] GC(728) Clear Next Bitmap 1,074ms
+[93,755s][info ][gc] GC(728) Pause Full (G1 Humongous Allocation) 841M->747M(1024M) 390,944ms
+[93,755s][info ][gc] GC(726) Concurrent Cycle 392,347ms
+[93,805s][info ][gc] GC(729) Pause Young (Concurrent Start) (G1 Humongous Allocation) 843M->842M(1024M) 18,462ms
+[93,805s][info ][gc] GC(730) Concurrent Cycle
+[93,865s][info ][gc] GC(731) Pause Young (Normal) (G1 Humongous Allocation) 937M->936M(1024M) 18,479ms
+[93,867s][debug][gc] GC(732) Clear Next Bitmap 0,976ms
+[94,320s][info ][gc] GC(732) Pause Full (G1 Humongous Allocation) 936M->748M(1024M) 454,699ms
+[94,321s][info ][gc] GC(730) Concurrent Cycle 515,778ms
+[94,378s][info ][gc] GC(733) Pause Young (Concurrent Start) (G1 Humongous Allocation) 845M->843M(1024M) 19,116ms
+[94,378s][info ][gc] GC(734) Concurrent Cycle
+[94,380s][info ][gc] GC(735) Pause Young (Normal) (G1 Humongous Allocation) 843M->843M(1024M) 1,354ms
+[94,381s][debug][gc] GC(736) Clear Next Bitmap 1,012ms
+[94,764s][info ][gc] GC(736) Pause Full (G1 Humongous Allocation) 843M->749M(1024M) 384,245ms
+[94,764s][info ][gc] GC(734) Concurrent Cycle 386,478ms
+[94,821s][info ][gc] GC(737) Pause Young (Concurrent Start) (G1 Humongous Allocation) 844M->843M(1024M) 19,507ms
+[94,821s][info ][gc] GC(738) Concurrent Cycle
+[94,823s][info ][gc] GC(739) Pause Young (Normal) (G1 Humongous Allocation) 843M->843M(1024M) 1,427ms
+[94,824s][debug][gc] GC(740) Clear Next Bitmap 1,127ms
+[95,214s][info ][gc] GC(740) Pause Full (G1 Humongous Allocation) 843M->749M(1024M) 391,229ms
+[95,214s][info ][gc] GC(738) Concurrent Cycle 393,448ms
+[95,272s][info ][gc] GC(741) Pause Young (Concurrent Start) (G1 Humongous Allocation) 846M->844M(1024M) 19,071ms
+[95,272s][info ][gc] GC(742) Concurrent Cycle
+[95,274s][info ][gc] GC(743) Pause Young (Normal) (G1 Humongous Allocation) 844M->844M(1024M) 1,293ms
+[95,275s][debug][gc] GC(744) Clear Next Bitmap 1,003ms
+[95,678s][info ][gc] GC(744) Pause Full (G1 Humongous Allocation) 844M->750M(1024M) 404,134ms
+[95,678s][info ][gc] GC(742) Concurrent Cycle 406,085ms
+[95,726s][info ][gc] GC(745) Pause Young (Concurrent Start) (G1 Humongous Allocation) 845M->844M(1024M) 18,614ms
+[95,726s][info ][gc] GC(746) Concurrent Cycle
+[95,787s][info ][gc] GC(747) Pause Young (Normal) (G1 Humongous Allocation) 940M->939M(1024M) 18,697ms
+[95,788s][debug][gc] GC(748) Clear Next Bitmap 0,959ms
+[96,171s][info ][gc] GC(748) Pause Full (G1 Humongous Allocation) 939M->751M(1024M) 384,267ms
+[96,724s][info ][gc] GC(749) Pause Full (G1 Humongous Allocation) 751M->751M(1024M) 552,209ms
+[96,725s][info ][gc] GC(746) Concurrent Cycle 998,760ms
+[96,776s][info ][gc] GC(750) Pause Young (Concurrent Start) (G1 Humongous Allocation) 847M->845M(1024M) 19,347ms
+[96,776s][info ][gc] GC(751) Concurrent Cycle
+[96,844s][info ][gc] GC(752) Pause Young (Normal) (G1 Humongous Allocation) 942M->940M(1024M) 19,209ms
+[96,845s][debug][gc] GC(753) Clear Next Bitmap 0,938ms
+[97,403s][info ][gc] GC(753) Pause Full (G1 Humongous Allocation) 940M->752M(1024M) 559,077ms
+[97,403s][info ][gc] GC(751) Concurrent Cycle 627,719ms
+[97,461s][info ][gc] GC(754) Pause Young (Concurrent Start) (G1 Humongous Allocation) 848M->847M(1024M) 18,991ms
+[97,461s][info ][gc] GC(755) Concurrent Cycle
+[97,463s][info ][gc] GC(756) Pause Young (Normal) (G1 Humongous Allocation) 847M->847M(1024M) 1,509ms
+[97,464s][debug][gc] GC(757) Clear Next Bitmap 1,010ms
+[97,862s][info ][gc] GC(757) Pause Full (G1 Humongous Allocation) 847M->752M(1024M) 399,242ms
+[97,863s][info ][gc] GC(755) Concurrent Cycle 401,483ms
+[97,919s][info ][gc] GC(758) Pause Young (Concurrent Start) (G1 Humongous Allocation) 850M->848M(1024M) 26,101ms
+[97,919s][info ][gc] GC(759) Concurrent Cycle
+[97,921s][info ][gc] GC(760) Pause Young (Normal) (G1 Humongous Allocation) 848M->848M(1024M) 1,343ms
+[97,922s][debug][gc] GC(761) Clear Next Bitmap 1,127ms
+[98,335s][info ][gc] GC(761) Pause Full (G1 Humongous Allocation) 848M->754M(1024M) 413,779ms
+[98,335s][info ][gc] GC(759) Concurrent Cycle 415,868ms
+[98,395s][info ][gc] GC(762) Pause Young (Concurrent Start) (G1 Humongous Allocation) 851M->850M(1024M) 18,752ms
+[98,395s][info ][gc] GC(763) Concurrent Cycle
+[98,456s][info ][gc] GC(764) Pause Young (Normal) (G1 Humongous Allocation) 946M->945M(1024M) 18,859ms
+[98,457s][debug][gc] GC(765) Clear Next Bitmap 0,984ms
+[98,846s][info ][gc] GC(765) Pause Full (G1 Humongous Allocation) 945M->755M(1024M) 389,747ms
+[98,846s][info ][gc] GC(763) Concurrent Cycle 451,613ms
+[98,894s][info ][gc] GC(766) Pause Young (Concurrent Start) (G1 Humongous Allocation) 852M->851M(1024M) 18,825ms
+[98,894s][info ][gc] GC(767) Concurrent Cycle
+[98,966s][info ][gc] GC(768) Pause Young (Normal) (G1 Humongous Allocation) 948M->946M(1024M) 22,543ms
+[98,967s][debug][gc] GC(769) Clear Next Bitmap 1,102ms
+[99,373s][info ][gc] GC(769) Pause Full (G1 Humongous Allocation) 946M->756M(1024M) 406,567ms
+[99,373s][info ][gc] GC(767) Concurrent Cycle 478,828ms
+[99,421s][info ][gc] GC(770) Pause Young (Concurrent Start) (G1 Humongous Allocation) 853M->852M(1024M) 18,405ms
+[99,421s][info ][gc] GC(771) Concurrent Cycle
+[99,482s][info ][gc] GC(772) Pause Young (Normal) (G1 Humongous Allocation) 948M->947M(1024M) 18,734ms
+[99,484s][debug][gc] GC(773) Clear Next Bitmap 1,052ms
+[99,932s][info ][gc] GC(773) Pause Full (G1 Humongous Allocation) 947M->757M(1024M) 449,393ms
+[99,932s][info ][gc] GC(771) Concurrent Cycle 511,293ms
+[99,990s][info ][gc] GC(774) Pause Young (Concurrent Start) (G1 Humongous Allocation) 855M->853M(1024M) 20,426ms
+[99,990s][info ][gc] GC(775) Concurrent Cycle
+[100,053s][info ][gc] GC(776) Pause Young (Normal) (G1 Humongous Allocation) 949M->948M(1024M) 20,173ms
+[100,054s][debug][gc] GC(777) Clear Next Bitmap 0,975ms
+[100,489s][info ][gc] GC(777) Pause Full (G1 Humongous Allocation) 948M->758M(1024M) 435,932ms
+[100,489s][info ][gc] GC(775) Concurrent Cycle 498,563ms
+[100,537s][info ][gc] GC(778) Pause Young (Concurrent Start) (G1 Humongous Allocation) 855M->854M(1024M) 18,765ms
+[100,537s][info ][gc] GC(779) Concurrent Cycle
+[100,539s][info ][gc] GC(780) Pause Young (Normal) (G1 Humongous Allocation) 854M->854M(1024M) 1,440ms
+[100,540s][debug][gc] GC(781) Clear Next Bitmap 0,998ms
+[100,972s][info ][gc] GC(781) Pause Full (G1 Humongous Allocation) 854M->759M(1024M) 433,270ms
+[100,973s][info ][gc] GC(779) Concurrent Cycle 435,471ms
+[101,030s][info ][gc] GC(782) Pause Young (Concurrent Start) (G1 Humongous Allocation) 856M->854M(1024M) 18,951ms
+[101,030s][info ][gc] GC(783) Concurrent Cycle
+[101,032s][info ][gc] GC(784) Pause Young (Normal) (G1 Humongous Allocation) 854M->854M(1024M) 1,389ms
+[101,033s][debug][gc] GC(785) Clear Next Bitmap 1,073ms
+[101,447s][info ][gc] GC(785) Pause Full (G1 Humongous Allocation) 854M->759M(1024M) 415,092ms
+[101,448s][info ][gc] GC(783) Concurrent Cycle 417,228ms
+[101,496s][info ][gc] GC(786) Pause Young (Concurrent Start) (G1 Humongous Allocation) 856M->855M(1024M) 18,756ms
+[101,496s][info ][gc] GC(787) Concurrent Cycle
+[101,497s][info ][gc] GC(788) Pause Young (Normal) (G1 Humongous Allocation) 855M->855M(1024M) 1,346ms
+[101,498s][debug][gc] GC(789) Clear Next Bitmap 1,028ms
+[101,904s][info ][gc] GC(789) Pause Full (G1 Humongous Allocation) 855M->760M(1024M) 406,099ms
+[101,904s][info ][gc] GC(787) Concurrent Cycle 408,287ms
+[101,962s][info ][gc] GC(790) Pause Young (Concurrent Start) (G1 Humongous Allocation) 857M->855M(1024M) 18,756ms
+[101,962s][info ][gc] GC(791) Concurrent Cycle
+[101,964s][info ][gc] GC(792) Pause Young (Normal) (G1 Humongous Allocation) 855M->855M(1024M) 1,286ms
+[101,965s][debug][gc] GC(793) Clear Next Bitmap 0,970ms
+[102,365s][info ][gc] GC(793) Pause Full (G1 Humongous Allocation) 855M->760M(1024M) 401,135ms
+[102,365s][info ][gc] GC(791) Concurrent Cycle 403,106ms
+[102,414s][info ][gc] GC(794) Pause Young (Concurrent Start) (G1 Humongous Allocation) 858M->857M(1024M) 18,842ms
+[102,414s][info ][gc] GC(795) Concurrent Cycle
+[102,476s][info ][gc] GC(796) Pause Young (Normal) (G1 Humongous Allocation) 955M->954M(1024M) 18,975ms
+[102,477s][debug][gc] GC(797) Clear Next Bitmap 1,242ms
+[102,899s][info ][gc] GC(797) Pause Full (G1 Humongous Allocation) 954M->762M(1024M) 423,406ms
+[103,300s][info ][gc] GC(798) Pause Full (G1 Humongous Allocation) 762M->762M(1024M) 400,722ms
+[103,300s][info ][gc] GC(795) Concurrent Cycle 886,547ms
+[103,352s][info ][gc] GC(799) Pause Young (Concurrent Start) (G1 Humongous Allocation) 861M->859M(1024M) 19,885ms
+[103,352s][info ][gc] GC(800) Concurrent Cycle
+[103,354s][info ][gc] GC(801) Pause Young (Normal) (G1 Humongous Allocation) 859M->859M(1024M) 0,755ms
+[103,355s][debug][gc] GC(802) Clear Next Bitmap 0,967ms
+[103,747s][info ][gc] GC(802) Pause Full (G1 Humongous Allocation) 859M->763M(1024M) 393,626ms
+[103,747s][info ][gc] GC(800) Concurrent Cycle 395,087ms
+[103,808s][info ][gc] GC(803) Pause Young (Concurrent Start) (G1 Humongous Allocation) 862M->860M(1024M) 19,533ms
+[103,809s][info ][gc] GC(804) Concurrent Cycle
+[103,872s][info ][gc] GC(805) Pause Young (Normal) (G1 Humongous Allocation) 957M->956M(1024M) 19,471ms
+[103,873s][debug][gc] GC(806) Clear Next Bitmap 0,995ms
+[104,270s][info ][gc] GC(806) Pause Full (G1 Humongous Allocation) 956M->764M(1024M) 398,490ms
+[104,270s][info ][gc] GC(804) Concurrent Cycle 461,908ms
+[104,328s][info ][gc] GC(807) Pause Young (Concurrent Start) (G1 Humongous Allocation) 863M->861M(1024M) 19,032ms
+[104,328s][info ][gc] GC(808) Concurrent Cycle
+[104,391s][info ][gc] GC(809) Pause Young (Normal) (G1 Humongous Allocation) 958M->957M(1024M) 18,995ms
+[104,392s][debug][gc] GC(810) Clear Next Bitmap 0,973ms
+[104,841s][info ][gc] GC(810) Pause Full (G1 Humongous Allocation) 957M->765M(1024M) 449,939ms
+[104,841s][info ][gc] GC(808) Concurrent Cycle 512,506ms
+[104,889s][info ][gc] GC(811) Pause Young (Concurrent Start) (G1 Humongous Allocation) 863M->862M(1024M) 18,829ms
+[104,889s][info ][gc] GC(812) Concurrent Cycle
+[104,891s][info ][gc] GC(813) Pause Young (Normal) (G1 Humongous Allocation) 862M->862M(1024M) 1,412ms
+[104,892s][debug][gc] GC(814) Clear Next Bitmap 0,947ms
+[105,290s][info ][gc] GC(814) Pause Full (G1 Humongous Allocation) 862M->766M(1024M) 399,275ms
+[105,686s][info ][gc] GC(815) Pause Full (G1 Humongous Allocation) 766M->765M(1024M) 395,856ms
+[105,687s][info ][gc] GC(812) Concurrent Cycle 797,344ms
+[105,739s][info ][gc] GC(816) Pause Young (Concurrent Start) (G1 Humongous Allocation) 864M->862M(1024M) 19,754ms
+[105,739s][info ][gc] GC(817) Concurrent Cycle
+[105,742s][info ][gc] GC(818) Pause Young (Normal) (G1 Humongous Allocation) 863M->862M(1024M) 1,471ms
+[105,743s][debug][gc] GC(819) Clear Next Bitmap 0,958ms
+[106,139s][info ][gc] GC(819) Pause Full (G1 Humongous Allocation) 862M->766M(1024M) 397,505ms
+[106,143s][info ][gc] GC(817) Concurrent Cycle 404,103ms
+[106,210s][info ][gc] GC(820) Pause Young (Concurrent Start) (G1 Humongous Allocation) 866M->863M(1024M) 26,785ms
+[106,210s][info ][gc] GC(821) Concurrent Cycle
+[106,275s][info ][gc] GC(822) Pause Young (Normal) (G1 Humongous Allocation) 961M->959M(1024M) 20,964ms
+[106,276s][debug][gc] GC(823) Clear Next Bitmap 0,936ms
+[106,825s][info ][gc] GC(823) Pause Full (G1 Humongous Allocation) 959M->767M(1024M) 550,214ms
+[106,825s][info ][gc] GC(821) Concurrent Cycle 614,886ms
+[106,875s][info ][gc] GC(824) Pause Young (Concurrent Start) (G1 Humongous Allocation) 865M->864M(1024M) 19,065ms
+[106,875s][info ][gc] GC(825) Concurrent Cycle
+[106,938s][info ][gc] GC(826) Pause Young (Normal) (G1 Humongous Allocation) 962M->960M(1024M) 19,410ms
+[106,939s][debug][gc] GC(827) Clear Next Bitmap 0,940ms
+[107,334s][info ][gc] GC(827) Pause Full (G1 Humongous Allocation) 960M->768M(1024M) 395,948ms
+[107,334s][info ][gc] GC(825) Concurrent Cycle 459,368ms
+[107,392s][info ][gc] GC(828) Pause Young (Concurrent Start) (G1 Humongous Allocation) 868M->866M(1024M) 19,002ms
+[107,392s][info ][gc] GC(829) Concurrent Cycle
+[107,394s][info ][gc] GC(830) Pause Young (Normal) (G1 Humongous Allocation) 866M->866M(1024M) 1,697ms
+[107,396s][debug][gc] GC(831) Clear Next Bitmap 1,365ms
+[107,796s][info ][gc] GC(831) Pause Full (G1 Humongous Allocation) 866M->770M(1024M) 401,839ms
+[107,796s][info ][gc] GC(829) Concurrent Cycle 404,556ms
+[107,845s][info ][gc] GC(832) Pause Young (Concurrent Start) (G1 Humongous Allocation) 868M->867M(1024M) 18,996ms
+[107,845s][info ][gc] GC(833) Concurrent Cycle
+[107,846s][info ][gc] GC(834) Pause Young (Normal) (G1 Humongous Allocation) 867M->867M(1024M) 0,819ms
+[107,848s][debug][gc] GC(835) Clear Next Bitmap 0,975ms
+[108,244s][info ][gc] GC(835) Pause Full (G1 Humongous Allocation) 867M->770M(1024M) 397,061ms
+[108,244s][info ][gc] GC(833) Concurrent Cycle 398,606ms
+[108,304s][info ][gc] GC(836) Pause Young (Concurrent Start) (G1 Humongous Allocation) 870M->868M(1024M) 19,991ms
+[108,304s][info ][gc] GC(837) Concurrent Cycle
+[108,305s][info ][gc] GC(838) Pause Young (Normal) (G1 Humongous Allocation) 868M->868M(1024M) 0,535ms
+[108,306s][debug][gc] GC(839) Clear Next Bitmap 1,034ms
+[108,722s][info ][gc] GC(839) Pause Full (G1 Humongous Allocation) 868M->771M(1024M) 416,727ms
+[108,722s][info ][gc] GC(837) Concurrent Cycle 418,034ms
+[108,771s][info ][gc] GC(840) Pause Young (Concurrent Start) (G1 Humongous Allocation) 869M->869M(1024M) 19,032ms
+[108,771s][info ][gc] GC(841) Concurrent Cycle
+[108,773s][info ][gc] GC(842) Pause Young (Normal) (G1 Humongous Allocation) 869M->869M(1024M) 1,529ms
+[108,774s][debug][gc] GC(843) Clear Next Bitmap 1,000ms
+[109,186s][info ][gc] GC(843) Pause Full (G1 Humongous Allocation) 869M->771M(1024M) 413,058ms
+[109,187s][info ][gc] GC(841) Concurrent Cycle 415,366ms
+[109,247s][info ][gc] GC(844) Pause Young (Concurrent Start) (G1 Humongous Allocation) 871M->869M(1024M) 21,610ms
+[109,247s][info ][gc] GC(845) Concurrent Cycle
+[109,312s][info ][gc] GC(846) Pause Young (Normal) (G1 Humongous Allocation) 968M->967M(1024M) 19,289ms
+[109,313s][debug][gc] GC(847) Clear Next Bitmap 1,010ms
+[109,750s][info ][gc] GC(847) Pause Full (G1 Humongous Allocation) 967M->772M(1024M) 437,331ms
+[109,750s][info ][gc] GC(845) Concurrent Cycle 502,921ms
+[109,799s][info ][gc] GC(848) Pause Young (Concurrent Start) (G1 Humongous Allocation) 871M->870M(1024M) 19,004ms
+[109,799s][info ][gc] GC(849) Concurrent Cycle
+[109,862s][info ][gc] GC(850) Pause Young (Normal) (G1 Humongous Allocation) 969M->968M(1024M) 19,406ms
+[109,863s][debug][gc] GC(851) Clear Next Bitmap 0,985ms
+[110,277s][info ][gc] GC(851) Pause Full (G1 Humongous Allocation) 968M->774M(1024M) 414,721ms
+[110,277s][info ][gc] GC(849) Concurrent Cycle 478,117ms
+[110,333s][info ][gc] GC(852) Pause Young (Concurrent Start) (G1 Humongous Allocation) 873M->871M(1024M) 19,525ms
+[110,333s][info ][gc] GC(853) Concurrent Cycle
+[110,398s][info ][gc] GC(854) Pause Young (Normal) (G1 Humongous Allocation) 970M->969M(1024M) 20,220ms
+[110,399s][debug][gc] GC(855) Clear Next Bitmap 1,046ms
+[110,827s][info ][gc] GC(855) Pause Full (G1 Humongous Allocation) 969M->775M(1024M) 429,413ms
+[110,828s][info ][gc] GC(853) Concurrent Cycle 494,345ms
+[110,877s][info ][gc] GC(856) Pause Young (Concurrent Start) (G1 Humongous Allocation) 873M->872M(1024M) 19,003ms
+[110,877s][info ][gc] GC(857) Concurrent Cycle
+[110,944s][info ][gc] GC(858) Pause Young (Normal) (G1 Humongous Allocation) 971M->970M(1024M) 22,437ms
+[110,946s][debug][gc] GC(859) Clear Next Bitmap 1,598ms
+[111,377s][info ][gc] GC(859) Pause Full (G1 Humongous Allocation) 970M->776M(1024M) 432,295ms
+[111,377s][info ][gc] GC(857) Concurrent Cycle 499,521ms
+[111,436s][info ][gc] GC(860) Pause Young (Concurrent Start) (G1 Humongous Allocation) 875M->873M(1024M) 21,947ms
+[111,436s][info ][gc] GC(861) Concurrent Cycle
+[111,438s][info ][gc] GC(862) Pause Young (Normal) (G1 Humongous Allocation) 873M->873M(1024M) 1,582ms
+[111,439s][debug][gc] GC(863) Clear Next Bitmap 0,993ms
+[111,855s][info ][gc] GC(863) Pause Full (G1 Humongous Allocation) 873M->776M(1024M) 417,536ms
+[112,255s][info ][gc] GC(864) Pause Full (G1 Humongous Allocation) 776M->776M(1024M) 399,672ms
+[112,255s][info ][gc] GC(861) Concurrent Cycle 819,717ms
+[112,309s][info ][gc] GC(865) Pause Young (Concurrent Start) (G1 Humongous Allocation) 877M->875M(1024M) 20,756ms
+[112,309s][info ][gc] GC(866) Concurrent Cycle
+[112,311s][info ][gc] GC(867) Pause Young (Normal) (G1 Humongous Allocation) 875M->875M(1024M) 1,444ms
+[112,312s][debug][gc] GC(868) Clear Next Bitmap 0,995ms
+[112,716s][info ][gc] GC(868) Pause Full (G1 Humongous Allocation) 875M->778M(1024M) 404,691ms
+[112,716s][info ][gc] GC(866) Concurrent Cycle 406,920ms
+[112,777s][info ][gc] GC(869) Pause Young (Concurrent Start) (G1 Humongous Allocation) 878M->876M(1024M) 22,116ms
+[112,778s][info ][gc] GC(870) Concurrent Cycle
+[112,779s][info ][gc] GC(871) Pause Young (Normal) (G1 Humongous Allocation) 876M->876M(1024M) 0,664ms
+[112,780s][debug][gc] GC(872) Clear Next Bitmap 1,011ms
+[113,191s][info ][gc] GC(872) Pause Full (G1 Humongous Allocation) 876M->778M(1024M) 412,738ms
+[113,192s][info ][gc] GC(870) Concurrent Cycle 414,150ms
+[113,264s][info ][gc] GC(873) Pause Young (Concurrent Start) (G1 Humongous Allocation) 879M->877M(1024M) 33,433ms
+[113,264s][info ][gc] GC(874) Concurrent Cycle
+[113,266s][info ][gc] GC(875) Pause Young (Normal) (G1 Humongous Allocation) 877M->877M(1024M) 1,492ms
+[113,268s][debug][gc] GC(876) Clear Next Bitmap 1,329ms
+[113,675s][info ][gc] GC(876) Pause Full (G1 Humongous Allocation) 877M->779M(1024M) 408,806ms
+[113,675s][info ][gc] GC(874) Concurrent Cycle 411,080ms
+[113,727s][info ][gc] GC(877) Pause Young (Concurrent Start) (G1 Humongous Allocation) 878M->878M(1024M) 20,086ms
+[113,727s][info ][gc] GC(878) Concurrent Cycle
+[113,792s][info ][gc] GC(879) Pause Young (Normal) (G1 Humongous Allocation) 977M->976M(1024M) 20,058ms
+[113,793s][debug][gc] GC(880) Clear Next Bitmap 0,992ms
+[114,193s][info ][gc] GC(880) Pause Full (G1 Humongous Allocation) 976M->780M(1024M) 400,955ms
+[114,200s][info ][gc] GC(878) Concurrent Cycle 472,839ms
+[114,256s][info ][gc] GC(881) Pause Young (Concurrent Start) (G1 Humongous Allocation) 880M->879M(1024M) 25,486ms
+[114,256s][info ][gc] GC(882) Concurrent Cycle
+[114,258s][info ][gc] GC(883) Pause Young (Normal) (G1 Humongous Allocation) 879M->879M(1024M) 1,167ms
+[114,259s][debug][gc] GC(884) Clear Next Bitmap 1,062ms
+[114,692s][info ][gc] GC(884) Pause Full (G1 Humongous Allocation) 879M->780M(1024M) 434,362ms
+[114,693s][info ][gc] GC(882) Concurrent Cycle 436,326ms
+[114,745s][info ][gc] GC(885) Pause Young (Concurrent Start) (G1 Humongous Allocation) 880M->879M(1024M) 18,940ms
+[114,745s][info ][gc] GC(886) Concurrent Cycle
+[114,747s][info ][gc] GC(887) Pause Young (Normal) (G1 Humongous Allocation) 879M->879M(1024M) 1,420ms
+[114,748s][debug][gc] GC(888) Clear Next Bitmap 1,005ms
+[115,208s][info ][gc] GC(888) Pause Full (G1 Humongous Allocation) 879M->781M(1024M) 461,131ms
+[115,208s][info ][gc] GC(886) Concurrent Cycle 463,230ms
+[115,272s][info ][gc] GC(889) Pause Young (Concurrent Start) (G1 Humongous Allocation) 881M->880M(1024M) 26,181ms
+[115,272s][info ][gc] GC(890) Concurrent Cycle
+[115,274s][info ][gc] GC(891) Pause Young (Normal) (G1 Humongous Allocation) 880M->880M(1024M) 1,237ms
+[115,275s][debug][gc] GC(892) Clear Next Bitmap 1,020ms
+[115,680s][info ][gc] GC(892) Pause Full (G1 Humongous Allocation) 880M->781M(1024M) 406,310ms
+[115,680s][info ][gc] GC(890) Concurrent Cycle 408,313ms
+[115,731s][info ][gc] GC(893) Pause Young (Concurrent Start) (G1 Humongous Allocation) 881M->880M(1024M) 19,121ms
+[115,731s][info ][gc] GC(894) Concurrent Cycle
+[115,795s][info ][gc] GC(895) Pause Young (Normal) (G1 Humongous Allocation) 980M->979M(1024M) 20,333ms
+[115,796s][debug][gc] GC(896) Clear Next Bitmap 1,014ms
+[116,206s][info ][gc] GC(896) Pause Full (G1 Humongous Allocation) 979M->783M(1024M) 410,484ms
+[116,206s][info ][gc] GC(894) Concurrent Cycle 475,171ms
+[116,273s][info ][gc] GC(897) Pause Young (Concurrent Start) (G1 Humongous Allocation) 883M->881M(1024M) 28,773ms
+[116,273s][info ][gc] GC(898) Concurrent Cycle
+[116,275s][info ][gc] GC(899) Pause Young (Normal) (G1 Humongous Allocation) 881M->881M(1024M) 1,748ms
+[116,276s][debug][gc] GC(900) Clear Next Bitmap 1,074ms
+[116,700s][info ][gc] GC(900) Pause Full (G1 Humongous Allocation) 881M->783M(1024M) 425,017ms
+[116,700s][info ][gc] GC(898) Concurrent Cycle 427,440ms
+[116,750s][info ][gc] GC(901) Pause Young (Concurrent Start) (G1 Humongous Allocation) 883M->882M(1024M) 19,160ms
+[116,750s][info ][gc] GC(902) Concurrent Cycle
+[116,814s][info ][gc] GC(903) Pause Young (Normal) (G1 Humongous Allocation) 981M->980M(1024M) 19,564ms
+[116,815s][debug][gc] GC(904) Clear Next Bitmap 0,957ms
+[117,217s][info ][gc] GC(904) Pause Full (G1 Humongous Allocation) 980M->784M(1024M) 403,404ms
+[117,217s][info ][gc] GC(902) Concurrent Cycle 467,208ms
+[117,287s][info ][gc] GC(905) Pause Young (Concurrent Start) (G1 Humongous Allocation) 886M->884M(1024M) 25,011ms
+[117,287s][info ][gc] GC(906) Concurrent Cycle
+[117,292s][info ][gc] GC(907) Pause Young (Normal) (G1 Humongous Allocation) 884M->884M(1024M) 1,560ms
+[117,293s][debug][gc] GC(908) Clear Next Bitmap 0,955ms
+[117,701s][info ][gc] GC(908) Pause Full (G1 Humongous Allocation) 884M->786M(1024M) 408,948ms
+[117,702s][info ][gc] GC(906) Concurrent Cycle 414,131ms
+[117,751s][info ][gc] GC(909) Pause Young (Concurrent Start) (G1 Humongous Allocation) 886M->885M(1024M) 19,321ms
+[117,751s][info ][gc] GC(910) Concurrent Cycle
+[117,815s][info ][gc] GC(911) Pause Young (Normal) (G1 Humongous Allocation) 986M->985M(1024M) 19,485ms
+[117,816s][debug][gc] GC(912) Clear Next Bitmap 1,012ms
+[118,223s][info ][gc] GC(912) Pause Full (G1 Humongous Allocation) 985M->787M(1024M) 408,112ms
+[118,632s][info ][gc] GC(913) Pause Full (G1 Humongous Allocation) 787M->787M(1024M) 408,786ms
+[118,632s][info ][gc] GC(910) Concurrent Cycle 880,899ms
+[118,689s][info ][gc] GC(914) Pause Young (Concurrent Start) (G1 Humongous Allocation) 888M->886M(1024M) 23,315ms
+[118,689s][info ][gc] GC(915) Concurrent Cycle
+[118,691s][info ][gc] GC(916) Pause Young (Normal) (G1 Humongous Allocation) 886M->886M(1024M) 0,671ms
+[118,692s][debug][gc] GC(917) Clear Next Bitmap 0,889ms
+[119,098s][info ][gc] GC(917) Pause Full (G1 Humongous Allocation) 886M->787M(1024M) 407,710ms
+[119,099s][info ][gc] GC(915) Concurrent Cycle 409,184ms
+[119,160s][info ][gc] GC(918) Pause Young (Concurrent Start) (G1 Humongous Allocation) 889M->887M(1024M) 19,440ms
+[119,160s][info ][gc] GC(919) Concurrent Cycle
+[119,232s][info ][gc] GC(920) Pause Young (Normal) (G1 Humongous Allocation) 988M->986M(1024M) 19,539ms
+[119,233s][debug][gc] GC(921) Clear Next Bitmap 1,082ms
+[119,646s][info ][gc] GC(921) Pause Full (G1 Humongous Allocation) 986M->788M(1024M) 414,175ms
+[119,646s][info ][gc] GC(919) Concurrent Cycle 486,045ms
+[119,696s][info ][gc] GC(922) Pause Young (Concurrent Start) (G1 Humongous Allocation) 889M->888M(1024M) 19,592ms
+[119,696s][info ][gc] GC(923) Concurrent Cycle
+[119,698s][info ][gc] GC(924) Pause Young (Normal) (G1 Humongous Allocation) 888M->888M(1024M) 0,753ms
+[119,699s][debug][gc] GC(925) Clear Next Bitmap 0,991ms
+[120,116s][info ][gc] GC(925) Pause Full (G1 Humongous Allocation) 888M->789M(1024M) 418,183ms
+[120,116s][info ][gc] GC(923) Concurrent Cycle 419,696ms
+[120,178s][info ][gc] GC(926) Pause Young (Concurrent Start) (G1 Humongous Allocation) 890M->889M(1024M) 27,176ms
+[120,178s][info ][gc] GC(927) Concurrent Cycle
+[120,180s][info ][gc] GC(928) Pause Young (Normal) (G1 Humongous Allocation) 889M->889M(1024M) 1,734ms
+[120,181s][debug][gc] GC(929) Clear Next Bitmap 0,899ms
+[120,588s][info ][gc] GC(929) Pause Full (G1 Humongous Allocation) 889M->789M(1024M) 407,332ms
+[120,588s][info ][gc] GC(927) Concurrent Cycle 409,824ms
+[120,637s][info ][gc] GC(930) Pause Young (Concurrent Start) (G1 Humongous Allocation) 890M->889M(1024M) 19,256ms
+[120,638s][info ][gc] GC(931) Concurrent Cycle
+[120,639s][info ][gc] GC(932) Pause Young (Normal) (G1 Humongous Allocation) 889M->889M(1024M) 1,296ms
+[120,640s][debug][gc] GC(933) Clear Next Bitmap 0,954ms
+[121,059s][info ][gc] GC(933) Pause Full (G1 Humongous Allocation) 889M->790M(1024M) 419,534ms
+[121,059s][info ][gc] GC(931) Concurrent Cycle 421,552ms
+[121,112s][info ][gc] GC(934) Pause Young (Concurrent Start) (G1 Humongous Allocation) 891M->890M(1024M) 19,563ms
+[121,112s][info ][gc] GC(935) Concurrent Cycle
+[121,185s][info ][gc] GC(936) Pause Young (Normal) (G1 Humongous Allocation) 991M->989M(1024M) 27,042ms
+[121,187s][debug][gc] GC(937) Clear Next Bitmap 1,099ms
+[121,598s][info ][gc] GC(937) Pause Full (G1 Humongous Allocation) 989M->791M(1024M) 412,556ms
+[121,598s][info ][gc] GC(935) Concurrent Cycle 486,715ms
+[121,648s][info ][gc] GC(938) Pause Young (Concurrent Start) (G1 Humongous Allocation) 891M->891M(1024M) 19,166ms
+[121,648s][info ][gc] GC(939) Concurrent Cycle
+[121,649s][info ][gc] GC(940) Pause Young (Normal) (G1 Humongous Allocation) 891M->891M(1024M) 0,557ms
+[121,650s][debug][gc] GC(941) Clear Next Bitmap 0,975ms
+[122,067s][info ][gc] GC(941) Pause Full (G1 Humongous Allocation) 891M->792M(1024M) 417,211ms
+[122,067s][info ][gc] GC(939) Concurrent Cycle 418,553ms
+[122,120s][info ][gc] GC(942) Pause Young (Concurrent Start) (G1 Humongous Allocation) 893M->891M(1024M) 20,253ms
+[122,120s][info ][gc] GC(943) Concurrent Cycle
+[122,203s][info ][gc] GC(944) Pause Young (Normal) (G1 Humongous Allocation) 993M->992M(1024M) 20,647ms
+[122,204s][debug][gc] GC(945) Clear Next Bitmap 0,986ms
+[122,611s][info ][gc] GC(945) Pause Full (G1 Humongous Allocation) 992M->794M(1024M) 408,181ms
+[122,611s][info ][gc] GC(943) Concurrent Cycle 491,812ms
+[122,662s][info ][gc] GC(946) Pause Young (Concurrent Start) (G1 Humongous Allocation) 895M->894M(1024M) 19,639ms
+[122,662s][info ][gc] GC(947) Concurrent Cycle
+[122,726s][info ][gc] GC(948) Pause Young (Normal) (G1 Humongous Allocation) 996M->995M(1024M) 19,566ms
+[122,728s][debug][gc] GC(949) Clear Next Bitmap 0,983ms
+[123,159s][info ][gc] GC(949) Pause Full (G1 Humongous Allocation) 995M->795M(1024M) 431,996ms
+[123,159s][info ][gc] GC(947) Concurrent Cycle 496,657ms
+[123,218s][info ][gc] GC(950) Pause Young (Concurrent Start) (G1 Humongous Allocation) 897M->895M(1024M) 19,894ms
+[123,218s][info ][gc] GC(951) Concurrent Cycle
+[123,220s][info ][gc] GC(952) Pause Young (Normal) (G1 Humongous Allocation) 895M->895M(1024M) 1,277ms
+[123,221s][debug][gc] GC(953) Clear Next Bitmap 0,982ms
+[123,635s][info ][gc] GC(953) Pause Full (G1 Humongous Allocation) 895M->795M(1024M) 414,861ms
+[123,635s][info ][gc] GC(951) Concurrent Cycle 416,866ms
+[123,686s][info ][gc] GC(954) Pause Young (Concurrent Start) (G1 Humongous Allocation) 897M->896M(1024M) 19,596ms
+[123,686s][info ][gc] GC(955) Concurrent Cycle
+[123,687s][info ][gc] GC(956) Pause Young (Normal) (G1 Humongous Allocation) 896M->896M(1024M) 1,232ms
+[123,688s][debug][gc] GC(957) Clear Next Bitmap 0,979ms
+[124,099s][info ][gc] GC(957) Pause Full (G1 Humongous Allocation) 896M->796M(1024M) 411,813ms
+[124,100s][info ][gc] GC(955) Concurrent Cycle 413,843ms
+[124,152s][info ][gc] GC(958) Pause Young (Concurrent Start) (G1 Humongous Allocation) 898M->896M(1024M) 19,768ms
+[124,152s][info ][gc] GC(959) Concurrent Cycle
+[124,226s][info ][gc] GC(960) Pause Young (Normal) (G1 Humongous Allocation) 998M->997M(1024M) 20,805ms
+[124,227s][debug][gc] GC(961) Clear Next Bitmap 0,988ms
+[124,643s][info ][gc] GC(961) Pause Full (G1 Humongous Allocation) 997M->797M(1024M) 416,832ms
+[125,053s][info ][gc] GC(962) Pause Full (G1 Humongous Allocation) 797M->797M(1024M) 410,310ms
+[125,053s][info ][gc] GC(959) Concurrent Cycle 901,433ms
+[125,110s][info ][gc] GC(963) Pause Young (Concurrent Start) (G1 Humongous Allocation) 900M->897M(1024M) 20,605ms
+[125,110s][info ][gc] GC(964) Concurrent Cycle
+[125,112s][info ][gc] GC(965) Pause Young (Normal) (G1 Humongous Allocation) 897M->897M(1024M) 1,481ms
+[125,113s][debug][gc] GC(966) Clear Next Bitmap 0,997ms
+[125,531s][info ][gc] GC(966) Pause Full (G1 Humongous Allocation) 897M->797M(1024M) 418,448ms
+[125,531s][info ][gc] GC(964) Concurrent Cycle 420,811ms
+[125,590s][info ][gc] GC(967) Pause Young (Concurrent Start) (G1 Humongous Allocation) 900M->898M(1024M) 19,963ms
+[125,590s][info ][gc] GC(968) Concurrent Cycle
+[125,592s][info ][gc] GC(969) Pause Young (Normal) (G1 Humongous Allocation) 898M->898M(1024M) 1,314ms
+[125,593s][debug][gc] GC(970) Clear Next Bitmap 0,990ms
+[126,007s][info ][gc] GC(970) Pause Full (G1 Humongous Allocation) 898M->798M(1024M) 415,584ms
+[126,008s][info ][gc] GC(968) Concurrent Cycle 417,729ms
+[126,060s][info ][gc] GC(971) Pause Young (Concurrent Start) (G1 Humongous Allocation) 900M->899M(1024M) 19,611ms
+[126,060s][info ][gc] GC(972) Concurrent Cycle
+[126,061s][info ][gc] GC(973) Pause Young (Normal) (G1 Humongous Allocation) 899M->899M(1024M) 0,560ms
+[126,062s][debug][gc] GC(974) Clear Next Bitmap 1,144ms
+[126,479s][info ][gc] GC(974) Pause Full (G1 Humongous Allocation) 899M->798M(1024M) 418,107ms
+[126,480s][info ][gc] GC(972) Concurrent Cycle 419,467ms
+[126,538s][info ][gc] GC(975) Pause Young (Concurrent Start) (G1 Humongous Allocation) 901M->899M(1024M) 19,663ms
+[126,538s][info ][gc] GC(976) Concurrent Cycle
+[126,603s][info ][gc] GC(977) Pause Young (Normal) (G1 Humongous Allocation) 1001M->1000M(1024M) 20,623ms
+[126,604s][debug][gc] GC(978) Clear Next Bitmap 0,990ms
+[127,016s][info ][gc] GC(978) Pause Full (G1 Humongous Allocation) 1000M->799M(1024M) 412,944ms
+[127,016s][info ][gc] GC(976) Concurrent Cycle 478,747ms
+[127,075s][info ][gc] GC(979) Pause Young (Concurrent Start) (G1 Humongous Allocation) 902M->900M(1024M) 20,856ms
+[127,075s][info ][gc] GC(980) Concurrent Cycle
+[127,087s][info ][gc] GC(981) Pause Young (Normal) (G1 Humongous Allocation) 900M->900M(1024M) 1,483ms
+[127,088s][debug][gc] GC(982) Clear Next Bitmap 1,198ms
+[127,503s][info ][gc] GC(982) Pause Full (G1 Humongous Allocation) 900M->800M(1024M) 416,059ms
+[127,504s][info ][gc] GC(980) Concurrent Cycle 429,079ms
+[127,581s][info ][gc] GC(983) Pause Young (Concurrent Start) (G1 Humongous Allocation) 903M->902M(1024M) 29,519ms
+[127,581s][info ][gc] GC(984) Concurrent Cycle
+[127,648s][info ][gc] GC(985) Pause Young (Normal) (G1 Humongous Allocation) 1004M->1003M(1024M) 19,806ms
+[127,650s][debug][gc] GC(986) Clear Next Bitmap 1,025ms
+[128,067s][info ][gc] GC(986) Pause Full (G1 Humongous Allocation) 1003M->802M(1024M) 418,474ms
+[128,067s][info ][gc] GC(984) Concurrent Cycle 485,964ms
+[128,120s][info ][gc] GC(987) Pause Young (Concurrent Start) (G1 Humongous Allocation) 906M->904M(1024M) 19,655ms
+[128,120s][info ][gc] GC(988) Concurrent Cycle
+[128,190s][info ][gc] GC(989) Pause Young (Normal) (G1 Humongous Allocation) 1007M->1005M(1024M) 22,865ms
+[128,191s][debug][gc] GC(990) Clear Next Bitmap 0,955ms
+[128,626s][info ][gc] GC(990) Pause Full (G1 Humongous Allocation) 1005M->803M(1024M) 435,314ms
+[128,626s][info ][gc] GC(988) Concurrent Cycle 506,012ms
+[128,678s][info ][gc] GC(991) Pause Young (Concurrent Start) (G1 Humongous Allocation) 906M->905M(1024M) 19,820ms
+[128,678s][info ][gc] GC(992) Concurrent Cycle
+[128,680s][info ][gc] GC(993) Pause Young (Normal) (G1 Humongous Allocation) 905M->905M(1024M) 1,388ms
+[128,681s][debug][gc] GC(994) Clear Next Bitmap 1,001ms
+[129,090s][info ][gc] GC(994) Pause Full (G1 Humongous Allocation) 905M->804M(1024M) 410,243ms
+[129,090s][info ][gc] GC(992) Concurrent Cycle 412,437ms
+[129,145s][info ][gc] GC(995) Pause Young (Concurrent Start) (G1 Humongous Allocation) 907M->905M(1024M) 22,281ms
+[129,145s][info ][gc] GC(996) Concurrent Cycle
+[129,147s][info ][gc] GC(997) Pause Young (Normal) (G1 Humongous Allocation) 906M->905M(1024M) 1,338ms
+[129,148s][debug][gc] GC(998) Clear Next Bitmap 0,944ms
+[129,565s][info ][gc] GC(998) Pause Full (G1 Humongous Allocation) 905M->804M(1024M) 417,536ms
+[129,565s][info ][gc] GC(996) Concurrent Cycle 420,025ms
+[129,624s][info ][gc] GC(999) Pause Young (Concurrent Start) (G1 Humongous Allocation) 908M->906M(1024M) 19,616ms
+[129,624s][info ][gc] GC(1000) Concurrent Cycle
+[129,625s][info ][gc] GC(1001) Pause Young (Normal) (G1 Humongous Allocation) 906M->906M(1024M) 0,565ms
+[129,626s][debug][gc] GC(1002) Clear Next Bitmap 0,999ms
+[130,047s][info ][gc] GC(1002) Pause Full (G1 Humongous Allocation) 906M->805M(1024M) 422,152ms
+[130,048s][info ][gc] GC(1000) Concurrent Cycle 423,942ms
+[130,105s][info ][gc] GC(1003) Pause Young (Concurrent Start) (G1 Humongous Allocation) 908M->906M(1024M) 21,779ms
+[130,105s][info ][gc] GC(1004) Concurrent Cycle
+[130,108s][info ][gc] GC(1005) Pause Young (Normal) (G1 Humongous Allocation) 906M->906M(1024M) 1,342ms
+[130,109s][debug][gc] GC(1006) Clear Next Bitmap 1,013ms
+[130,544s][info ][gc] GC(1006) Pause Full (G1 Humongous Allocation) 906M->805M(1024M) 436,298ms
+[130,545s][info ][gc] GC(1004) Concurrent Cycle 439,884ms
+[130,612s][info ][gc] GC(1007) Pause Young (Concurrent Start) (G1 Humongous Allocation) 909M->907M(1024M) 25,356ms
+[130,612s][info ][gc] GC(1008) Concurrent Cycle
+[130,678s][info ][gc] GC(1009) Pause Young (Normal) (G1 Humongous Allocation) 1009M->1008M(1024M) 19,972ms
+[130,680s][debug][gc] GC(1010) Clear Next Bitmap 1,389ms
+[131,092s][info ][gc] GC(1010) Pause Full (G1 Humongous Allocation) 1008M->806M(1024M) 413,830ms
+[131,538s][info ][gc] GC(1011) Pause Full (G1 Humongous Allocation) 806M->806M(1024M) 445,616ms
+[131,539s][info ][gc] GC(1008) Concurrent Cycle 926,703ms
+[131,600s][info ][gc] GC(1012) Pause Young (Concurrent Start) (G1 Humongous Allocation) 910M->908M(1024M) 22,869ms
+[131,600s][info ][gc] GC(1013) Concurrent Cycle
+[131,667s][info ][gc] GC(1014) Pause Young (Normal) (G1 Humongous Allocation) 1010M->1010M(1024M) 20,417ms
+[131,668s][debug][gc] GC(1015) Clear Next Bitmap 0,994ms
+[132,111s][info ][gc] GC(1015) Pause Full (G1 Humongous Allocation) 1010M->807M(1024M) 444,596ms
+[132,112s][info ][gc] GC(1013) Concurrent Cycle 511,697ms
+[132,165s][info ][gc] GC(1016) Pause Young (Concurrent Start) (G1 Humongous Allocation) 911M->909M(1024M) 19,974ms
+[132,165s][info ][gc] GC(1017) Concurrent Cycle
+[132,166s][info ][gc] GC(1018) Pause Young (Normal) (G1 Humongous Allocation) 909M->909M(1024M) 1,363ms
+[132,167s][debug][gc] GC(1019) Clear Next Bitmap 0,980ms
+[132,633s][info ][gc] GC(1019) Pause Full (G1 Humongous Allocation) 909M->808M(1024M) 466,614ms
+[132,633s][info ][gc] GC(1017) Concurrent Cycle 468,656ms
+[132,696s][info ][gc] GC(1020) Pause Young (Concurrent Start) (G1 Humongous Allocation) 912M->911M(1024M) 23,112ms
+[132,696s][info ][gc] GC(1021) Concurrent Cycle
+[132,698s][info ][gc] GC(1022) Pause Young (Normal) (G1 Humongous Allocation) 911M->911M(1024M) 1,319ms
+[132,700s][debug][gc] GC(1023) Clear Next Bitmap 1,377ms
+[133,145s][info ][gc] GC(1023) Pause Full (G1 Humongous Allocation) 911M->809M(1024M) 446,900ms
+[133,145s][info ][gc] GC(1021) Concurrent Cycle 449,001ms
+[133,206s][info ][gc] GC(1024) Pause Young (Concurrent Start) (G1 Humongous Allocation) 914M->912M(1024M) 19,902ms
+[133,206s][info ][gc] GC(1025) Concurrent Cycle
+[133,272s][info ][gc] GC(1026) Pause Young (Normal) (G1 Humongous Allocation) 1016M->1015M(1024M) 19,954ms
+[133,273s][debug][gc] GC(1027) Clear Next Bitmap 0,952ms
+[133,695s][info ][gc] GC(1027) Pause Full (G1 Humongous Allocation) 1015M->810M(1024M) 423,113ms
+[134,123s][info ][gc] GC(1028) Pause Full (G1 Humongous Allocation) 810M->810M(1024M) 428,474ms
+[134,124s][info ][gc] GC(1025) Concurrent Cycle 917,504ms
+[134,191s][info ][gc] GC(1029) Pause Young (Concurrent Start) (G1 Humongous Allocation) 915M->913M(1024M) 25,272ms
+[134,191s][info ][gc] GC(1030) Concurrent Cycle
+[134,193s][info ][gc] GC(1031) Pause Young (Normal) (G1 Humongous Allocation) 913M->913M(1024M) 0,759ms
+[134,194s][debug][gc] GC(1032) Clear Next Bitmap 1,445ms
+[134,612s][info ][gc] GC(1032) Pause Full (G1 Humongous Allocation) 913M->811M(1024M) 419,301ms
+[134,612s][info ][gc] GC(1030) Concurrent Cycle 420,943ms
+[134,664s][info ][gc] GC(1033) Pause Young (Concurrent Start) (G1 Humongous Allocation) 915M->914M(1024M) 19,710ms
+[134,664s][info ][gc] GC(1034) Concurrent Cycle
+[134,665s][info ][gc] GC(1035) Pause Young (Normal) (G1 Humongous Allocation) 914M->914M(1024M) 0,662ms
+[134,666s][debug][gc] GC(1036) Clear Next Bitmap 1,008ms
+[135,087s][info ][gc] GC(1036) Pause Full (G1 Humongous Allocation) 914M->812M(1024M) 422,034ms
+[135,087s][info ][gc] GC(1034) Concurrent Cycle 423,513ms
+[135,147s][info ][gc] GC(1037) Pause Young (Concurrent Start) (G1 Humongous Allocation) 916M->914M(1024M) 22,076ms
+[135,148s][info ][gc] GC(1038) Concurrent Cycle
+[135,149s][info ][gc] GC(1039) Pause Young (Normal) (G1 Humongous Allocation) 914M->914M(1024M) 1,274ms
+[135,150s][debug][gc] GC(1040) Clear Next Bitmap 0,963ms
+[135,571s][info ][gc] GC(1040) Pause Full (G1 Humongous Allocation) 914M->812M(1024M) 421,234ms
+[135,571s][info ][gc] GC(1038) Concurrent Cycle 423,347ms
+[135,631s][info ][gc] GC(1041) Pause Young (Concurrent Start) (G1 Humongous Allocation) 917M->915M(1024M) 19,784ms
+[135,631s][info ][gc] GC(1042) Concurrent Cycle
+[135,632s][info ][gc] GC(1043) Pause Young (Normal) (G1 Humongous Allocation) 915M->915M(1024M) 0,647ms
+[135,633s][debug][gc] GC(1044) Clear Next Bitmap 0,996ms
+[136,049s][info ][gc] GC(1044) Pause Full (G1 Humongous Allocation) 915M->813M(1024M) 417,521ms
+[136,050s][info ][gc] GC(1042) Concurrent Cycle 418,874ms
+[136,104s][info ][gc] GC(1045) Pause Young (Concurrent Start) (G1 Humongous Allocation) 917M->915M(1024M) 19,965ms
+[136,104s][info ][gc] GC(1046) Concurrent Cycle
+[136,105s][info ][gc] GC(1047) Pause Young (Normal) (G1 Humongous Allocation) 915M->915M(1024M) 0,604ms
+[136,185s][info ][gc] GC(1048) To-space exhausted
+[136,185s][info ][gc] GC(1048) Pause Young (Normal) (G1 Humongous Allocation) 1019M->1019M(1024M) 33,338ms
+[136,186s][debug][gc] GC(1049) Clear Next Bitmap 1,091ms
+[136,608s][info ][gc] GC(1049) Pause Full (G1 Humongous Allocation) 1019M->814M(1024M) 423,108ms
+[136,608s][info ][gc] GC(1046) Concurrent Cycle 504,266ms
+[136,660s][info ][gc] GC(1050) Pause Young (Concurrent Start) (G1 Humongous Allocation) 917M->916M(1024M) 19,931ms
+[136,660s][info ][gc] GC(1051) Concurrent Cycle
+[136,661s][info ][gc] GC(1052) Pause Young (Normal) (G1 Humongous Allocation) 916M->916M(1024M) 1,233ms
+[136,662s][debug][gc] GC(1053) Clear Next Bitmap 1,029ms
+[137,088s][info ][gc] GC(1053) Pause Full (G1 Humongous Allocation) 916M->814M(1024M) 426,776ms
+[137,088s][info ][gc] GC(1051) Concurrent Cycle 428,821ms
+[137,144s][info ][gc] GC(1054) Pause Young (Concurrent Start) (G1 Humongous Allocation) 919M->917M(1024M) 20,075ms
+[137,144s][info ][gc] GC(1055) Concurrent Cycle
+[137,145s][info ][gc] GC(1056) Pause Young (Normal) (G1 Humongous Allocation) 917M->917M(1024M) 0,533ms
+[137,146s][debug][gc] GC(1057) Clear Next Bitmap 0,930ms
+[137,569s][info ][gc] GC(1057) Pause Full (G1 Humongous Allocation) 917M->815M(1024M) 424,029ms
+[137,991s][info ][gc] GC(1058) Pause Full (G1 Humongous Allocation) 815M->815M(1024M) 421,065ms
+[137,991s][info ][gc] GC(1055) Concurrent Cycle 846,674ms
+[138,055s][info ][gc] GC(1059) Pause Young (Concurrent Start) (G1 Humongous Allocation) 920M->917M(1024M) 21,281ms
+[138,055s][info ][gc] GC(1060) Concurrent Cycle
+[138,056s][info ][gc] GC(1061) Pause Young (Normal) (G1 Humongous Allocation) 917M->917M(1024M) 0,714ms
+[138,057s][debug][gc] GC(1062) Clear Next Bitmap 1,022ms
+[138,484s][info ][gc] GC(1062) Pause Full (G1 Humongous Allocation) 917M->815M(1024M) 428,429ms
+[138,485s][info ][gc] GC(1060) Concurrent Cycle 429,955ms
+[138,545s][info ][gc] GC(1063) Pause Young (Concurrent Start) (G1 Humongous Allocation) 920M->918M(1024M) 20,101ms
+[138,545s][info ][gc] GC(1064) Concurrent Cycle
+[138,546s][info ][gc] GC(1065) Pause Young (Normal) (G1 Humongous Allocation) 918M->918M(1024M) 0,548ms
+[138,547s][debug][gc] GC(1066) Clear Next Bitmap 0,972ms
+[138,982s][info ][gc] GC(1066) Pause Full (G1 Humongous Allocation) 918M->816M(1024M) 436,115ms
+[138,983s][info ][gc] GC(1064) Concurrent Cycle 437,277ms
+[139,038s][info ][gc] GC(1067) Pause Young (Concurrent Start) (G1 Humongous Allocation) 921M->919M(1024M) 21,001ms
+[139,038s][info ][gc] GC(1068) Concurrent Cycle
+[139,039s][info ][gc] GC(1069) Pause Young (Normal) (G1 Humongous Allocation) 919M->919M(1024M) 0,638ms
+[139,040s][debug][gc] GC(1070) Clear Next Bitmap 1,004ms
+[139,460s][info ][gc] GC(1070) Pause Full (G1 Humongous Allocation) 919M->817M(1024M) 420,580ms
+[139,460s][info ][gc] GC(1068) Concurrent Cycle 422,003ms
+[139,520s][info ][gc] GC(1071) Pause Young (Concurrent Start) (G1 Humongous Allocation) 923M->921M(1024M) 20,302ms
+[139,521s][info ][gc] GC(1072) Concurrent Cycle
+[139,522s][info ][gc] GC(1073) Pause Young (Normal) (G1 Humongous Allocation) 921M->921M(1024M) 0,675ms
+[139,523s][debug][gc] GC(1074) Clear Next Bitmap 0,952ms
+[139,949s][info ][gc] GC(1074) Pause Full (G1 Humongous Allocation) 921M->818M(1024M) 427,064ms
+[139,949s][info ][gc] GC(1072) Concurrent Cycle 428,446ms
+[140,002s][info ][gc] GC(1075) Pause Young (Concurrent Start) (G1 Humongous Allocation) 923M->922M(1024M) 20,190ms
+[140,003s][info ][gc] GC(1076) Concurrent Cycle
+[140,004s][info ][gc] GC(1077) Pause Young (Normal) (G1 Humongous Allocation) 922M->922M(1024M) 0,642ms
+[140,005s][debug][gc] GC(1078) Clear Next Bitmap 0,971ms
+[140,437s][info ][gc] GC(1078) Pause Full (G1 Humongous Allocation) 922M->818M(1024M) 433,220ms
+[140,437s][info ][gc] GC(1076) Concurrent Cycle 434,633ms
+[140,497s][info ][gc] GC(1079) Pause Young (Concurrent Start) (G1 Humongous Allocation) 924M->922M(1024M) 20,822ms
+[140,497s][info ][gc] GC(1080) Concurrent Cycle
+[140,499s][info ][gc] GC(1081) Pause Young (Normal) (G1 Humongous Allocation) 922M->922M(1024M) 1,369ms
+[140,500s][debug][gc] GC(1082) Clear Next Bitmap 1,082ms
+[140,922s][info ][gc] GC(1082) Pause Full (G1 Humongous Allocation) 922M->819M(1024M) 422,619ms
+[141,348s][info ][gc] GC(1083) Pause Full (G1 Humongous Allocation) 819M->819M(1024M) 425,812ms
+[141,348s][info ][gc] GC(1080) Concurrent Cycle 850,687ms

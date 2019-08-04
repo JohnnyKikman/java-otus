@@ -1,0 +1,12 @@
+Application started, pid: 9996@johnnykay-HP-Pavilion-Power-Laptop-15-cb0xx
+GC data: 0 minor collections in 0 ms, 79 major collections in 47264 ms.
+GC data: 0 minor collections in 0 ms, 54 major collections in 50416 ms.
+GC data: 0 minor collections in 0 ms, 46 major collections in 50169 ms.
+GC data: 0 minor collections in 0 ms, 44 major collections in 51138 ms.
+GC data: 0 minor collections in 0 ms, 41 major collections in 49980 ms.
+GC data: 0 minor collections in 0 ms, 40 major collections in 50722 ms.
+GC data: 0 minor collections in 0 ms, 38 major collections in 51021 ms.
+GC data: 0 minor collections in 0 ms, 36 major collections in 50391 ms.
+GC data: 0 minor collections in 0 ms, 35 major collections in 49960 ms.
+GC data: 0 minor collections in 0 ms, 35 major collections in 51324 ms.
+GC data: 0 minor collections in 0 ms, 35 major collections in 50301 ms.
