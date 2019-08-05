@@ -1,14 +1,15 @@
 package ru.otus.service;
 
+import ru.otus.exception.AmountNotFullyDisposableException;
 import ru.otus.exception.InsufficientFundsException;
-import ru.otus.exception.UnsupportedBanknotesException;
+import ru.otus.storage.Storage;
 import ru.otus.value.Banknote;
 
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
-
-import static java.util.stream.Collectors.toMap;
-import static java.util.stream.Collectors.toSet;
+import java.util.stream.Collectors;
 
 /**
  * Стандартная имплементация банкомата.
@@ -24,38 +25,51 @@ public class AtmServiceImpl implements AtmService {
     /**
      * {@inheritDoc}
      */
-    public void cashIn(Map<Integer, Integer> amounts) {
-        final Set<Integer> availableSlots = storage.getAvailableSlots().stream().map(Banknote::getAmount)
-                .collect(toSet());
-        final Set<Integer> givenBanknotes = amounts.keySet();
-        if (!availableSlots.containsAll(givenBanknotes)) {
-            givenBanknotes.removeAll(availableSlots);
-            throw new UnsupportedBanknotesException(givenBanknotes);
-        }
-
-        storage.accept(amounts.entrySet().stream()
-                .collect(toMap(entry -> Banknote.of(entry.getKey()), Map.Entry::getValue))
-        );
+    public void cashIn(Map<Banknote, Integer> banknotes) {
+        final Map<Banknote, Integer> amounts = storage.getAmounts();
+        banknotes.forEach(((banknote, amount) ->
+                amounts.put(banknote, amounts.get(banknote) + amount)));
     }
 
     /**
      * {@inheritDoc}
      */
-    public Map<Integer, Integer> cashOut(int requiredAmount) {
+    public Map<Banknote, Integer> cashOut(int remainingAmount) {
         final int total = getTotal();
-        if (total < requiredAmount) {
+        if (total < remainingAmount) {
             throw new InsufficientFundsException(total);
         }
 
-        return storage.retrieve(requiredAmount).entrySet().stream()
-                .collect(toMap(entry -> entry.getKey().getAmount(), Map.Entry::getValue));
+        final Map<Banknote, Integer> amounts = storage.getAmounts();
+        final List<Banknote> sortedBanknotes = storage.getAmounts().keySet().stream()
+                .sorted(Comparator.comparing(Banknote::getAmount).reversed())
+                .collect(Collectors.toList());
+        final Map<Banknote, Integer> returnedBanknotes = new HashMap<>();
+        for (Banknote banknote : sortedBanknotes) {
+            int amount = banknote.getAmount();
+            int availableBanknotes = amounts.get(banknote);
+            if (remainingAmount >= amount) {
+                final int extractedBanknotes = remainingAmount / amount;
+                remainingAmount -= extractedBanknotes * amount;
+                returnedBanknotes.put(banknote, extractedBanknotes);
+                amounts.put(banknote, availableBanknotes - extractedBanknotes);
+            }
+        }
+
+        if (remainingAmount > 0) {
+            throw new AmountNotFullyDisposableException(remainingAmount);
+        }
+        return returnedBanknotes;
     }
 
     /**
      * {@inheritDoc}
      */
     public int getTotal() {
-        return storage.getTotalAmount();
+        return storage.getAmounts().entrySet().stream()
+                .map(entry -> entry.getKey().getAmount() * entry.getValue())
+                .reduce(Integer::sum)
+                .orElse(0);
     }
 
 }

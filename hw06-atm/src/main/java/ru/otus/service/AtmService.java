@@ -1,5 +1,7 @@
 package ru.otus.service;
 
+import ru.otus.value.Banknote;
+
 import java.util.Map;
 
 /**
@@ -12,7 +14,7 @@ public interface AtmService {
      *
      * @param banknotes Номиналы вносимых купюр и их количество.
      */
-    void cashIn(Map<Integer, Integer> banknotes);
+    void cashIn(Map<Banknote, Integer> banknotes);
 
     /**
      * Получение средств из банкомата.
@@ -20,7 +22,7 @@ public interface AtmService {
      * @param requiredAmount необходимый к выдаче объем средств
      * @return выдаваемые купюры и их количества
      */
-    Map<Integer, Integer> cashOut(int requiredAmount);
+    Map<Banknote, Integer> cashOut(int requiredAmount);
 
     /**
      * Получение суммы средств, находящихся в банкомате.

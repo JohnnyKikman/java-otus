@@ -2,7 +2,6 @@ package ru.otus.value;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import ru.otus.exception.UnsupportedBanknotesException;
 
 /**
  * Номиналы банкнот.
@@ -21,17 +20,5 @@ public enum Banknote {
     FIVE_THOUSAND(5000);
 
     private final int amount;
-
-    /**
-     * Получение константы {@link Banknote} по числовому значению суммы.
-     */
-    public static Banknote of(int value) {
-        for (Banknote banknote : values()) {
-            if (banknote.getAmount() == value) {
-                return banknote;
-            }
-        }
-        throw new UnsupportedBanknotesException(value);
-    }
 
 }
