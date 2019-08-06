@@ -14,10 +14,12 @@ import ru.otus.value.Banknote;
 import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import static java.util.Collections.emptyMap;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
@@ -39,13 +41,12 @@ class AtmServiceTest {
         initMocks(this);
         atmService = new AtmServiceImpl(storage);
 
-        final Map<Banknote, Integer> storageContents = new HashMap<>();
-        storageContents.put(ONE_THOUSAND, 2);
-        storageContents.put(TWO_HUNDRED, 1);
-        storageContents.put(ONE_HUNDRED, 2);
-        storageContents.put(FIFTY, 1);
-        storageContents.put(TEN, 5);
-        when(storage.getAmounts()).thenReturn(storageContents);
+        when(storage.getAvailableBanknotes()).thenReturn(Set.of(ONE_THOUSAND, TWO_HUNDRED, ONE_HUNDRED, FIFTY, TEN));
+        when(storage.getBanknotes(ONE_THOUSAND)).thenReturn(2);
+        when(storage.getBanknotes(TWO_HUNDRED)).thenReturn(1);
+        when(storage.getBanknotes(ONE_HUNDRED)).thenReturn(2);
+        when(storage.getBanknotes(FIFTY)).thenReturn(1);
+        when(storage.getBanknotes(TEN)).thenReturn(5);
     }
 
     @AfterEach
@@ -64,7 +65,7 @@ class AtmServiceTest {
 
     @Test
     void shouldFailCashOutWithInsufficientFunds() {
-        when(storage.getAmounts()).thenReturn(emptyMap());
+        when(storage.getBanknotes(any(Banknote.class))).thenReturn(0);
 
         assertThatThrownBy(() -> atmService.cashOut(Integer.MAX_VALUE))
                 .isInstanceOf(InsufficientFundsException.class)

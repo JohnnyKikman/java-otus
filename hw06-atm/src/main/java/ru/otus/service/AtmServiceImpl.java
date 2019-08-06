@@ -26,9 +26,7 @@ public class AtmServiceImpl implements AtmService {
      * {@inheritDoc}
      */
     public void cashIn(Map<Banknote, Integer> banknotes) {
-        final Map<Banknote, Integer> amounts = storage.getAmounts();
-        banknotes.forEach(((banknote, amount) ->
-                amounts.put(banknote, amounts.get(banknote) + amount)));
+        banknotes.forEach(storage::putBanknotes);
     }
 
     /**
@@ -40,19 +38,17 @@ public class AtmServiceImpl implements AtmService {
             throw new InsufficientFundsException(total);
         }
 
-        final Map<Banknote, Integer> amounts = storage.getAmounts();
-        final List<Banknote> sortedBanknotes = storage.getAmounts().keySet().stream()
+        final List<Banknote> sortedBanknotes = storage.getAvailableBanknotes().stream()
                 .sorted(Comparator.comparing(Banknote::getAmount).reversed())
                 .collect(Collectors.toList());
         final Map<Banknote, Integer> returnedBanknotes = new HashMap<>();
         for (Banknote banknote : sortedBanknotes) {
             int amount = banknote.getAmount();
-            int availableBanknotes = amounts.get(banknote);
-            if (remainingAmount >= amount) {
-                final int extractedBanknotes = remainingAmount / amount;
+            final int extractedBanknotes = remainingAmount / amount;
+            if (remainingAmount >= amount && extractedBanknotes <= storage.getBanknotes(banknote)) {
                 remainingAmount -= extractedBanknotes * amount;
                 returnedBanknotes.put(banknote, extractedBanknotes);
-                amounts.put(banknote, availableBanknotes - extractedBanknotes);
+                storage.fetchBanknotes(banknote, extractedBanknotes);
             }
         }
 
@@ -66,8 +62,8 @@ public class AtmServiceImpl implements AtmService {
      * {@inheritDoc}
      */
     public int getTotal() {
-        return storage.getAmounts().entrySet().stream()
-                .map(entry -> entry.getKey().getAmount() * entry.getValue())
+        return storage.getAvailableBanknotes().stream()
+                .map(banknote -> banknote.getAmount() * storage.getBanknotes(banknote))
                 .reduce(Integer::sum)
                 .orElse(0);
     }
