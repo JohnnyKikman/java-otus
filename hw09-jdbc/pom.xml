@@ -10,20 +10,32 @@
         <version>0.9.0</version>
     </parent>
 
-    <artifactId>hw04-logging</artifactId>
-    <name>hw04-logging</name>
+    <artifactId>hw09-jdbc</artifactId>
+    <name>hw09-jdbc</name>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
-    <packaging>jar</packaging>
-
-    <build>
-        <finalName>${project.name}</finalName>
-    </build>
 
 </project>
