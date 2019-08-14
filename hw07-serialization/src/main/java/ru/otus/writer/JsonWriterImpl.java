@@ -1,6 +1,7 @@
 package ru.otus.writer;
 
 import lombok.SneakyThrows;
+import ru.otus.util.NumberUtils;
 
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
@@ -10,8 +11,6 @@ import javax.json.JsonValue;
 import java.io.Writer;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -91,28 +90,12 @@ public class JsonWriterImpl implements JsonWriter {
      */
     @SuppressWarnings("unchecked")
     private JsonValue formatField(Object value) {
-        if (value instanceof String || value instanceof Enum) {
-            return Json.createValue(value.toString());
-        } else if (value instanceof Character) {
-            return Json.createValue(String.valueOf((char) value));
+        if (value instanceof String || value instanceof Enum || value instanceof Character) {
+            return Json.createValue(String.valueOf(value));
         } else if (value instanceof Boolean) {
             return (boolean) value ? JsonValue.TRUE : JsonValue.FALSE;
-        } else if (value instanceof Integer) {
-            return Json.createValue((Integer) value);
-        } else if (value instanceof Byte) {
-            return Json.createValue((Byte) value);
-        } else if (value instanceof Short) {
-            return Json.createValue((Short) value);
-        } else if (value instanceof Long) {
-            return Json.createValue((Long) value);
-        } else if (value instanceof Double) {
-            return Json.createValue((Double) value);
-        } else if (value instanceof Float) {
-            return Json.createValue((Float) value);
-        } else if (value instanceof BigDecimal) {
-            return Json.createValue((BigDecimal) value);
-        } else if (value instanceof BigInteger) {
-            return Json.createValue((BigInteger) value);
+        } else if (value instanceof Number) {
+            return NumberUtils.toJsonNumber((Number) value);
         } else if (value.getClass().isArray()) {
             final int length = Array.getLength(value);
             final JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
