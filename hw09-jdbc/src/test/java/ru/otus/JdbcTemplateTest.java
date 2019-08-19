@@ -3,6 +3,7 @@ package ru.otus;
 import lombok.SneakyThrows;
 import org.assertj.core.api.WithAssertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.otus.model.Account;
 import ru.otus.model.User;
@@ -14,6 +15,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
+@DisplayName("JdbcTemplate")
 class JdbcTemplateTest implements WithAssertions {
 
     private JdbcTemplate jdbcTemplate;
@@ -49,6 +51,7 @@ class JdbcTemplateTest implements WithAssertions {
     }
 
     @Test
+    @DisplayName("Should create and select User")
     void shouldCreateAndSelectUser() {
         final User user = new User(1L, "John", 22);
 
@@ -58,6 +61,7 @@ class JdbcTemplateTest implements WithAssertions {
     }
 
     @Test
+    @DisplayName("Should create and select Account")
     void shouldCreateAndSelectAccount() {
         final Account account = new Account(2L, "Max", new BigDecimal("21.0"));
 
@@ -67,6 +71,7 @@ class JdbcTemplateTest implements WithAssertions {
     }
 
     @Test
+    @DisplayName("Should create User with null fields")
     void shouldCreateUserWithNullFields() {
         final User user = new User(null, null, null);
 
@@ -77,6 +82,7 @@ class JdbcTemplateTest implements WithAssertions {
     }
 
     @Test
+    @DisplayName("Should create Account with null fields")
     void shouldCreateAccountWithNullFields() {
         final Account account = new Account(null, null, null);
 
@@ -100,6 +106,7 @@ class JdbcTemplateTest implements WithAssertions {
     }
 
     @Test
+    @DisplayName("Should update existing Account")
     void shouldUpdateExistingAccount() {
         final Account account = new Account(2L, "Active", new BigDecimal("11.11"));
 
@@ -113,11 +120,13 @@ class JdbcTemplateTest implements WithAssertions {
     }
 
     @Test
-    void shouldFailSelectUserByNonExistingId() {
+    @DisplayName("Should fail selecting User by non-existing id")
+    void shouldFailSelectingUserByNonExistingId() {
         assertThat(jdbcTemplate.load(111L, User.class)).isNull();
     }
 
     @Test
+    @DisplayName("Should fail operation for entity withoud id")
     void shouldFailOperationForEntityWithoutId() {
         assertThatThrownBy(() -> jdbcTemplate.create(new Object()));
     }

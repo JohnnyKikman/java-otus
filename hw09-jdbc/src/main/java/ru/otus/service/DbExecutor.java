@@ -24,9 +24,10 @@ public interface DbExecutor {
      *
      * @param sql тело запроса
      * @param connection {@link Connection}
-     * @param id идентификатор, по которому производится поиск объекта в БД
+     * @param fieldSetter {@link Consumer}, связывающий поля класса с параметрами запроса
      * @param objectMapper {@link Consumer}, приводящий результат запроса к доменной сущности
      */
-    void executeQuery(String sql, Connection connection, long id, Consumer<ResultSet> objectMapper);
+    void executeQuery(String sql, Connection connection, Consumer<PreparedStatement> fieldSetter,
+                      Consumer<ResultSet> objectMapper);
 
 }

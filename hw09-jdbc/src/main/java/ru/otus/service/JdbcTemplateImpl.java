@@ -73,7 +73,7 @@ public class JdbcTemplateImpl implements JdbcTemplate {
             new DbExecutorImpl().executeQuery(
                     getTemplate(targetClass, SELECT),
                     connection,
-                    id,
+                    statement -> assignId(statement, 1, id),
                     resultSet -> {
                         try {
                             final Field[] fields = targetClass.getDeclaredFields();
@@ -131,7 +131,15 @@ public class JdbcTemplateImpl implements JdbcTemplate {
             preparedStatement.setObject(i++, field.get(object));
         }
         if (withId) {
-            preparedStatement.setLong(i, ReflectionUtils.getId(object));
+            assignId(preparedStatement, i, ReflectionUtils.getId(object));
         }
+    }
+
+    /**
+     * Устанавливает в {@link PreparedStatement} идентификатор сущности в заданный {@literal index} параметр.
+     */
+    @SneakyThrows
+    private void assignId(PreparedStatement preparedStatement, int index, long id) {
+        preparedStatement.setLong(index, id);
     }
 }

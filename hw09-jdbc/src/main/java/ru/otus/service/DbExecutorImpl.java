@@ -31,9 +31,10 @@ public class DbExecutorImpl implements DbExecutor {
      * {@inheritDoc}.
      */
     @Override
-    public void executeQuery(String sql, Connection connection, long id, Consumer<ResultSet> objectMapper) {
+    public void executeQuery(String sql, Connection connection, Consumer<PreparedStatement> fieldSetter,
+                             Consumer<ResultSet> objectMapper) {
         try (final PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setLong(1, id);
+            fieldSetter.accept(preparedStatement);
             final ResultSet resultSet = preparedStatement.executeQuery();
             System.out.println(format(SELECTED_INFO_TEMPLATE, sql));
             if (resultSet.next()) {
