@@ -3,20 +3,23 @@ package ru.otus.service;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import ru.otus.annotation.Id;
-import ru.otus.util.ReflectionUtils;
-import ru.otus.util.SqlKey;
+import ru.otus.util.ClassData;
 import ru.otus.util.SqlUtils;
 import ru.otus.value.Operation;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import static java.lang.String.format;
+import static java.util.Arrays.asList;
 import static ru.otus.value.Operation.INSERT;
 import static ru.otus.value.Operation.SELECT;
 import static ru.otus.value.Operation.UPDATE;
@@ -25,20 +28,23 @@ import static ru.otus.value.Operation.UPDATE;
 public class JdbcTemplateImpl implements JdbcTemplate {
 
     private static final String NO_ID_FIELD = "В переданном объекте типа %s нет поля, отмеченного аннотацией @Id";
+    private static final String CANNOT_INSTANTIATE_CLASS =
+            "Невозможно создать класс %s с помощью конструктора без параметров";
 
     private final Connection connection;
-    private final Map<SqlKey, String> sqlCache = new HashMap<>();
+    private final Map<Class, ClassData> classDataCache = new HashMap<>();
 
     /**
      * {@inheritDoc}.
      */
     @Override
     public void create(Object objectData) {
+        final ClassData<?> classData = getClassData(objectData.getClass(), INSERT);
         try {
             new DbExecutorImpl().executeUpdate(
-                    getTemplate(objectData.getClass(), INSERT),
+                    classData.getSqls().get(INSERT),
                     connection,
-                    statement -> assignFields(objectData, statement, false)
+                    statement -> assignFields(objectData, classData, statement, false)
             );
             connection.commit();
         } catch (SQLException e) {
@@ -51,11 +57,12 @@ public class JdbcTemplateImpl implements JdbcTemplate {
      */
     @Override
     public void update(Object objectData) {
+        final ClassData<?> classData = getClassData(objectData.getClass(), UPDATE);
         try {
             new DbExecutorImpl().executeUpdate(
-                    getTemplate(objectData.getClass(), UPDATE),
+                    classData.getSqls().get(UPDATE),
                     connection,
-                    statement -> assignFields(objectData, statement, true)
+                    statement -> assignFields(objectData, classData, statement, true)
             );
             connection.commit();
         } catch (SQLException e) {
@@ -68,15 +75,17 @@ public class JdbcTemplateImpl implements JdbcTemplate {
      */
     @Override
     public <T> T load(long id, Class<T> targetClass) {
-        final T result = ReflectionUtils.newInstance(targetClass);
+        final ClassData<T> classData = getClassData(targetClass, SELECT);
+        final T result;
         try {
+            result = classData.getDefaultConstructor().newInstance();
             new DbExecutorImpl().executeQuery(
-                    getTemplate(targetClass, SELECT),
+                    classData.getSqls().get(SELECT),
                     connection,
                     statement -> assignId(statement, 1, id),
                     resultSet -> {
                         try {
-                            final Field[] fields = targetClass.getDeclaredFields();
+                            final Collection<Field> fields = classData.getFields();
                             int i = 1;
                             for (Field field : fields) {
                                 field.setAccessible(true);
@@ -89,49 +98,64 @@ public class JdbcTemplateImpl implements JdbcTemplate {
                     }
             );
             connection.commit();
-        } catch (SQLException e) {
+            if (classData.getId().get(result) == null) {
+                return null;
+            }
+        } catch (SQLException | ReflectiveOperationException e) {
             System.out.println(e.getMessage());
             return null;
         }
-        return ReflectionUtils.getId(result) != null ? result : null;
+        return result;
     }
 
     /**
      * Функция получения SQL-запроса для заданного класса {@link Class} и операции {@link Operation}.
      */
-    private String getTemplate(Class<?> clazz, Operation operation) {
-        final SqlKey key = new SqlKey(clazz, operation);
-        String sql = sqlCache.get(key);
-        if (sql != null) {
-            return sql;
+    @SuppressWarnings("unchecked")
+    private <T> ClassData<T> getClassData(Class<T> clazz, Operation operation) {
+        ClassData<T> classData = classDataCache.get(clazz);
+        if (classData != null) {
+            final Map<Operation, String> sqls = classData.getSqls();
+            if (!sqls.containsKey(operation)) {
+                sqls.put(operation, SqlUtils.buildSqlTemplate(clazz, operation, classData.getId()));
+            }
+            return classData;
         }
 
         final Field[] classFields = clazz.getDeclaredFields();
-        final boolean hasId = Arrays.stream(classFields)
-                .anyMatch(field -> field.getAnnotationsByType(Id.class).length > 0);
-        if (!hasId) {
+        final Optional<Field> id = Arrays.stream(classFields)
+                .filter(field -> field.getAnnotationsByType(Id.class).length > 0)
+                .findFirst();
+        if (id.isEmpty()) {
             throw new IllegalArgumentException(format(NO_ID_FIELD, clazz.getSimpleName()));
         }
+        final Constructor<T> defaultConstructor;
+        try {
+            defaultConstructor = clazz.getConstructor();
+        } catch (NoSuchMethodException e) {
+            throw new IllegalArgumentException(format(CANNOT_INSTANTIATE_CLASS, clazz.getSimpleName()));
+        }
+        classData = new ClassData<>(id.get(), asList(classFields), defaultConstructor);
+        classData.getSqls().put(operation, SqlUtils.buildSqlTemplate(clazz, operation, classData.getId()));
+        classDataCache.put(clazz, classData);
 
-        sql = SqlUtils.buildSqlTemplate(clazz, operation);
-        sqlCache.put(key, sql);
-
-        return sql;
+        return classData;
     }
 
     /**
      * Почередно присываивает полям в {@link PreparedStatement} значения из объекта.
      */
     @SneakyThrows
-    private void assignFields(Object object, PreparedStatement preparedStatement, boolean withId) {
-        final Field[] fields = object.getClass().getDeclaredFields();
+    private void assignFields(Object object, ClassData<?> classData, PreparedStatement preparedStatement,
+                              boolean withId) {
+        final Collection<Field> fields = classData.getFields();
         int i = 1;
         for (Field field : fields) {
             field.setAccessible(true);
             preparedStatement.setObject(i++, field.get(object));
         }
         if (withId) {
-            assignId(preparedStatement, i, ReflectionUtils.getId(object));
+            assignId(preparedStatement, i, (long) classData.getId().get(object));
         }
     }
 

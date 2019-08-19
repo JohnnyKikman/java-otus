@@ -18,7 +18,7 @@ public final class SqlUtils {
         return Arrays.stream(fields).map(Field::getName).collect(Collectors.joining(","));
     }
 
-    public static String buildSqlTemplate(Class<?> clazz, Operation operation) {
+    public static String buildSqlTemplate(Class<?> clazz, Operation operation, Field idField) {
         final String tableName = clazz.getSimpleName();
         final Field[] fields = clazz.getDeclaredFields();
         switch (operation) {
@@ -30,12 +30,12 @@ public final class SqlUtils {
             case SELECT:
                 return "select "
                         + SqlUtils.formatParameters(fields)
-                        + " from " + tableName + " where " + ReflectionUtils.getIdFieldName(clazz) + " = ?";
+                        + " from " + tableName + " where " + idField.getName() + " = ?";
             case UPDATE:
                 return "update " + tableName + " set "
                         + Arrays.stream(fields).map(field -> field.getName() + " = ?")
                         .collect(Collectors.joining(","))
-                        + " where " + ReflectionUtils.getIdFieldName(clazz) + " = ?";
+                        + " where " + idField.getName() + " = ?";
             default:
                 throw new IllegalStateException(format(UNKNOWN_SQL_OPERATION, operation));
         }
