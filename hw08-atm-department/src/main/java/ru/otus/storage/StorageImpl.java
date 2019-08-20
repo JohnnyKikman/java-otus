@@ -3,31 +3,50 @@ package ru.otus.storage;
 import ru.otus.command.Command;
 import ru.otus.exception.NotEnoughBanknotesException;
 import ru.otus.service.internal.StorageState;
+import ru.otus.storage.internal.Cell;
 import ru.otus.value.Banknote;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.stream.Collectors;
 
-import static java.util.function.Function.identity;
-import static java.util.stream.Collectors.toMap;
+import static ru.otus.value.Banknote.FIFTY;
+import static ru.otus.value.Banknote.FIVE_HUNDRED;
+import static ru.otus.value.Banknote.FIVE_THOUSAND;
+import static ru.otus.value.Banknote.ONE_HUNDRED;
+import static ru.otus.value.Banknote.ONE_THOUSAND;
+import static ru.otus.value.Banknote.TEN;
+import static ru.otus.value.Banknote.TWO_HUNDRED;
+import static ru.otus.value.Banknote.TWO_THOUSAND;
 
 public class StorageImpl implements Storage {
 
-    private Map<Banknote, Integer> amounts;
+    private Cell cells;
     private final Collection<Command> commands = new ArrayList<>();
 
     private static final int INITIAL_BANKNOTES = 1;
-    private static final Map<Banknote, Integer> DEFAULT_STATE =
-            Arrays.stream(Banknote.values()).collect(toMap(identity(), any -> INITIAL_BANKNOTES));
+    private static final Cell DEFAULT_STATE;
+
+    static {
+        DEFAULT_STATE = new Cell(FIVE_THOUSAND, INITIAL_BANKNOTES)
+                .and(new Cell(TWO_THOUSAND, INITIAL_BANKNOTES))
+                .and(new Cell(ONE_THOUSAND, INITIAL_BANKNOTES))
+                .and(new Cell(FIVE_HUNDRED, INITIAL_BANKNOTES))
+                .and(new Cell(TWO_HUNDRED, INITIAL_BANKNOTES))
+                .and(new Cell(ONE_HUNDRED, INITIAL_BANKNOTES))
+                .and(new Cell(FIFTY, INITIAL_BANKNOTES))
+                .and(new Cell(TEN, INITIAL_BANKNOTES));
+    }
 
     public StorageImpl() {
-        amounts = DEFAULT_STATE;
+        cells = DEFAULT_STATE;
     }
 
     public StorageImpl(StorageState state) {
-        amounts = state.getAmounts();
+        cells = cellsFrom(state);
     }
 
     /**
@@ -35,7 +54,7 @@ public class StorageImpl implements Storage {
      */
     @Override
     public int getBanknotes(Banknote banknote) {
-        return amounts.get(banknote);
+        return cells.get(banknote);
     }
 
     /**
@@ -43,11 +62,11 @@ public class StorageImpl implements Storage {
      */
     @Override
     public void fetchBanknotes(Banknote banknote, int amount) {
-        final int currentAmount = amounts.get(banknote);
+        final int currentAmount = cells.get(banknote);
         if (currentAmount - amount < 0) {
             throw new NotEnoughBanknotesException(banknote, amount, currentAmount);
         }
-        amounts.put(banknote, currentAmount - amount);
+        cells.fetch(banknote, amount);
     }
 
 
@@ -56,7 +75,7 @@ public class StorageImpl implements Storage {
      */
     @Override
     public void putBanknotes(Banknote banknote, int amount) {
-        amounts.put(banknote, amounts.get(banknote) + amount);
+        cells.put(banknote, amount);
     }
 
     /**
@@ -64,7 +83,7 @@ public class StorageImpl implements Storage {
      */
     @Override
     public Collection<Banknote> getAvailableBanknotes() {
-        return amounts.keySet();
+        return cells.toMap().keySet();
     }
 
     /**
@@ -72,7 +91,7 @@ public class StorageImpl implements Storage {
      */
     @Override
     public StorageState getCurrentState() {
-        return new StorageState(amounts);
+        return new StorageState(cells.toMap());
     }
 
     /**
@@ -80,7 +99,7 @@ public class StorageImpl implements Storage {
      */
     @Override
     public void restore(StorageState state) {
-        this.amounts = state.getAmounts();
+        this.cells = cellsFrom(state);
     }
 
     /**
@@ -98,5 +117,24 @@ public class StorageImpl implements Storage {
     public void execute() {
         commands.forEach(Command::execute);
         commands.clear();
+    }
+
+    private Cell cellsFrom(StorageState state) {
+        final Map<Banknote, Integer> amounts = state.getAmounts();
+        if (amounts.isEmpty()) {
+            return Cell.empty();
+        }
+
+        final Iterator<Banknote> banknotes = amounts.keySet()
+                .stream()
+                .sorted(Comparator.comparing(Banknote::getAmount).reversed())
+                .collect(Collectors.toList()).iterator();
+        final Banknote highestBanknote = banknotes.next();
+        Cell cell = new Cell(highestBanknote, amounts.get(highestBanknote));
+        while (banknotes.hasNext()) {
+            final Banknote banknote = banknotes.next();
+            cell = cell.and(new Cell(banknote, amounts.get(banknote)));
+        }
+        return cell;
     }
 }
