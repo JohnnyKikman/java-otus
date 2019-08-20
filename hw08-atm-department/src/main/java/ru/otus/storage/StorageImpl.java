@@ -1,18 +1,30 @@
 package ru.otus.storage;
 
 import ru.otus.exception.NotEnoughBanknotesException;
-import ru.otus.service.internal.AtmState;
+import ru.otus.service.internal.StorageState;
 import ru.otus.value.Banknote;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
 
+import static java.util.function.Function.identity;
+import static java.util.stream.Collectors.toMap;
+
 public class StorageImpl implements Storage {
 
-    private final Map<Banknote, Integer> amounts;
+    private Map<Banknote, Integer> amounts;
 
-    public StorageImpl(AtmState state) {
-        amounts = state.getInitialAmounts();
+    private static final int INITIAL_BANKNOTES = 1;
+    private static final Map<Banknote, Integer> DEFAULT_STATE =
+            Arrays.stream(Banknote.values()).collect(toMap(identity(), any -> INITIAL_BANKNOTES));
+
+    public StorageImpl() {
+        amounts = DEFAULT_STATE;
+    }
+
+    public StorageImpl(StorageState state) {
+        amounts = state.getAmounts();
     }
 
     /**
@@ -50,5 +62,21 @@ public class StorageImpl implements Storage {
     @Override
     public Collection<Banknote> getAvailableBanknotes() {
         return amounts.keySet();
+    }
+
+    /**
+     * {@inheritDoc}.
+     */
+    @Override
+    public StorageState getCurrentState() {
+        return new StorageState(amounts);
+    }
+
+    /**
+     * {@inheritDoc}.
+     */
+    @Override
+    public void restore(StorageState state) {
+        this.amounts = state.getAmounts();
     }
 }

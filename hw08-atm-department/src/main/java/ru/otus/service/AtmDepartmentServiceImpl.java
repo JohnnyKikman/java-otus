@@ -1,6 +1,6 @@
 package ru.otus.service;
 
-import ru.otus.service.internal.AtmState;
+import ru.otus.service.internal.StorageState;
 
 import java.util.Collection;
 
@@ -10,7 +10,7 @@ public class AtmDepartmentServiceImpl implements AtmDepartmentService {
 
     private final Collection<AtmService> atms;
 
-    public AtmDepartmentServiceImpl(Collection<AtmState> initialStates) {
+    public AtmDepartmentServiceImpl(Collection<StorageState> initialStates) {
         atms = initialStates.stream().map(AtmServiceImpl::new).collect(toList());
     }
 

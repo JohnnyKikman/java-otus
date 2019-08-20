@@ -2,20 +2,16 @@ package ru.otus.service;
 
 import ru.otus.exception.AmountNotFullyDisposableException;
 import ru.otus.exception.InsufficientFundsException;
-import ru.otus.service.internal.AtmState;
+import ru.otus.service.internal.StorageState;
 import ru.otus.storage.Storage;
 import ru.otus.storage.StorageImpl;
 import ru.otus.value.Banknote;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
-import static java.util.function.Function.identity;
-import static java.util.stream.Collectors.toMap;
 
 /**
  * Стандартная имплементация банкомата.
@@ -23,21 +19,16 @@ import static java.util.stream.Collectors.toMap;
 public class AtmServiceImpl implements AtmService {
 
     private Storage storage;
-    private final AtmState initialState;
-
-    private static final int INITIAL_BANKNOTES = 1;
-    private static final AtmState DEFAULT_STATE = new AtmState(
-            Arrays.stream(Banknote.values()).collect(toMap(identity(), any -> INITIAL_BANKNOTES))
-    );
+    private final StorageState initialState;
 
     public AtmServiceImpl() {
-        this.initialState = DEFAULT_STATE;
-        this.storage = new StorageImpl(initialState);
+        this.storage = new StorageImpl();
+        this.initialState = storage.getCurrentState();
     }
 
-    public AtmServiceImpl(AtmState state) {
-        this.initialState = state;
+    public AtmServiceImpl(StorageState state) {
         this.storage = new StorageImpl(state);
+        this.initialState = storage.getCurrentState();
     }
 
     /**
@@ -58,6 +49,7 @@ public class AtmServiceImpl implements AtmService {
             throw new InsufficientFundsException(total);
         }
 
+        final StorageState preCashOutState = storage.getCurrentState();
         final List<Banknote> sortedBanknotes = storage.getAvailableBanknotes().stream()
                 .sorted(Comparator.comparing(Banknote::getAmount).reversed())
                 .collect(Collectors.toList());
@@ -73,6 +65,7 @@ public class AtmServiceImpl implements AtmService {
         }
 
         if (remainingAmount > 0) {
+            storage.restore(preCashOutState);
             throw new AmountNotFullyDisposableException(remainingAmount);
         }
         return returnedBanknotes;
@@ -94,6 +87,6 @@ public class AtmServiceImpl implements AtmService {
      */
     @Override
     public void restoreInitialState() {
-        storage = new StorageImpl(initialState);
+        storage.restore(initialState);
     }
 }

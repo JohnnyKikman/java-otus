@@ -1,5 +1,6 @@
 package ru.otus.storage;
 
+import ru.otus.service.internal.StorageState;
 import ru.otus.value.Banknote;
 
 import java.util.Collection;
@@ -39,5 +40,19 @@ public interface Storage {
      * @return коллекция доступных {@link Banknote}
      */
     Collection<Banknote> getAvailableBanknotes();
+
+    /**
+     * Получить текущее состояние хранилища.
+     *
+     * @return текущее состояние {@link StorageState}
+     */
+    StorageState getCurrentState();
+
+    /**
+     * Восстановление состояние хранилища из переданного.
+     *
+     * @param state состояние хранилища {@link StorageState}
+     */
+    void restore(StorageState state);
 
 }
