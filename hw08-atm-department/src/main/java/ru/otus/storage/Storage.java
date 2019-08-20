@@ -1,5 +1,6 @@
 package ru.otus.storage;
 
+import ru.otus.command.Command;
 import ru.otus.service.internal.StorageState;
 import ru.otus.value.Banknote;
 
@@ -54,5 +55,17 @@ public interface Storage {
      * @param state состояние хранилища {@link StorageState}
      */
     void restore(StorageState state);
+
+    /**
+     * Регистрация команды на выполнение.
+     *
+     * @param command команда {@link Command}
+     */
+    void register(Command command);
+
+    /**
+     * Выполнение зарегистрированных команд.
+     */
+    void execute();
 
 }

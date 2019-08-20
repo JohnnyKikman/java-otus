@@ -1,9 +1,11 @@
 package ru.otus.storage;
 
+import ru.otus.command.Command;
 import ru.otus.exception.NotEnoughBanknotesException;
 import ru.otus.service.internal.StorageState;
 import ru.otus.value.Banknote;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
@@ -14,6 +16,7 @@ import static java.util.stream.Collectors.toMap;
 public class StorageImpl implements Storage {
 
     private Map<Banknote, Integer> amounts;
+    private final Collection<Command> commands = new ArrayList<>();
 
     private static final int INITIAL_BANKNOTES = 1;
     private static final Map<Banknote, Integer> DEFAULT_STATE =
@@ -78,5 +81,22 @@ public class StorageImpl implements Storage {
     @Override
     public void restore(StorageState state) {
         this.amounts = state.getAmounts();
+    }
+
+    /**
+     * {@inheritDoc}.
+     */
+    @Override
+    public void register(Command command) {
+        commands.add(command);
+    }
+
+    /**
+     * {@inheritDoc}.
+     */
+    @Override
+    public void execute() {
+        commands.forEach(Command::execute);
+        commands.clear();
     }
 }

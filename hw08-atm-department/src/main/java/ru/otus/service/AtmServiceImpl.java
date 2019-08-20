@@ -1,5 +1,7 @@
 package ru.otus.service;
 
+import ru.otus.command.FetchBanknotesCommand;
+import ru.otus.command.PutBanknotesCommand;
 import ru.otus.exception.AmountNotFullyDisposableException;
 import ru.otus.exception.InsufficientFundsException;
 import ru.otus.service.internal.StorageState;
@@ -36,7 +38,8 @@ public class AtmServiceImpl implements AtmService {
      */
     @Override
     public void cashIn(Map<Banknote, Integer> banknotes) {
-        banknotes.forEach(storage::putBanknotes);
+        banknotes.forEach((banknote, amount) -> storage.register(new PutBanknotesCommand(storage, banknote, amount)));
+        storage.execute();
     }
 
     /**
@@ -60,7 +63,7 @@ public class AtmServiceImpl implements AtmService {
             if (remainingAmount >= amount && extractedBanknotes <= storage.getBanknotes(banknote)) {
                 remainingAmount -= extractedBanknotes * amount;
                 returnedBanknotes.put(banknote, extractedBanknotes);
-                storage.fetchBanknotes(banknote, extractedBanknotes);
+                storage.register(new FetchBanknotesCommand(storage, banknote, extractedBanknotes));
             }
         }
 
@@ -68,6 +71,7 @@ public class AtmServiceImpl implements AtmService {
             storage.restore(preCashOutState);
             throw new AmountNotFullyDisposableException(remainingAmount);
         }
+        storage.execute();
         return returnedBanknotes;
     }
 
