@@ -1,5 +1,6 @@
 package ru.otus.service;
 
+import lombok.Getter;
 import lombok.Setter;
 import ru.otus.command.FetchBanknotesCommand;
 import ru.otus.command.PutBanknotesCommand;
@@ -11,6 +12,8 @@ import ru.otus.storage.StorageImpl;
 import ru.otus.strategy.BanknotesSortingStrategy;
 import ru.otus.strategy.DescendingBanknotesSortingStrategy;
 import ru.otus.value.Banknote;
+import ru.otus.visitor.TotalCollectingVisitor;
+import ru.otus.visitor.Visitor;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,6 +24,7 @@ import java.util.Map;
  */
 public class AtmServiceImpl implements AtmService {
 
+    @Getter
     private Storage storage;
     private final StorageState initialState;
     @Setter
@@ -52,7 +56,7 @@ public class AtmServiceImpl implements AtmService {
      */
     @Override
     public Map<Banknote, Integer> cashOut(int remainingAmount) {
-        final int total = getTotal();
+        final int total = accept(new TotalCollectingVisitor());
         if (total < remainingAmount) {
             throw new InsufficientFundsException(total);
         }
@@ -82,18 +86,12 @@ public class AtmServiceImpl implements AtmService {
      * {@inheritDoc}.
      */
     @Override
-    public int getTotal() {
-        return storage.getAvailableBanknotes().stream()
-                .map(banknote -> banknote.getAmount() * storage.getBanknotes(banknote))
-                .reduce(Integer::sum)
-                .orElse(0);
-    }
-
-    /**
-     * {@inheritDoc}.
-     */
-    @Override
     public void restoreInitialState() {
         storage.restore(initialState);
+    }
+
+    @Override
+    public int accept(Visitor visitor) {
+        return visitor.visit(this);
     }
 }

@@ -1,7 +1,9 @@
 package ru.otus.service;
 
+import ru.otus.storage.Storage;
 import ru.otus.strategy.BanknotesSortingStrategy;
 import ru.otus.value.Banknote;
+import ru.otus.visitor.Visitor;
 
 import java.util.Map;
 
@@ -9,6 +11,11 @@ import java.util.Map;
  * Интерфейс для работы с банкоматом.
  */
 public interface AtmService {
+
+    /**
+     * Получение хранилища банкомата.
+     */
+    Storage getStorage();
 
     /**
      * Внесение средств в банкомат.
@@ -26,13 +33,6 @@ public interface AtmService {
     Map<Banknote, Integer> cashOut(int requiredAmount);
 
     /**
-     * Получение суммы средств, находящихся в банкомате.
-     *
-     * @return сумма средств в банкомате
-     */
-    int getTotal();
-
-    /**
      * Восстановление первоначального состояния банкомата.
      */
     void restoreInitialState();
@@ -43,5 +43,12 @@ public interface AtmService {
      * @param strategy стратегия сортировки банкнот {@link BanknotesSortingStrategy}
      */
     void setStrategy(BanknotesSortingStrategy strategy);
+
+    /**
+     * Получение объекта {@link Visitor}, вычисляющего значение типа int.
+     *
+     * @param visitor объект {@link Visitor}
+     */
+    int accept(Visitor visitor);
 
 }

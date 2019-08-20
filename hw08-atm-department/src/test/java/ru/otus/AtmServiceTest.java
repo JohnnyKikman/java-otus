@@ -8,6 +8,7 @@ import ru.otus.service.AtmService;
 import ru.otus.service.AtmServiceImpl;
 import ru.otus.service.internal.StorageState;
 import ru.otus.value.Banknote;
+import ru.otus.visitor.TotalCollectingVisitor;
 
 import java.util.AbstractMap;
 import java.util.Collections;
@@ -64,7 +65,7 @@ class AtmServiceTest {
                 .hasMessage("Невозможно полностью выдать необходимую сумму. Остаток: 1");
 
         // проверка восстановления состояния
-        assertThat(atmService.getTotal()).isEqualTo(2500);
+        assertThat(atmService.accept(new TotalCollectingVisitor())).isEqualTo(2500);
     }
 
 }

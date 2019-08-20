@@ -2,6 +2,7 @@ package ru.otus;
 
 import ru.otus.service.AtmServiceImpl;
 import ru.otus.value.Banknote;
+import ru.otus.visitor.TotalCollectingVisitor;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -20,13 +21,13 @@ public class AtmApplication {
         Arrays.stream(Banknote.values()).forEach(faceValue -> initialPack.put(faceValue, random.nextInt(10)));
         atm.cashIn(initialPack);
 
-        System.out.println(atm.getTotal());
+        System.out.println(atm.accept(new TotalCollectingVisitor()));
 
         // снятие "нормального" объема средств
 
         System.out.println(atm.cashOut(1230));
 
-        System.out.println(atm.getTotal());
+        System.out.println(atm.accept(new TotalCollectingVisitor()));
 
         // попытка снять средства, которые не выдать имеющимися банкнотами -> AmountNotFullyDisposableException
 

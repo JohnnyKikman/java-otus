@@ -1,6 +1,7 @@
 package ru.otus.service;
 
 import ru.otus.service.internal.StorageState;
+import ru.otus.visitor.TotalCollectingVisitor;
 
 import java.util.Collection;
 
@@ -19,7 +20,7 @@ public class AtmDepartmentServiceImpl implements AtmDepartmentService {
      */
     @Override
     public int getAtmAmounts() {
-        return atms.stream().map(AtmService::getTotal).reduce(Integer::sum).orElse(0);
+        return atms.stream().map(atm -> atm.accept(new TotalCollectingVisitor())).reduce(Integer::sum).orElse(0);
     }
 
     /**
