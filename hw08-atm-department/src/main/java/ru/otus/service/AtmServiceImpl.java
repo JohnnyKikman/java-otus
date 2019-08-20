@@ -1,5 +1,6 @@
 package ru.otus.service;
 
+import lombok.Setter;
 import ru.otus.command.FetchBanknotesCommand;
 import ru.otus.command.PutBanknotesCommand;
 import ru.otus.exception.AmountNotFullyDisposableException;
@@ -7,13 +8,13 @@ import ru.otus.exception.InsufficientFundsException;
 import ru.otus.service.internal.StorageState;
 import ru.otus.storage.Storage;
 import ru.otus.storage.StorageImpl;
+import ru.otus.strategy.BanknotesSortingStrategy;
+import ru.otus.strategy.DescendingBanknotesSortingStrategy;
 import ru.otus.value.Banknote;
 
-import java.util.Comparator;
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * Стандартная имплементация банкомата.
@@ -22,15 +23,19 @@ public class AtmServiceImpl implements AtmService {
 
     private Storage storage;
     private final StorageState initialState;
+    @Setter
+    private BanknotesSortingStrategy strategy;
 
     public AtmServiceImpl() {
         this.storage = new StorageImpl();
         this.initialState = storage.getCurrentState();
+        this.strategy = new DescendingBanknotesSortingStrategy();
     }
 
     public AtmServiceImpl(StorageState state) {
         this.storage = new StorageImpl(state);
         this.initialState = storage.getCurrentState();
+        this.strategy = new DescendingBanknotesSortingStrategy();
     }
 
     /**
@@ -53,9 +58,7 @@ public class AtmServiceImpl implements AtmService {
         }
 
         final StorageState preCashOutState = storage.getCurrentState();
-        final List<Banknote> sortedBanknotes = storage.getAvailableBanknotes().stream()
-                .sorted(Comparator.comparing(Banknote::getAmount).reversed())
-                .collect(Collectors.toList());
+        final Collection<Banknote> sortedBanknotes = strategy.sort(storage.getAvailableBanknotes());
         final Map<Banknote, Integer> returnedBanknotes = new HashMap<>();
         for (Banknote banknote : sortedBanknotes) {
             int amount = banknote.getAmount();

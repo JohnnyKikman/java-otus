@@ -1,5 +1,6 @@
 package ru.otus.service;
 
+import ru.otus.strategy.BanknotesSortingStrategy;
 import ru.otus.value.Banknote;
 
 import java.util.Map;
@@ -35,5 +36,12 @@ public interface AtmService {
      * Восстановление первоначального состояния банкомата.
      */
     void restoreInitialState();
+
+    /**
+     * Изменение стратегии, по которой будут сортироваться банкноты при выдаче.
+     *
+     * @param strategy стратегия сортировки банкнот {@link BanknotesSortingStrategy}
+     */
+    void setStrategy(BanknotesSortingStrategy strategy);
 
 }
