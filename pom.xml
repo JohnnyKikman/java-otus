@@ -13,6 +13,7 @@
         <module>hw04-logging</module>
         <module>hw06-atm</module>
         <module>hw07-serialization</module>
+        <module>hw08-atm-department</module>
         <module>hw09-jdbc</module>
         <module>hw10-hibernate</module>
     </modules>
