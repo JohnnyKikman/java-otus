@@ -33,9 +33,9 @@ public class UserDbService implements DbService<User> {
             session.save(objectData);
 
             session.getTransaction().commit();
+            cache.put(objectData.getId(), objectData);
             System.out.println(format(SAVED_TEMPLATE, objectData));
         }
-        cache.put(objectData.getId(), objectData);
     }
 
     /**
@@ -43,7 +43,8 @@ public class UserDbService implements DbService<User> {
      */
     @Override
     public void update(User objectData) {
-        if (objectData.getId() == null) {
+        final Long id = objectData.getId();
+        if (id == null) {
             throw new IllegalStateException(format(ENTITY_HAS_NO_ID, objectData));
         }
         try (final Session session = sessionFactory.openSession()) {
@@ -52,6 +53,7 @@ public class UserDbService implements DbService<User> {
             session.update(objectData);
 
             session.getTransaction().commit();
+            cache.put(id, objectData);
             System.out.println(format(UPDATED_TEMPLATE, objectData));
         }
     }
