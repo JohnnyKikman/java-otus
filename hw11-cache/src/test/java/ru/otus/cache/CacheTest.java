@@ -12,7 +12,7 @@ class CacheTest implements WithAssertions {
     private Cache<Integer, String> cache;
 
     @Test
-    @DisplayName("should remove elements on max size for eternal cache")
+    @DisplayName("Should remove elements on max size for eternal cache")
     void shouldRemoveElementsOnMaxSizeForEternalCache() {
         cache = new CacheImpl<>(5, 0, 0, true);
 
@@ -33,7 +33,7 @@ class CacheTest implements WithAssertions {
     }
 
     @Test
-    @DisplayName("should remove elements on life timeout")
+    @DisplayName("Should remove elements on life timeout")
     void shouldRemoveElementsOnLifeTimeout() throws InterruptedException {
         cache = new CacheImpl<>(5, 2000, 0, false);
 
@@ -49,7 +49,7 @@ class CacheTest implements WithAssertions {
     }
 
     @Test
-    @DisplayName("should remove elements on idle timeout")
+    @DisplayName("Should remove elements on idle timeout")
     void shouldRemoveElementsOnIdleTimeout() throws InterruptedException {
         cache = new CacheImpl<>(5, 0, 5000, false);
 

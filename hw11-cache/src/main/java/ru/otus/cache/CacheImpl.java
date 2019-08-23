@@ -29,7 +29,7 @@ public class CacheImpl<K, V> implements Cache<K, V> {
     private final Map<K, SoftReference<CacheElement<V>>> elements = new LinkedHashMap<>();
     private final Collection<CacheListener<K, V>> listeners = new ArrayList<>();
 
-    CacheImpl(int maxElements, long lifeTimeMs, long idleTimeMs, boolean isEternal) {
+    public CacheImpl(int maxElements, long lifeTimeMs, long idleTimeMs, boolean isEternal) {
         this.maxElements = maxElements;
         this.lifeTimeMs = lifeTimeMs > 0 ? lifeTimeMs : 0;
         this.idleTimeMs = idleTimeMs > 0 ? idleTimeMs : 0;
