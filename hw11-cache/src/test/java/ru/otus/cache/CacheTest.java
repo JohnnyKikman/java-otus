@@ -4,6 +4,8 @@ import org.assertj.core.api.WithAssertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Cache")
@@ -21,11 +23,11 @@ class CacheTest implements WithAssertions {
         }
 
         for (int i = 0; i < 5; i++) {
-            assertThat(cache.get(i)).isNull();
+            assertThat(cache.get(i)).isEmpty();
         }
 
         for (int i = 5; i < 10; i++) {
-            assertThat(cache.get(i)).isEqualTo("String " + i);
+            assertThat(cache.get(i)).isEqualTo(Optional.of("String " + i));
         }
 
         assertEquals(5, cache.getHitCount());
@@ -44,7 +46,7 @@ class CacheTest implements WithAssertions {
         Thread.sleep(3000);
 
         for (int i = 0; i < 5; i++) {
-            assertThat(cache.get(i)).isNull();
+            assertThat(cache.get(i)).isEmpty();
         }
     }
 
@@ -60,13 +62,13 @@ class CacheTest implements WithAssertions {
         Thread.sleep(3000);
 
         for (int i = 0; i < 5; i++) {
-            assertThat(cache.get(i)).isNotNull();
+            assertThat(cache.get(i)).isNotEmpty();
         }
 
         Thread.sleep(6000);
 
         for (int i = 0; i < 5; i++) {
-            assertThat(cache.get(i)).isNull();
+            assertThat(cache.get(i)).isEmpty();
         }
     }
 

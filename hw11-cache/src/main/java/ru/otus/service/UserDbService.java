@@ -6,6 +6,8 @@ import org.hibernate.SessionFactory;
 import ru.otus.cache.Cache;
 import ru.otus.model.User;
 
+import java.util.Optional;
+
 import static java.lang.String.format;
 
 @RequiredArgsConstructor
@@ -63,9 +65,9 @@ public class UserDbService implements DbService<User> {
      */
     @Override
     public User load(long id) {
-        final User resultFromCache = cache.get(id);
-        if (resultFromCache != null) {
-            return resultFromCache;
+        final Optional<User> resultFromCache = cache.get(id);
+        if (resultFromCache.isPresent()) {
+            return resultFromCache.get();
         }
 
         try (final Session session = sessionFactory.openSession()) {

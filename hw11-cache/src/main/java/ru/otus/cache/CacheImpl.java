@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.function.Function;
@@ -37,13 +38,13 @@ public class CacheImpl<K, V> implements Cache<K, V> {
     }
 
     @Override
-    @SuppressWarnings("ConstantConditions")
     public void put(K key, V value) {
         if (elements.size() == maxElements) {
             final K leastUsed = elements.entrySet().stream()
-                    .min(Comparator.comparingLong(
-                            e -> e.getValue().get() != null ? e.getValue().get().getAccessedAt() : -1
-                    )).map(Map.Entry::getKey)
+                    .min(Comparator.comparingLong(e -> Optional.ofNullable(e.getValue())
+                            .map(SoftReference::get)
+                            .map(CacheElement::getAccessedAt).orElse(-1L)))
+                    .map(Map.Entry::getKey)
                     .orElse(elements.keySet().iterator().next());
             elements.remove(leastUsed);
         }
@@ -79,24 +80,24 @@ public class CacheImpl<K, V> implements Cache<K, V> {
     }
 
     @Override
-    public V get(K key) {
+    public Optional<V> get(K key) {
         final SoftReference<CacheElement<V>> elementReference = elements.get(key);
         if (elementReference == null) {
             miss++;
-            return null;
+            return Optional.empty();
         }
 
         final CacheElement<V> element = elementReference.get();
         if (element == null) {
             miss++;
             elements.remove(key);
-            return null;
+            return Optional.empty();
         } else {
             hit++;
             element.access();
             final V value = element.getValue();
             listeners.forEach(listener -> listener.notify(key, value, GET_ACTION));
-            return value;
+            return Optional.of(value);
         }
     }
 
