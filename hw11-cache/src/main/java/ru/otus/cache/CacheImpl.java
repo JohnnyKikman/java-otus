@@ -11,7 +11,12 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.function.Function;
 
+import static java.lang.String.format;
+
 public class CacheImpl<K, V> implements Cache<K, V> {
+
+    private static final String NOTIFICATION_FAILED = "Не удалось оповестить подписчика о событии '%s' кэша. " +
+            "Ключ: %s, значение: %s";
 
     private static final int TIME_THRESHOLD_MS = 5;
     private static final String PUT_ACTION = "put";
@@ -50,7 +55,7 @@ public class CacheImpl<K, V> implements Cache<K, V> {
         }
 
         elements.put(key, new SoftReference<>(new CacheElement<>(value)));
-        listeners.forEach(listener -> listener.notify(key, value, PUT_ACTION));
+        notifyListeners(key, value, PUT_ACTION);
 
         if (!isEternal) {
             if (lifeTimeMs != 0) {
@@ -73,7 +78,7 @@ public class CacheImpl<K, V> implements Cache<K, V> {
             final CacheElement<V> element = elementReference.get();
             if (element != null) {
                 elementReference.clear();
-                listeners.forEach(listener -> listener.notify(key, element.getValue(), REMOVE_ACTION));
+                notifyListeners(key, element.getValue(), REMOVE_ACTION);
             }
             elements.remove(key);
         }
@@ -96,7 +101,7 @@ public class CacheImpl<K, V> implements Cache<K, V> {
             hit++;
             element.access();
             final V value = element.getValue();
-            listeners.forEach(listener -> listener.notify(key, value, GET_ACTION));
+            notifyListeners(key, value, GET_ACTION);
             return Optional.of(value);
         }
     }
@@ -141,5 +146,15 @@ public class CacheImpl<K, V> implements Cache<K, V> {
 
     private boolean isBefore(long t1, long t2) {
         return t1 < t2 + TIME_THRESHOLD_MS;
+    }
+
+    private void notifyListeners(K key, V value, String actionType) {
+        listeners.forEach(listener -> {
+            try {
+                listener.notify(key, value, actionType);
+            } catch (Exception e) {
+                System.err.println(format(NOTIFICATION_FAILED, key, value, actionType));
+            }
+        });
     }
 }
