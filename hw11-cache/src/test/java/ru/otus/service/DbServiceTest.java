@@ -2,20 +2,15 @@ package ru.otus.service;
 
 import lombok.SneakyThrows;
 import org.assertj.core.api.WithAssertions;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.otus.cache.Cache;
 import ru.otus.cache.CacheImpl;
-import ru.otus.model.Account;
 import ru.otus.model.AddressDataSet;
 import ru.otus.model.PhoneDataSet;
 import ru.otus.model.User;
+import ru.otus.util.SessionFactories;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,32 +20,14 @@ import static java.util.Arrays.asList;
 @DisplayName("DbService")
 class DbServiceTest implements WithAssertions {
 
-    private static final String CONFIG_FILE_PATH = "hibernate.cfg.xml";
-
     private Cache<Long, User> cache;
     private DbService<User> userService;
 
     @BeforeEach
     @SneakyThrows
     void setUp() {
-        final Configuration configuration = new Configuration().configure(CONFIG_FILE_PATH);
-
-        final StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                .applySettings(configuration.getProperties())
-                .build();
-
-        final Metadata metadata = new MetadataSources(serviceRegistry)
-                .addAnnotatedClass(User.class)
-                .addAnnotatedClass(AddressDataSet.class)
-                .addAnnotatedClass(PhoneDataSet.class)
-                .addAnnotatedClass(Account.class)
-                .getMetadataBuilder().build();
-
         cache = new CacheImpl<>(1, 0, 0, true);
-        userService = new UserDbService(
-                cache,
-                metadata.getSessionFactoryBuilder().build()
-        );
+        userService = new UserDbService(cache, SessionFactories.get());
     }
 
     @Test
@@ -71,6 +48,24 @@ class DbServiceTest implements WithAssertions {
 
         assertThat(cache.getHitCount()).isEqualTo(1);
         assertThat(cache.getMissCount()).isEqualTo(0);
+    }
+
+    @Test
+    @DisplayName("Should create and select multiple users")
+    void shouldCreateAndSelectMultipleUsers() {
+        final User firstUser = new User();
+        firstUser.setName("Seb");
+        firstUser.setAge(32);
+
+        userService.create(firstUser);
+
+        final User secondUser = new User();
+        secondUser.setName("Lewis");
+        secondUser.setAge(34);
+
+        userService.create(secondUser);
+
+        assertThat(userService.loadAll()).containsExactlyInAnyOrder(firstUser, secondUser);
     }
 
     @Test
