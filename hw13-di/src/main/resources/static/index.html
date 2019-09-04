@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Users management</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="usersApp" ng-controller="usersController">
+    <font size="2" face="sans-serif"/>
+    <table border="1">
+        <p style="font-size:120%;">Список пользователей</p>
+        <tr>
+            <td>ID</td>
+            <td>Имя</td>
+            <td>Возраст</td>
+            <td>Улица</td>
+            <td>Номера телефонов</td>
+        </tr>
+        <tr ng-repeat="u in users">
+            <td>{{ u.id }}</td>
+            <td>{{ u.name }}</td>
+            <td>{{ u.age }}</td>
+            <td>{{ u.addressDataSet.street }}</td>
+            <td>{{ u.phoneDataSets[0].number }}</td>
+        </tr>
+    </table>
+    <br/>
+    <form name="userForm" ng-submit="saveUser()" ng-controller="usersController">
+        <p style="font-size:120%;">Создание пользователя</p>
+        <br/>
+        <input type="text" ng-model="user.name" placeholder="Имя пользователя"/>
+        <br/>
+        <input type="number" ng-model="user.age" placeholder="Возраст"/>
+        <br/>
+        <input type="text" ng-model="user.addressDataSet.street" placeholder="Улица"/>
+        <br/>
+        <input type="number" ng-model="phoneDataSet[0].number" placeholder="Телефон"/>
+        <br/>
+        <input type="submit" id="submit" value="Сохранить"/>
+    </form>
+</div>
+<script>
+    var app = angular.module('usersApp', []);
+    app.controller('usersController', function($scope, $http) {
+        $http({
+            method : "GET",
+            url : "http://localhost:8080/hw13-di-0.9.0/user"
+        }).then(function (response) {
+            $scope.users = response.data;
+            console.log($scope.users);
+        });
+
+        $scope.phoneDataSet = [];
+        $scope.saveUser = function() {
+            var userData = $scope.user;
+            userData.phoneDataSets = $scope.phoneDataSet;
+            $http({
+                method : "POST",
+                url : "http://localhost:8080/hw13-di-0.9.0/user",
+                data: userData
+            })
+        }
+    });
+</script>
+
+</body>
+</html>
