@@ -1,6 +1,7 @@
 package ru.otus;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -27,21 +28,23 @@ import ru.otus.util.SessionFactories;
 @PropertySource("application.properties")
 public class WebConfig implements WebMvcConfigurer {
 
-    private Environment environment;
+    @Value("${cache.max-elements}")
+    private Integer maxElements;
+    @Value("${cache.time.life}")
+    private Integer lifeTime;
+    @Value("${cache.time.idle}")
+    private Integer idleTime;
+    @Value("${cache.eternal}")
+    private Boolean isEternal;
 
     @Bean
     public DbService<User> userDbService() {
-        return new UserDbService(userCache(environment), sessionFactory());
+        return new UserDbService(userCache(), sessionFactory());
     }
 
     @Bean
-    public Cache<Long, User> userCache(Environment environment) {
-        return new CacheImpl<>(
-                environment.getProperty("cache.max-elements", Integer.class, 1),
-                environment.getProperty("cache.time.life", Integer.class, 0),
-                environment.getProperty("cache.time.idle", Integer.class,0),
-                environment.getProperty("cache.eternal", Boolean.class, true)
-        );
+    public Cache<Long, User> userCache() {
+        return new CacheImpl<>(maxElements, lifeTime, idleTime, isEternal);
     }
 
     @Bean
@@ -57,13 +60,13 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public ViewResolver viewResolver() {
         final InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/static/");
+        viewResolver.setPrefix("/templates/");
         viewResolver.setSuffix(".html");
         return viewResolver;
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
+        registry.addResourceHandler("/templates/**").addResourceLocations("/templates/");
     }
 }

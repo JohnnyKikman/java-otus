@@ -17,7 +17,7 @@ public class UserController {
 
     private final DbService<User> userService;
 
-    @PostMapping("/user")
+    @PostMapping("/api/user")
     public void saveUser(@RequestBody User user) {
         try {
             userService.create(user);
@@ -26,7 +26,7 @@ public class UserController {
         }
     }
 
-    @GetMapping("/user")
+    @GetMapping("/api/user")
     public String getUsers() {
         try {
             return new Gson().toJson(userService.loadAll());

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Users management</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <base href="./">
 </head>
 <body>
 
@@ -43,13 +44,12 @@
 </div>
 <script>
     var app = angular.module('usersApp', []);
-    app.controller('usersController', function($scope, $http) {
+    app.controller('usersController', function($scope, $http, $window) {
         $http({
             method : "GET",
-            url : "http://localhost:8080/hw13-di-0.9.0/user"
+            url : "api/user"
         }).then(function (response) {
             $scope.users = response.data;
-            console.log($scope.users);
         });
 
         $scope.phoneDataSet = [];
@@ -58,8 +58,10 @@
             userData.phoneDataSets = $scope.phoneDataSet;
             $http({
                 method : "POST",
-                url : "http://localhost:8080/hw13-di-0.9.0/user",
+                url : "api/user",
                 data: userData
+            }).then(function (response) {
+                $window.location.reload();
             })
         }
     });
