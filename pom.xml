@@ -18,6 +18,7 @@
         <module>hw10-hibernate</module>
         <module>hw11-cache</module>
         <module>hw12-web-server</module>
+        <module>hw13-di</module>
     </modules>
 
     <properties>
@@ -32,6 +33,7 @@
         <javax.json.version>1.1.4</javax.json.version>
         <hibernate.version>5.4.4.Final</hibernate.version>
         <jetty.version>9.4.20.v20190813</jetty.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
 
         <junit.version>5.4.2</junit.version>
         <assertj.version>3.12.2</assertj.version>
@@ -104,6 +106,30 @@
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-servlet</artifactId>
                 <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
             </dependency>
 
             <dependency>
