@@ -2,8 +2,13 @@ package ru.otus;
 
 import lombok.SneakyThrows;
 
+import java.util.function.Supplier;
+
+import static java.lang.String.format;
+
 class SequencePrinter {
 
+    private static final String PRINT_TEMPLATE = "[%s] > %d";
     private static final int OVERFLOW_VALUE = 10;
     private final Object monitor = new Object();
 
@@ -12,6 +17,7 @@ class SequencePrinter {
     private boolean isFirstCounterStep = true;
     private boolean isFirstIncreasing = true;
     private boolean isSecondIncreasing = true;
+    private Supplier<Boolean> isPrintingOver = () -> firstCounter < 0 && secondCounter < 0;
 
     @SneakyThrows
     void printSequence() {
@@ -25,26 +31,33 @@ class SequencePrinter {
         secondThread.join();
     }
 
+    @SneakyThrows
     private void print() {
         while (true) {
             synchronized (monitor) {
-                if (firstCounter < 0 && secondCounter < 0) {
+                if (isPrintingOver.get()) {
+                    monitor.notifyAll();
                     return;
                 }
 
+                final String threadName = Thread.currentThread().getName();
+                final int numberToPrint;
                 if (isFirstCounterStep) {
-                    System.out.print((isFirstIncreasing ? firstCounter++ : firstCounter--) + " ");
+                    numberToPrint = (isFirstIncreasing ? firstCounter++ : firstCounter--);
                     if (firstCounter == OVERFLOW_VALUE) {
                         isFirstIncreasing = false;
                     }
                 } else {
-                    System.out.print((isSecondIncreasing ? secondCounter++ : secondCounter--) + " ");
+                    numberToPrint = (isSecondIncreasing ? secondCounter++ : secondCounter--);
                     if (secondCounter == OVERFLOW_VALUE) {
                         isSecondIncreasing = false;
                     }
                 }
+                System.out.println(format(PRINT_TEMPLATE, threadName, numberToPrint));
 
+                monitor.notifyAll();
                 isFirstCounterStep = !isFirstCounterStep;
+                monitor.wait();
             }
         }
     }
