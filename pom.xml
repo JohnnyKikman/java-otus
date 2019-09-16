@@ -19,6 +19,7 @@
         <module>hw11-cache</module>
         <module>hw12-web-server</module>
         <module>hw13-di</module>
+        <module>hw14-number-sequence</module>
     </modules>
 
     <properties>
