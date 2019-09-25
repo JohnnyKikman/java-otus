@@ -26,7 +26,7 @@ import ru.otus.util.SessionFactories;
 @ComponentScan
 @EnableWebMvc
 @PropertySource("application.properties")
-public class WebConfig implements WebMvcConfigurer {
+public class Config implements WebMvcConfigurer {
 
     @Value("${cache.max-elements}")
     private Integer maxElements;

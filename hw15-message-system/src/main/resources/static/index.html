@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <script src="webjars/jquery/jquery.min.js"></script>
+    <script src="webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="webjars/stomp-websocket/stomp.min.js"></script>
+    <style type="text/css">
+        TABLE {
+            width: 500px;
+            border: 1px solid black;
+        }
+        TD, TH {
+            padding: 3px;
+        }
+        TH {
+            text-align: left;
+            background: black;
+            color: white;
+            border: 1px solid white;
+        }
+        TR {
+            border-bottom: 1px solid black;
+        }
+    </style>
+    <script>
+        let stompClient = null;
+        function onCreate() {
+            console.log('onCreate')
+            saveUser()
+            document.getElementById("message").hidden = false;
+            setTimeout(function () {
+                document.getElementById("message").hidden = true;
+            }, 5000);
+        }
+        function saveUser() {
+            var name = document.getElementById("nameInput").value;
+            var age = document.getElementById("ageInput").value;
+            var user = {
+                name: name,
+                age: age
+            }
+            stompClient.send("/users/save", {}, JSON.stringify(user))
+        }
+        $(function () {
+            stompClient = Stomp.over(new SockJS('hw15-message-system-0.9.0'))
+            stompClient.connect({}, (frame) => {
+                stompClient.subscribe('/topic/users', (data) => {
+                    var response = JSON.parse(data.body);
+                    var usersTable = document.getElementById("usersTable");
+                    var initial = response.initial;
+                    if (initial == true && usersTable.rows.size > 0) {
+                        return;
+                    }
+                    var users = response.users;
+                    users.forEach(function (el) {
+                        var row = usersTable.insertRow(-1);
+
+                        var idCell = row.insertCell(0);
+                        idCell.textContent = el.id;
+
+                        var nameCell = row.insertCell(1);
+                        nameCell.textContent = el.name;
+
+                        var ageCell = row.insertCell(2);
+                        ageCell.textContent = el.age;
+                    });
+                });
+                stompClient.send("/users/get", {}, {});
+            });
+        })
+        function onLoad() {
+            document.getElementById("message").hidden = true;
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+<div>Welcome!</div>
+<div style="display: inline-block; width: 40%;">
+    <p style="background-color: yellow;">New user</p>
+    <p>Name <input id="nameInput" type="text" name="name"></p>
+    <p>Age <input id="ageInput" type="number" name="age"></p>
+    <p><input type="button" value="Create" onclick="onCreate()"></p>
+    <p id="message">Created!</p>
+</div>
+<div style="display: inline-block; vertical-align: top; width: 40%; margin-left: 10%;">
+    <p style="background-color: orange;">All users</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody id="usersTable">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
