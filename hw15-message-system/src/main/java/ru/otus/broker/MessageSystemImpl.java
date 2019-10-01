@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import ru.otus.message.Message;
 import ru.otus.service.Receiver;
-import ru.otus.value.Destination;
 
 import java.io.Closeable;
 import java.util.ArrayList;
@@ -22,8 +21,8 @@ public class MessageSystemImpl implements MessageSystem, Closeable {
 
     private static final String THREAD_NAME = "MS-worker-%s";
 
-    private final Map<Destination, Receiver> receivers;
-    private final Map<Destination, BlockingQueue<Message>> messageQueues;
+    private final Map<String, Receiver> receivers;
+    private final Map<String, BlockingQueue<Message>> messageQueues;
     private final List<Thread> workers;
 
     public MessageSystemImpl() {
@@ -34,8 +33,8 @@ public class MessageSystemImpl implements MessageSystem, Closeable {
 
     @Override
     public void start() {
-        for (final Map.Entry<Destination, Receiver> entry : receivers.entrySet()) {
-            final Destination destination = entry.getKey();
+        for (final Map.Entry<String, Receiver> entry : receivers.entrySet()) {
+            final String destination = entry.getKey();
             final String threadName = format(THREAD_NAME, destination);
             final Thread thread = new Thread(() -> {
                 while (true) {
@@ -47,6 +46,9 @@ public class MessageSystemImpl implements MessageSystem, Closeable {
                         } catch (InterruptedException e) {
                             log.warn("Worker {} terminated", threadName);
                             return;
+                        } catch (Exception e) {
+                            log.warn("Worker {} threw exception during message handling: {}", threadName, e.getMessage());
+                            e.printStackTrace();
                         }
                     }
                 }
@@ -64,10 +66,10 @@ public class MessageSystemImpl implements MessageSystem, Closeable {
     }
 
     @Override
-    public void registerReceiver(Destination key, Receiver receiver) {
-        receivers.put(key, receiver);
-        messageQueues.put(key, new LinkedBlockingQueue<>());
-        log.info("Registered destination {} in MessageSystem", key);
+    public void registerReceiver(String destination, Receiver receiver) {
+        receivers.put(destination, receiver);
+        messageQueues.put(destination, new LinkedBlockingQueue<>());
+        log.info("Registered destination {} in MessageSystem", destination);
     }
 
     @Override

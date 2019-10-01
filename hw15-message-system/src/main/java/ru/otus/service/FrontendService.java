@@ -28,6 +28,7 @@ public class FrontendService implements Receiver {
         this.handlers = new HashMap<>();
         handlers.put(SingleUserResponse.class, this::sendSingleUser);
         handlers.put(UserListResponse.class, this::sendUserList);
+        log.info("Registered handlers for commands: {}", handlers.keySet());
     }
 
     @Override

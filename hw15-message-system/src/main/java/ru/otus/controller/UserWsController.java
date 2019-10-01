@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import ru.otus.broker.MessageSystem;
@@ -16,6 +17,9 @@ import ru.otus.model.User;
 @RequiredArgsConstructor
 public class UserWsController {
 
+    @Value("${destinations.db}")
+    private String dbDestination;
+
     private final ObjectMapper objectMapper;
     private final MessageSystem messageSystem;
 
@@ -24,13 +28,13 @@ public class UserWsController {
     public void saveUser(String message) {
         log.info("Received message to save user: {}", message);
         final User user = objectMapper.readValue(message, User.class);
-        messageSystem.send(new AddUserRequest(user));
+        messageSystem.send(new AddUserRequest(dbDestination, user));
     }
 
     @MessageMapping("/get")
     public void getUsers() {
         log.info("Received message to get users");
-        messageSystem.send(new GetUsersRequest());
+        messageSystem.send(new GetUsersRequest(dbDestination));
     }
 
 }

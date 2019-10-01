@@ -1,6 +1,7 @@
 package ru.otus.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import ru.otus.broker.MessageSystem;
 import ru.otus.message.AddUserRequest;
 import ru.otus.message.GetUsersRequest;
@@ -17,6 +18,9 @@ import java.util.function.Consumer;
 @Slf4j
 public class DatabaseService implements Receiver {
 
+    @Value("${destinations.frontend}")
+    private String frontendDestination;
+
     private final DbService<User> dbService;
     private final MessageSystem messageSystem;
 
@@ -29,6 +33,7 @@ public class DatabaseService implements Receiver {
         handlers = new HashMap<>();
         handlers.put(AddUserRequest.class, this::addUser);
         handlers.put(GetUsersRequest.class, this::getUsers);
+        log.info("Registered handlers for commands: {}", handlers.keySet());
     }
 
     @Override
@@ -41,12 +46,12 @@ public class DatabaseService implements Receiver {
         log.info("Received message: {}", message);
         final User user = addUserRequest.getUser();
         dbService.create(user);
-        messageSystem.send(new SingleUserResponse(user));
+        messageSystem.send(new SingleUserResponse(frontendDestination, user));
     }
 
     private void getUsers(Message message) {
         log.info("Received message: {}", message);
         final Collection<User> users = dbService.loadAll();
-        messageSystem.send(new UserListResponse(users));
+        messageSystem.send(new UserListResponse(frontendDestination, users));
     }
 }

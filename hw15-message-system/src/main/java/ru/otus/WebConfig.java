@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -17,24 +16,16 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.socket.WebSocketHandler;
-import org.springframework.web.socket.config.annotation.EnableWebSocket;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
-import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 import ru.otus.broker.MessageSystem;
 import ru.otus.broker.MessageSystemImpl;
 import ru.otus.cache.Cache;
 import ru.otus.cache.CacheImpl;
-import ru.otus.controller.UserWsController;
 import ru.otus.model.User;
 import ru.otus.service.DatabaseService;
 import ru.otus.service.DbService;
 import ru.otus.service.FrontendService;
 import ru.otus.service.UserDbService;
 import ru.otus.util.SessionFactories;
-
-import static ru.otus.value.Destination.DB_SERVICE;
-import static ru.otus.value.Destination.FRONTEND_SERVICE;
 
 @Configuration
 @ComponentScan
@@ -50,6 +41,11 @@ public class WebConfig implements WebMvcConfigurer {
     private int idleTime;
     @Value("${cache.eternal}")
     private boolean isEternal;
+
+    @Value("${destinations.db}")
+    private String dbDestination;
+    @Value("${destinations.frontend}")
+    private String frontendDestination;
 
     @Bean
     public DbService<User> userDbService() {
@@ -106,7 +102,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public DatabaseService databaseService(MessageSystem messageSystem) {
         final DatabaseService databaseService = new DatabaseService(userDbService(), messageSystem);
-        messageSystem.registerReceiver(DB_SERVICE, databaseService);
+        messageSystem.registerReceiver(dbDestination, databaseService);
         return databaseService;
     }
 
@@ -115,7 +111,7 @@ public class WebConfig implements WebMvcConfigurer {
     public FrontendService frontendService(MessageSystem messageSystem, SimpMessagingTemplate template,
                                            ObjectMapper objectMapper) {
         final FrontendService frontendService = new FrontendService(objectMapper, template);
-        messageSystem.registerReceiver(FRONTEND_SERVICE, frontendService);
+        messageSystem.registerReceiver(frontendDestination, frontendService);
         messageSystem.start();
         return frontendService;
     }
